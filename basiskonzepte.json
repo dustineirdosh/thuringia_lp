@@ -2,7 +2,7 @@
   "metadaten": {
     "titel": "KMK-Basiskonzepte Biologie – Umfassendes didaktisches Referenzdataset für Klassen 7–8",
     "beschreibung": "Vollständige, hierarchisch strukturierte und didaktisch angereicherte Darstellung der fünf KMK-Basiskonzepte Biologie. Jedes Basiskonzept (Ebene 1) wird in zwei Teilkonzepte (Ebene 2) gegliedert. Das Dataset integriert curriculumtheoretische, kognitionswissenschaftliche und fachdidaktische Dimensionen zur Unterstützung einer optimalen Sequenzplanung für den Biologieunterricht der Klassen 7–8 am Thüringer Gymnasium.",
-    "version": "3.0",
+    "version": "4.0",
     "quellen": [
       "KMK Bildungsstandards Biologie, Abschnitt 2.5",
       "Thüringer Lehrplan Biologie Gymnasium Klassen 7–8",
@@ -10,21 +10,12 @@
       "Kognitionswissenschaftliche Grundlagen der Sequenzplanung"
     ],
     "struktur_hinweis": "Jedes Basiskonzept (Ebene 1) gliedert sich in genau zwei Teilkonzepte (Ebene 2). Alle Einträge sind eigenständig verwendbar und durch Querverweise vernetzt.",
-    "neue_felder_gegenueber_v2": [
-      "haeufige_schuelervorstellungen: empirisch belegte Fehlvorstellungen pro Konzept",
-      "konzeptuelle_voraussetzungen: benötigte Vorkonzepte für den Aufbau des Basiskonzepts",
-      "sequenzierungsempfehlung: evidenzbasierte Hinweise zur Reihenfolge im Unterricht",
-      "interleaving_partner: Konzepte, die sich für verschränktes Lernen eignen",
-      "ersteinfuehrung_empfehlung: phänomenologischer Einstieg und geeignete Jahrgangsstufe",
-      "kognitive_komplexitaet_gy78: spezifisch kalibriert für Klassen 7–8",
-      "bk_verbindungen: explizite Relationen zwischen Basiskonzepten mit Beschreibung",
-      "lernziel_ids_thuringia: direkte Verlinkung zu Lernzielen des Thüringer Lehrplans",
-      "konzeptanker_lernziele: Lernziele mit besonderer konzeptueller Ankerfunktion",
-      "typische_misskonzeptionen_entstehung: kausale Erklärung der Fehlvorstellungsgenese",
-      "diagnostische_fragen: Fragen zur Erfassung des konzeptuellen Verständnisstands",
-      "darstellungsformen_progression: Stufenfolge vom einfachen zum komplexen Modell",
-      "alltagsanker: konkrete Alltagsphänomene als Einstieg in abstrakte Konzepte",
-      "sprachliche_stolpersteine: fachsprachliche Begriffe mit Verwechslungspotenzial"
+    "aenderungen_v4": [
+      "Massiv erweiterte lernziel_ids_thuringia für bk_individuelle_evolutive_entwicklung und beide Teilkonzepte",
+      "Neue direkte Verlinkungen zu Human-Evolution-relevanten Lernzielen (Nervensystem-Plastizität, Immungedächtnis, Pubertät als evolutive Strategie, vorgeburtliche Entwicklung)",
+      "Querverbindungen zwischen evolutivem Teilkonzept und Organsystemlernzielen expliziert",
+      "Neue konzeptanker_lernziele für humane Entwicklung und Evolution",
+      "Erweiterte lernziel_ids für das evolutive Teilkonzept inkl. Zellbiologie, Abwehrsystem, Nervensystem-Vergleich"
     ]
   },
   "basiskonzepte": [
@@ -206,6 +197,7 @@
         "GY-78-WIR-INS-2",
         "GY-78-WIR-INS-3",
         "GY-78-WIR-INS-4",
+        "GY-78-WIR-INS-8",
         "GY-78-WIR-WTG-1",
         "GY-78-WIR-WTG-2",
         "GY-78-WIR-WTG-3",
@@ -213,14 +205,23 @@
         "GY-78-ZEL-PTZ-2",
         "GY-78-ZEL-PTZ-3",
         "GY-78-ZEL-PTZ-4",
+        "GY-78-ZEL-PTZ-6",
+        "GY-78-ZEL-BAK-1",
+        "GY-78-ZEL-FPA-2",
+        "GY-78-ZEL-FPA-4",
+        "GY-78-WIR-FPA-1",
+        "GY-78-WIR-FPA-2",
         "GY-78-HUM-NER-2",
+        "GY-78-HUM-NER-8",
         "GY-78-HUM-NER-9",
         "GY-78-HUM-ATM-1",
         "GY-78-HUM-ATM-2",
         "GY-78-HUM-ATM-3",
         "GY-78-HUM-AUS-2",
+        "GY-78-HUM-AUS-3",
         "GY-78-HUM-BHK-1",
         "GY-78-HUM-BHK-2",
+        "GY-78-HUM-ABW-1",
         "GY-78-HUM-ABW-5",
         "GY-78-HUM-FPA-4"
       ],
@@ -396,19 +397,25 @@
             "GY-78-WIR-INS-1",
             "GY-78-WIR-INS-2",
             "GY-78-WIR-INS-3",
+            "GY-78-WIR-INS-8",
             "GY-78-WIR-WTG-2",
             "GY-78-WIR-WTG-3",
             "GY-78-WIR-WTG-4",
             "GY-78-ZEL-PTZ-2",
             "GY-78-ZEL-PTZ-3",
-            "GY-78-HUM-ATM-1",
-            "GY-78-HUM-BHK-1",
-            "GY-78-HUM-BHK-2",
-            "GY-78-HUM-AUS-1",
+            "GY-78-ZEL-PTZ-6",
+            "GY-78-ZEL-BAK-1",
             "GY-78-ZEL-FPA-2",
             "GY-78-ZEL-FPA-4",
             "GY-78-WIR-FPA-1",
-            "GY-78-WIR-FPA-2"
+            "GY-78-WIR-FPA-2",
+            "GY-78-HUM-ATM-1",
+            "GY-78-HUM-AUS-1",
+            "GY-78-HUM-AUS-3",
+            "GY-78-HUM-BHK-1",
+            "GY-78-HUM-BHK-2",
+            "GY-78-HUM-NER-8",
+            "GY-78-HUM-ABW-1"
           ],
           "konzeptanker_lernziele": [
             {
@@ -577,6 +584,7 @@
             "GY-78-HUM-NER-2",
             "GY-78-HUM-NER-9",
             "GY-78-HUM-FES-1",
+            "GY-78-HUM-BHK-4",
             "GY-78-HUM-FPA-2",
             "GY-78-HUM-FPA-4"
           ],
@@ -640,7 +648,7 @@
       "kurzbezeichnung": "Stoff/Energie",
       "paired_concept": "Steuerung und Regelung",
       "definition_kmk": "Beschreibt den Sachverhalt, dass biologische Systeme offene, sich selbst organisierende Systeme sind, die im ständigen Austausch mit der Umwelt stehen. Alle Lebensprozesse benötigen Energie und laufen unter Energieumwandlungen ab. Lebewesen nehmen Stoffe auf, wandeln sie um und scheiden Stoffe wieder aus.",
-      "definition_didaktisch": "Lebewesen sind keine geschlossenen Systeme, sondern stehen im ständigen Stoff- und Energieaustausch mit ihrer Umwelt. Dieser Austausch ist die materielle Grundlage aller Lebensprozesse. Das Konzept verbindet Chemie und Physik mit der Biologie und ist die Grundlage für das Verständnis von Verdauung, Atmung, Kreislauf, Zellatmung und Ökologie. Es ist das zentrale Stoff- und Energierahmenkonzept des Biologieunterrichts.",
+      "definition_didaktisch": "Lebewesen sind keine geschlossenen Systeme, sondern stehen im ständigen Stoff- und Energieaustausch mit ihrer Umwelt. Dieser Austausch ist die materielle Grundlage aller Lebensprozesse. Das Konzept verbindet Chemie und Physik mit der Biologie und ist die Grundlage für das Verständnis von Verdauung, Atmung, Kreislauf, Zellatmung und Ökologie.",
       "wesentliche_prinzipien_kmk": [
         "Fließgleichgewicht",
         "Stoffkreislauf",
@@ -707,16 +715,6 @@
           "fehlvorstellung": "Energie wird durch Essen erzeugt oder gespeichert und dann 'verbraucht'",
           "korrekte_vorstellung": "Energie wird umgewandelt (chemische Energie in kinetische, thermische Energie); nichts wird erzeugt oder vernichtet",
           "didaktischer_hinweis": "Energieerhaltungssatz aus dem Physikunterricht explizit verknüpfen"
-        },
-        {
-          "fehlvorstellung": "Pflanzen fressen Erde/Wasser als Nahrung",
-          "korrekte_vorstellung": "Pflanzen bauen organische Stoffe aus anorganischen Stoffen (CO₂, H₂O) mithilfe von Lichtenergie durch Photosynthese auf",
-          "didaktischer_hinweis": "Autotrophie/Heterotrophie klar unterscheiden; Photosynthese als Energiekonversion, nicht als Nahrungsaufnahme"
-        },
-        {
-          "fehlvorstellung": "Muskelarbeit verbraucht Sauerstoff direkt",
-          "korrekte_vorstellung": "Sauerstoff wird für die Zellatmung (oxidative Phosphorylierung) benötigt, die ATP für die Muskelkontraktion bereitstellt",
-          "didaktischer_hinweis": "Kausalkettendiagramm: Sport → erhöhter ATP-Bedarf → erhöhte Zellatmung → erhöhter O₂-Bedarf → erhöhte Atemfrequenz"
         }
       ],
       "typische_misskonzeptionen_entstehung": [
@@ -732,7 +730,7 @@
       ],
       "sequenzierungsempfehlung": {
         "empfohlene_phase": "Klasse 7 (zweites Halbjahr) – nach Einführung von Str/Fkt und Zellbiologie",
-        "begruendung": "Stoff/Energie setzt Kenntnisse der Zellstruktur (Mitochondrium, Chloroplast) und des Schlüssel-Schloss-Prinzips (Enzyme) voraus. Der phänomenologische Einstieg über Verdauung und Atmung ist im Kontext des Körpers zugänglich.",
+        "begruendung": "Stoff/Energie setzt Kenntnisse der Zellstruktur (Mitochondrium, Chloroplast) und des Schlüssel-Schloss-Prinzips (Enzyme) voraus.",
         "empfohlene_einführungsreihenfolge": [
           "1. Einstieg über Alltagsphänomen: Warum bin ich nach dem Sport erschöpft?",
           "2. Nachweis von Glukose und Stärke in Nahrungsmitteln (FPA-1)",
@@ -761,7 +759,7 @@
         "alltagsphänomen": "Erschöpfung nach Sport, Hunger, Wärme beim Sport",
         "vom_konkreten_zum_abstrakten": [
           "Schritt 1: Alltagserfahrung der Erschöpfung und des Hungers (Phänomenebene)",
-          "Schritt 2: Verdauung als Aufspaltung von Nahrungsstoffen – was passiert mit dem Essen? (Beschreibungsebene)",
+          "Schritt 2: Verdauung als Aufspaltung von Nahrungsstoffen (Beschreibungsebene)",
           "Schritt 3: Enzymexperiment: enzymatische Stärkespaltung nachweisen (Experimentebene)",
           "Schritt 4: Zellatmungsgleichung formulieren und interpretieren (Formelebene)",
           "Schritt 5: Verbindung: Nahrung → Verdauung → Zellatmung → Energie für Muskelarbeit (Systemebene)"
@@ -792,7 +790,7 @@
         {
           "ziel_bk": "bk_steuerung_regelung",
           "beziehungstyp": "wird_geregelt_durch",
-          "beschreibung": "Metabolische Zustandsgrößen (Blutzucker, CO₂-Konzentration, Osmolalität) werden durch Regelkreise konstant gehalten; Stoff/Energie liefert die zu regelnden Größen"
+          "beschreibung": "Metabolische Zustandsgrößen (Blutzucker, CO₂-Konzentration, Osmolalität) werden durch Regelkreise konstant gehalten"
         },
         {
           "ziel_bk": "bk_individuelle_evolutive_entwicklung",
@@ -804,22 +802,35 @@
         "GY-78-HUM-VD-1",
         "GY-78-HUM-VD-2",
         "GY-78-HUM-VD-3",
+        "GY-78-HUM-VD-4",
+        "GY-78-HUM-VD-5",
+        "GY-78-HUM-VD-6",
+        "GY-78-HUM-VD-7",
+        "GY-78-HUM-VD-8",
         "GY-78-HUM-ATM-1",
         "GY-78-HUM-ATM-2",
         "GY-78-HUM-ATM-3",
         "GY-78-HUM-ATM-4",
+        "GY-78-HUM-ATM-5",
+        "GY-78-HUM-ATM-6",
+        "GY-78-HUM-ATM-7",
         "GY-78-HUM-AUS-1",
         "GY-78-HUM-AUS-2",
         "GY-78-HUM-AUS-3",
         "GY-78-HUM-BHK-1",
         "GY-78-HUM-BHK-2",
         "GY-78-HUM-BHK-3",
+        "GY-78-HUM-BHK-6",
+        "GY-78-HUM-ABW-4",
+        "GY-78-HUM-ZUS-1",
         "GY-78-HUM-ZUS-2",
         "GY-78-HUM-ZUS-3",
         "GY-78-HUM-FPA-1",
         "GY-78-HUM-FPA-2",
         "GY-78-HUM-FPA-3",
         "GY-78-ZEL-PTZ-4",
+        "GY-78-ZEL-PTZ-1",
+        "GY-78-ZEL-BAK-2",
         "GY-78-WIR-WTG-6"
       ],
       "konzeptanker_lernziele": [
@@ -887,7 +898,7 @@
           "uebergeordnetes_bk": "bk_stoff_energie_umwandlung",
           "paired_teilkonzept": "bk_stoff_energie_umwandlung__energie",
           "beschreibung_kmk": "Lebewesen nehmen Stoffe aus ihrer Umwelt auf, bauen diese um (Assimilation, Dissimilation) und scheiden Stoffe wieder aus. Stoffe werden in Kreisläufen geführt. Das Fließgleichgewicht beschreibt den dynamischen Gleichgewichtszustand offener Systeme.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Stoffumwandlung' beschreibt die materielle Seite des Lebens: Welche Stoffe nimmt ein Lebewesen auf, wie werden sie umgebaut, und welche Stoffe werden abgegeben? Im Mittelpunkt stehen enzymatische Prozesse (Verdauung), Transportprozesse (Resorption, Kreislauf) und Ausscheidungsprozesse (Niere, Haut, Lunge). Das Fließgleichgewicht verdeutlicht, dass Lebewesen nie im Gleichgewicht mit ihrer Umgebung sind, sondern dieses aktiv aufrechterhalten.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Stoffumwandlung' beschreibt die materielle Seite des Lebens: Welche Stoffe nimmt ein Lebewesen auf, wie werden sie umgebaut, und welche Stoffe werden abgegeben? Im Mittelpunkt stehen enzymatische Prozesse (Verdauung), Transportprozesse (Resorption, Kreislauf) und Ausscheidungsprozesse (Niere, Haut, Lunge).",
           "fokus_prinzipien": [
             "Fließgleichgewicht",
             "Stoffkreislauf"
@@ -946,12 +957,26 @@
             "GY-78-HUM-VD-1",
             "GY-78-HUM-VD-2",
             "GY-78-HUM-VD-3",
+            "GY-78-HUM-VD-5",
+            "GY-78-HUM-VD-6",
+            "GY-78-HUM-VD-8",
             "GY-78-HUM-AUS-1",
             "GY-78-HUM-AUS-2",
             "GY-78-HUM-AUS-3",
+            "GY-78-HUM-BHK-1",
             "GY-78-HUM-BHK-3",
+            "GY-78-HUM-BHK-6",
+            "GY-78-HUM-ABW-4",
+            "GY-78-HUM-ATM-3",
+            "GY-78-HUM-ATM-5",
+            "GY-78-HUM-ATM-6",
+            "GY-78-HUM-ATM-7",
+            "GY-78-HUM-ZUS-1",
             "GY-78-HUM-FPA-1",
-            "GY-78-HUM-FPA-2"
+            "GY-78-HUM-FPA-2",
+            "GY-78-ZEL-PTZ-1",
+            "GY-78-ZEL-BAK-2",
+            "GY-78-WIR-WTG-6"
           ],
           "konzeptanker_lernziele": [
             {
@@ -989,7 +1014,7 @@
           "uebergeordnetes_bk": "bk_stoff_energie_umwandlung",
           "paired_teilkonzept": "bk_stoff_energie_umwandlung__stoff",
           "beschreibung_kmk": "Alle Lebensprozesse benötigen Energie. Energie wird umgewandelt, nicht erzeugt oder vernichtet. Bei jeder Umwandlung wird ein Teil der Energie entwertet (Wärme). Energetische Kopplung ermöglicht den Antrieb endergoner Reaktionen durch exergone.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Energieumwandlung' beschreibt die energetische Seite des Lebens: Woher kommt die Energie für alle Lebensprozesse? Wie wird chemische Energie in nutzbare Form (ATP) umgewandelt? ATP ist der universelle Energiewährung des Lebens. Die Zellatmung ist der zentrale Prozess, der chemische Energie aus Nahrungsmolekülen in ATP umwandelt. Dieses Teilkonzept hat den höchsten Abstraktionsgrad im Lehrgang der Klassen 7–8 und erfordert sorgsame phänomenologische Vorbereitung.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Energieumwandlung' beschreibt die energetische Seite des Lebens: Woher kommt die Energie für alle Lebensprozesse? Wie wird chemische Energie in nutzbare Form (ATP) umgewandelt? ATP ist die universelle Energiewährung des Lebens. Die Zellatmung ist der zentrale Prozess.",
           "fokus_prinzipien": [
             "Energieentwertung",
             "Energetische Kopplung"
@@ -1037,14 +1062,17 @@
           ],
           "sequenzierungsempfehlung": {
             "empfohlene_phase": "Klasse 7 (zweites Halbjahr) – nach Stoffumwandlung (Verdauung), als zweiter Teil von Stoff/Energie",
-            "begruendung": "Energieumwandlung baut auf Stoffumwandlung auf (Glukose als Substrat der Zellatmung setzt Kenntnisse der Verdauung voraus). Die Zellatmungsgleichung ist der Höhepunkt dieses Teilkonzepts.",
+            "begruendung": "Energieumwandlung baut auf Stoffumwandlung auf (Glukose als Substrat der Zellatmung setzt Kenntnisse der Verdauung voraus).",
             "warnung": "Zellatmung auf molekularer Ebene (Glykolyse, Citratzyklus) ist für Klassen 7–8 zu abstrakt; die Wort- und Summengleichung sowie der Sauerstoffbedarf sind ausreichend"
           },
           "lernziel_ids_thuringia": [
             "GY-78-HUM-ATM-4",
+            "GY-78-HUM-VD-5",
+            "GY-78-HUM-VD-7",
             "GY-78-HUM-ZUS-3",
             "GY-78-HUM-FPA-3",
-            "GY-78-HUM-FPA-5"
+            "GY-78-HUM-FPA-5",
+            "GY-78-ZEL-PTZ-4"
           ],
           "konzeptanker_lernziele": [
             {
@@ -1076,7 +1104,7 @@
       "kurzbezeichnung": "Info/Komm",
       "paired_concept": "Steuerung und Regelung",
       "definition_kmk": "Beschreibt den Sachverhalt, dass Lebewesen Informationen aufnehmen, weiterleiten, verarbeiten, speichern und auf sie reagieren. Kommunikation findet auf verschiedenen Systemebenen statt: In einem vielzelligen Organismus sind alle Organe, Gewebe, Zellen und deren Bestandteile beständig an der Kommunikation beteiligt. Auch zwischen Organismen findet Kommunikation auf vielfältige Weise statt.",
-      "definition_didaktisch": "Biologische Systeme verhalten sich zielgerichtet, weil sie Informationen verarbeiten. Das Nervensystem, das Hormonsystem und das Immunsystem sind drei verschiedene Implementierungen desselben grundlegenden Informationsarchitektur-Musters: Reiz → Rezeptor → Codierung → Weiterleitung → Verarbeitung → Reaktion. Dieses Muster ist der konzeptuelle Kern des Basiskonzepts und sollte als explizite Abstraktion gelehrt werden, die dann in jedem Teilsystem wiederzuerkennen ist.",
+      "definition_didaktisch": "Biologische Systeme verhalten sich zielgerichtet, weil sie Informationen verarbeiten. Das Nervensystem, das Hormonsystem und das Immunsystem sind drei verschiedene Implementierungen desselben grundlegenden Informationsarchitektur-Musters: Reiz → Rezeptor → Codierung → Weiterleitung → Verarbeitung → Reaktion.",
       "wesentliche_prinzipien_kmk": [
         "Signaltransduktion",
         "Codierung und Decodierung von Information"
@@ -1130,12 +1158,12 @@
       "haeufige_schuelervorstellungen": [
         {
           "fehlvorstellung": "Das Nervensystem 'sendet Befehle', das Hormonsystem 'macht etwas anderes'",
-          "korrekte_vorstellung": "Nerven- und Hormonsystem sind zwei verschiedene Implementierungen desselben Informationsprinzips: Beide übertragen Signale von Sender zu Empfänger; der Unterschied liegt in Geschwindigkeit, Medium und Reichweite",
+          "korrekte_vorstellung": "Nerven- und Hormonsystem sind zwei verschiedene Implementierungen desselben Informationsprinzips",
           "didaktischer_hinweis": "Explizit vergleichen: Nervensystem (elektrisch, schnell, lokal) vs. Hormonsystem (chemisch, langsam, systemisch)"
         },
         {
           "fehlvorstellung": "Nerven transportieren 'Elektrizität' wie Drähte",
-          "korrichte_vorstellung": "Das Aktionspotenzial ist ein elektrochemisches Phänomen durch Ionenflüsse über Membranen; keine Elektronenbewegung wie in Drähten",
+          "korrekte_vorstellung": "Das Aktionspotenzial ist ein elektrochemisches Phänomen durch Ionenflüsse über Membranen; keine Elektronenbewegung wie in Drähten",
           "didaktischer_hinweis": "Für Klassen 7–8: Aktionspotenzial als 'Erregungswelle' beschreiben ohne Ionendetails"
         },
         {
@@ -1151,7 +1179,7 @@
       ],
       "sequenzierungsempfehlung": {
         "empfohlene_phase": "Klasse 8 (erstes Halbjahr) – nach Zellbiologie und Grundlagen der Organsysteme (Stoff/Energie)",
-        "begruendung": "Das Nervensystem setzt Verständnis der Zellstruktur (Neuronenbau) und des Schlüssel-Schloss-Prinzips (Rezeptoren, Neurotransmitter) voraus. Das Hormonsystem baut auf dem Nervensystem auf.",
+        "begruendung": "Das Nervensystem setzt Verständnis der Zellstruktur (Neuronenbau) und des Schlüssel-Schloss-Prinzips (Rezeptoren, Neurotransmitter) voraus.",
         "empfohlene_einführungsreihenfolge": [
           "1. Phänomenologischer Einstieg: Reflexe erfahren (Kniescheibenreflex, Pupillenreflex)",
           "2. Reiz-Reaktions-Kette beschreiben (NER-3 bis NER-7)",
@@ -1165,12 +1193,12 @@
       "interleaving_partner": [
         {
           "partner_bk": "bk_steuerung_regelung",
-          "begruendung": "Information und Kommunikation ist der Mechanismus, durch den Regelkreise implementiert werden; beide müssen zusammen gelehrt werden",
-          "empfohlene_verschraenkung": "Sobald ein Informationsweg (z. B. Blutzuckermessung durch Bauchspeicheldrüse) eingeführt wird, sofort den Regelkreis (Blutzuckerregelung) ergänzen"
+          "begruendung": "Information und Kommunikation ist der Mechanismus, durch den Regelkreise implementiert werden",
+          "empfohlene_verschraenkung": "Sobald ein Informationsweg eingeführt wird, sofort den Regelkreis ergänzen"
         },
         {
           "partner_bk": "bk_struktur_funktion",
-          "begruendung": "Nervenzellbau, Sinnesorganbau und Synapsenstruktur sind Anwendungen von Str/Fkt; beide Konzepte sollten gleichzeitig angewendet werden",
+          "begruendung": "Nervenzellbau, Sinnesorganbau und Synapsenstruktur sind Anwendungen von Str/Fkt",
           "empfohlene_verschraenkung": "Nervenzellbau (Str/Fkt) und Nervenzellunktion (Info/Komm) immer gemeinsam behandeln"
         }
       ],
@@ -1179,11 +1207,11 @@
         "phänomenologischer_einstieg": "Kniescheibenreflex im Unterricht: Warum zieht das Bein hoch, ohne dass ich nachgedacht habe?",
         "alltagsphänomen": "Reflexe, Schmerz, Schreck, Hunger als Sinnesreize",
         "vom_konkreten_zum_abstrakten": [
-          "Schritt 1: Reflexerfahrung und -beschreibung (Was passiert? Wie schnell?)",
-          "Schritt 2: Reiz-Reaktions-Kette strukturiert beschreiben (Stationen benennen)",
+          "Schritt 1: Reflexerfahrung und -beschreibung",
+          "Schritt 2: Reiz-Reaktions-Kette strukturiert beschreiben",
           "Schritt 3: Nervenzellbau als strukturelle Grundlage einführen",
-          "Schritt 4: Allgemeines Informationsprinzip abstrahieren: Reiz → Codierung → Weiterleitung → Decodierung → Reaktion",
-          "Schritt 5: Übertragung auf Hormonsystem und Immunsystem als andere Implementierungen desselben Prinzips"
+          "Schritt 4: Allgemeines Informationsprinzip abstrahieren",
+          "Schritt 5: Übertragung auf Hormonsystem und Immunsystem"
         ]
       },
       "kognitive_komplexitaet_gy78": {
@@ -1206,7 +1234,7 @@
         {
           "ziel_bk": "bk_steuerung_regelung",
           "beziehungstyp": "implementiert",
-          "beschreibung": "Informations- und Kommunikationsprozesse sind der Mechanismus, durch den biologische Regelkreise realisiert werden. Ohne Informationsübertragung keine Regelung."
+          "beschreibung": "Informations- und Kommunikationsprozesse sind der Mechanismus, durch den biologische Regelkreise realisiert werden."
         },
         {
           "ziel_bk": "bk_struktur_funktion",
@@ -1215,7 +1243,7 @@
         },
         {
           "ziel_bk": "bk_individuelle_evolutive_entwicklung",
-          "beziehungstyp": "ermoeglichet",
+          "beziehungstyp": "ermoeglicht",
           "beschreibung": "Das Hormonsystem (Info/Komm) steuert die individuelle Entwicklung (Pubertät, Menstruationszyklus, Metamorphose); Informationsprozesse sind die kausalen Mechanismen der Ontogenese."
         }
       ],
@@ -1230,11 +1258,17 @@
         "GY-78-HUM-NER-8",
         "GY-78-HUM-NER-9",
         "GY-78-HUM-NER-10",
+        "GY-78-HUM-NER-11",
+        "GY-78-HUM-NER-12",
         "GY-78-HUM-FES-1",
+        "GY-78-HUM-ABW-2",
         "GY-78-HUM-ABW-3",
         "GY-78-HUM-ABW-4",
         "GY-78-HUM-ABW-5",
         "GY-78-HUM-ABW-6",
+        "GY-78-HUM-ABW-7",
+        "GY-78-HUM-BHK-4",
+        "GY-78-HUM-FES-7",
         "GY-78-WIR-INS-4",
         "GY-78-WIR-INS-9"
       ],
@@ -1249,10 +1283,10 @@
         }
       ],
       "diagnostische_fragen": [
-        "Beschreibe die Reiz-Reaktions-Kette beim Zurückziehen der Hand von einer heißen Herdplatte. Welche Stationen durchläuft die Information?",
+        "Beschreibe die Reiz-Reaktions-Kette beim Zurückziehen der Hand von einer heißen Herdplatte.",
         "Vergleiche das Nervensystem mit dem Hormonsystem als Kommunikationssysteme. Was ist gleich, was ist verschieden?",
-        "Wie 'weiß' das Immunsystem, welche Zellen körpereigen und welche körperfremd sind? Erkläre das Prinzip.",
-        "Was bedeutet es, dass Antikörper 'spezifisch' für ein bestimmtes Antigen sind? Welches Prinzip steckt dahinter?"
+        "Wie 'weiß' das Immunsystem, welche Zellen körpereigen und welche körperfremd sind?",
+        "Was bedeutet es, dass Antikörper 'spezifisch' für ein bestimmtes Antigen sind?"
       ],
       "darstellungsformen_progression": [
         "Stufe 1: Reiz-Reaktions-Schema (vereinfacht, fünf Stationen)",
@@ -1275,7 +1309,7 @@
         },
         {
           "begriff": "Reflex / Reaktion",
-          "problem": "Im Alltag synonym; in der Biologie: Reflex = unwillkürlich, schnell, ohne Großhirnbeteiligung; Reaktion = allgemeiner Begriff",
+          "problem": "Im Alltag synonym; in der Biologie: Reflex = unwillkürlich, schnell, ohne Großhirnbeteiligung",
           "empfehlung": "Reflexbogen als Spezialfall der Reiz-Reaktions-Kette einführen"
         }
       ],
@@ -1315,11 +1349,11 @@
             "Lebenslang (immunologisches Gedächtnis, Langzeitgedächtnis)"
           ],
           "beispielthemen_gy78": [
-            "Sinnesorgane als Informationsaufnahme: Rezeptoren wandeln Reize in Signale um (Zellebene)",
-            "Adäquate Reize: welche Sinneszelle reagiert auf welchen Reiz? (Zellebene)",
-            "Informationsverarbeitung im Zentralnervensystem: Rückenmark und Gehirn (Organebene)",
-            "Immunologisches Gedächtnis als Informationsspeicher: Gedächtniszellen (Zellebene)",
-            "Veränderungen von Nervenzellverbindungen als Grundlage für Lernprozesse (Zellebene)"
+            "Sinnesorgane als Informationsaufnahme: Rezeptoren wandeln Reize in Signale um",
+            "Adäquate Reize: welche Sinneszelle reagiert auf welchen Reiz?",
+            "Informationsverarbeitung im Zentralnervensystem: Rückenmark und Gehirn",
+            "Immunologisches Gedächtnis als Informationsspeicher: Gedächtniszellen",
+            "Veränderungen von Nervenzellverbindungen als Grundlage für Lernprozesse"
           ],
           "typische_mechanismen": [
             "Transduktion: Umwandlung physikalischer/chemischer Reize in elektrische Signale durch Sinneszellen",
@@ -1351,12 +1385,22 @@
             "GY-78-HUM-NER-8",
             "GY-78-HUM-NER-9",
             "GY-78-HUM-NER-10",
-            "GY-78-HUM-ABW-5"
+            "GY-78-HUM-NER-11",
+            "GY-78-HUM-ABW-3",
+            "GY-78-HUM-ABW-5",
+            "GY-78-HUM-ABW-6",
+            "GY-78-HUM-ABW-7",
+            "GY-78-HUM-BHK-4",
+            "GY-78-HUM-FES-7"
           ],
           "konzeptanker_lernziele": [
             {
               "lernziel_id": "GY-78-HUM-NER-9",
               "begruendung": "Der Nervenzellbau ist die strukturelle Grundlage für alle Informationsprozesse; hier wird Str/Fkt und Info/Komm erstmals direkt verknüpft"
+            },
+            {
+              "lernziel_id": "GY-78-HUM-ABW-5",
+              "begruendung": "Das immunologische Gedächtnis ist Informationsspeicherung auf Zellebene – dieselbe Grundlogik wie synaptische Plastizität, aber in einem anderen System"
             }
           ],
           "diagnostische_fragen": [
@@ -1380,7 +1424,7 @@
           "uebergeordnetes_bk": "bk_information_kommunikation",
           "paired_teilkonzept": "bk_information_kommunikation__information",
           "beschreibung_kmk": "Kommunikation bezeichnet die Weitergabe und den Austausch von Signalen zwischen Zellen, Organen oder Organismen. Sie kann elektrisch (Nervensystem), chemisch (Hormone, Neurotransmitter, Pheromone) oder anderweitig erfolgen und findet auf allen Systemebenen statt.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Kommunikation' fokussiert auf die Übertragung von Signalen zwischen biologischen Einheiten. Zentral ist, dass dieselbe Grundarchitektur (Sender – Signal – Empfänger – Antwort) im Nervensystem (elektrisch und chemisch), im Hormonsystem (chemisch, weitreichend) und im Immunsystem (chemisch, zellulär) realisiert wird. Diese Einheit in der Vielfalt ist das konzeptuelle Herzstück.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Kommunikation' fokussiert auf die Übertragung von Signalen zwischen biologischen Einheiten. Zentral ist, dass dieselbe Grundarchitektur (Sender – Signal – Empfänger – Antwort) im Nervensystem, im Hormonsystem und im Immunsystem realisiert wird.",
           "fokus_prinzipien": [
             "Signaltransduktion",
             "Chemische und elektrische Signalwege"
@@ -1397,12 +1441,12 @@
             "Stunden bis Tage (Immunzell-Kommunikation)"
           ],
           "beispielthemen_gy78": [
-            "Synaptische Übertragung: Neurotransmitter als chemische Botschaft (Molekülebene)",
-            "Hormonelle Kommunikation: Drüse → Blut → Zielorgan (Organ-/Molekülebene)",
-            "Kommunikation zwischen Immunzellen: Aktivierung von Lymphozyten (Zellebene)",
-            "Pheromone zur Kommunikation zwischen Insekten (Organismus-/Molekülebene)",
-            "Strickleiternervensystem der Insekten als Kommunikationsnetz (Organ-/Organismusebene)",
-            "Insektenstaat: Kommunikation durch Pheromone und Tänze (Organismusebene)"
+            "Synaptische Übertragung: Neurotransmitter als chemische Botschaft",
+            "Hormonelle Kommunikation: Drüse → Blut → Zielorgan",
+            "Kommunikation zwischen Immunzellen: Aktivierung von Lymphozyten",
+            "Pheromone zur Kommunikation zwischen Insekten",
+            "Strickleiternervensystem der Insekten als Kommunikationsnetz",
+            "Insektenstaat: Kommunikation durch Pheromone und Tänze"
           ],
           "typische_mechanismen": [
             "Chemische Synapse: Transmitterausschüttung → Diffusion → Rezeptorbindung → Potenzialänderung",
@@ -1413,7 +1457,7 @@
           "haeufige_schuelervorstellungen": [
             {
               "fehlvorstellung": "Nervensystem und Hormonsystem sind vollständig unabhängige Systeme",
-              "korrekte_vorstellung": "Beide Systeme interagieren: das Nervensystem kann Hormonausschüttung steuern; Hormone beeinflussen neuronale Aktivität. Sie sind zwei Kommunikationswege desselben Organismus.",
+              "korrekte_vorstellung": "Beide Systeme interagieren: das Nervensystem kann Hormonausschüttung steuern; Hormone beeinflussen neuronale Aktivität.",
               "didaktischer_hinweis": "Beispiel: Stressreaktion – Nervensystem (schnell) und Adrenalin (hormonell) wirken zusammen"
             }
           ],
@@ -1423,12 +1467,14 @@
           ],
           "sequenzierungsempfehlung": {
             "empfohlene_phase": "Klasse 8 (erstes bis zweites Quartal) – nach Einführung der Informationsdimension und des Nervensystems",
-            "begruendung": "Kommunikation baut auf Informationsverarbeitung auf; das Nervensystem sollte als erstes Kommunikationssystem eingeführt werden, bevor Hormonsystem und Immunsystem als Variationen desselben Musters folgen"
+            "begruendung": "Kommunikation baut auf Informationsverarbeitung auf; das Nervensystem sollte als erstes Kommunikationssystem eingeführt werden"
           },
           "lernziel_ids_thuringia": [
             "GY-78-HUM-NER-6",
             "GY-78-HUM-NER-7",
+            "GY-78-HUM-NER-12",
             "GY-78-HUM-FES-1",
+            "GY-78-HUM-ABW-2",
             "GY-78-HUM-ABW-3",
             "GY-78-HUM-ABW-4",
             "GY-78-HUM-ABW-5",
@@ -1443,7 +1489,7 @@
             }
           ],
           "diagnostische_fragen": [
-            "Erkläre die Übertragung eines Signals von einer Nervenzelle auf die nächste. Was ist das Signal? Wie wird es übertragen?",
+            "Erkläre die Übertragung eines Signals von einer Nervenzelle auf die nächste.",
             "Vergleiche synaptische Übertragung und hormonelle Kommunikation: Was haben beide gemeinsam, was unterscheidet sie?",
             "Warum reagiert Adrenalin nur auf bestimmte Zielzellen, obwohl es im gesamten Blut verteilt wird?"
           ],
@@ -1465,7 +1511,7 @@
       "kurzbezeichnung": "Steu/Reg",
       "paired_concept": "Information und Kommunikation",
       "definition_kmk": "Beschreibt den Sachverhalt, dass biologische Systeme viele Zustandsgrößen in Grenzen halten, auch wenn innere oder äußere Faktoren sich kurzfristig stark ändern. Dabei werden innere Zustände aufrechterhalten oder funktionsbezogen verändert.",
-      "definition_didaktisch": "Biologische Systeme sind stabil, weil sie kontinuierlich über ihren Zustand informiert werden und korrigierend eingreifen können. Dieses Prinzip der Selbstregulation durch negative Rückkopplung ist das universellste Organisationsprinzip lebender Systeme auf allen Ebenen – von der Enzymregulation bis zur Ökosystemhomöostase. Das Regelkreismodell (Sollwert, Istwert, Sensor, Komparator, Stellglied, Rückkopplung) ist das konzeptuelle Kernmodell dieses Basiskonzepts und sollte als abstraktes Schema einmal explizit eingeführt und dann in jedem Anwendungsfall wiedererkannt werden.",
+      "definition_didaktisch": "Biologische Systeme sind stabil, weil sie kontinuierlich über ihren Zustand informiert werden und korrigierend eingreifen können. Das Regelkreismodell (Sollwert, Istwert, Sensor, Komparator, Stellglied, Rückkopplung) ist das konzeptuelle Kernmodell dieses Basiskonzepts.",
       "wesentliche_prinzipien_kmk": [
         "Positive Rückkopplung",
         "Negative Rückkopplung",
@@ -1484,13 +1530,13 @@
         "Wochen bis Monate (Entwicklungsregulation)"
       ],
       "beispielthemen_gy78": [
-        "Blutzuckerregelung: Insulin senkt, Glukagon hebt den Blutzucker (Organ-/Molekülebene)",
-        "Körpertemperaturregelung: Schwitzen und Muskelzittern als Stellglieder (Organismusebene)",
-        "Atemregulation: CO₂-Konzentration im Blut als Regelgröße (Organ-/Molekülebene)",
-        "Osmoregulation in der Niere: ADH-Regelkreis (Organ-/Molekülebene)",
-        "Herzfrequenzregulation durch das vegetative Nervensystem (Organ-/Organismusebene)",
-        "Reflexbogen als einfache Steuerung ohne Rückkopplung (Neurologische Ebene)",
-        "Menstruationszyklus als hormoneller Regelkreis (Organ-/Organismusebene)"
+        "Blutzuckerregelung: Insulin senkt, Glukagon hebt den Blutzucker",
+        "Körpertemperaturregelung: Schwitzen und Muskelzittern als Stellglieder",
+        "Atemregulation: CO₂-Konzentration im Blut als Regelgröße",
+        "Osmoregulation in der Niere: ADH-Regelkreis",
+        "Herzfrequenzregulation durch das vegetative Nervensystem",
+        "Reflexbogen als einfache Steuerung ohne Rückkopplung",
+        "Menstruationszyklus als hormoneller Regelkreis"
       ],
       "typische_mechanismen": [
         "Negativer Rückkopplungskreis: Istwert > Sollwert → Stellglied dämpft → Istwert sinkt",
@@ -1522,7 +1568,7 @@
         },
         {
           "fehlvorstellung": "Insulin 'beseitigt' Blutzucker",
-          "korrekte_vorstellung": "Insulin bewirkt, dass Glukose aus dem Blut in die Zellen aufgenommen wird (zur Zellatmung oder Speicherung als Glykogen); Blutzucker wird nicht 'beseitigt', sondern umgeleitet",
+          "korrekte_vorstellung": "Insulin bewirkt, dass Glukose aus dem Blut in die Zellen aufgenommen wird; Blutzucker wird nicht 'beseitigt', sondern umgeleitet",
           "didaktischer_hinweis": "Kausalkette: Insulin → Glukosetransporter → Zellaufnahme → Blutzucker sinkt"
         }
       ],
@@ -1538,17 +1584,17 @@
       ],
       "sequenzierungsempfehlung": {
         "empfohlene_phase": "Klasse 8 (zweites Quartal) – nach Einführung von Info/Komm und Stoff/Energie",
-        "begruendung": "Regelkreise setzen Verständnis der Informationsübertragung (Hormone, Nerven) und der zu regelnden Stoffwechselgrößen (Blutzucker, CO₂) voraus. Das abstrakte Regelkreismodell sollte explizit als Konzeptanker eingeführt werden, bevor spezifische Beispiele folgen.",
+        "begruendung": "Regelkreise setzen Verständnis der Informationsübertragung (Hormone, Nerven) und der zu regelnden Stoffwechselgrößen (Blutzucker, CO₂) voraus.",
         "empfohlene_einführungsreihenfolge": [
           "1. Einstieg: Thermostat als technisches Regelkreisbeispiel (Alltagsanker)",
           "2. Regelkreismodell abstrakt einführen: Sollwert, Istwert, Sensor, Komparator, Stellglied, Rückkopplung",
-          "3. Erste biologische Anwendung: Blutzuckerregelung (VD-4) – konkret und gut dokumentierbar",
-          "4. Zweite Anwendung: Atemregulation durch CO₂ (ATM) – phänomenologisch zugänglich",
+          "3. Erste biologische Anwendung: Blutzuckerregelung (VD-4)",
+          "4. Zweite Anwendung: Atemregulation durch CO₂ (ATM)",
           "5. Steuerung vs. Regelung: Reflexbogen als Gegenbeispiel (NER)",
-          "6. Dritte Anwendung: Menstruationszyklus (FES-3) – komplexerer hormoneller Regelkreis",
+          "6. Dritte Anwendung: Menstruationszyklus (FES-3)",
           "7. Synthese: alle Regelkreise als Variationen desselben abstrakten Musters"
         ],
-        "kritischer_konzeptanker": "Das abstrakte Regelkreisschema muss als Konzeptanker explizit eingeführt werden (1–2 Stunden), bevor es auf spezifische biologische Systeme angewendet wird. Ohne diese explizite Einführung behandeln Schüler jeden Regelkreis als neue Tatsache statt als Anwendung desselben Prinzips."
+        "kritischer_konzeptanker": "Das abstrakte Regelkreisschema muss als Konzeptanker explizit eingeführt werden (1–2 Stunden), bevor es auf spezifische biologische Systeme angewendet wird."
       },
       "interleaving_partner": [
         {
@@ -1558,20 +1604,20 @@
         },
         {
           "partner_bk": "bk_stoff_energie_umwandlung",
-          "begruendung": "Stoffwechselgrößen (Blutzucker, CO₂, Osmolalität) sind die Regelgrößen biologischer Kreise; ohne Stoff/Energie fehlt der Inhalt der Regulation",
+          "begruendung": "Stoffwechselgrößen (Blutzucker, CO₂, Osmolalität) sind die Regelgrößen biologischer Kreise",
           "empfohlene_verschraenkung": "Blutzuckerregelung nach der Verdauungseinheit einführen: Was wird geregelt, und warum?"
         }
       ],
       "ersteinfuehrung_empfehlung": {
         "jahrgangsstufe": "8 (zweites Quartal)",
-        "phänomenologischer_einstieg": "Raumthermostat: Wie 'weiß' die Heizung, wann sie aufhören soll zu heizen? → Übertragung auf biologische Systeme",
+        "phänomenologischer_einstieg": "Raumthermostat: Wie 'weiß' die Heizung, wann sie aufhören soll zu heizen?",
         "alltagsphänomen": "Körpertemperatur bei Fieber: Der Körper 'kämpft' gegen die Störung; Schwitzen bei Hitze",
         "vom_konkreten_zum_abstrakten": [
           "Schritt 1: Thermostat-Modell analysieren (Alltagsanker)",
           "Schritt 2: Abstraktion: Regelkreisschema mit Fachbegriffen aufbauen",
           "Schritt 3: Blutzuckerregelung in das Schema einsetzen (erste biologische Anwendung)",
           "Schritt 4: Vergleich mit Steuerung (Reflexbogen): Was fehlt beim Reflex?",
-          "Schritt 5: Weitere Regelkreise als Wiedererkennungsaufgaben (Atemregulation, Osmose)"
+          "Schritt 5: Weitere Regelkreise als Wiedererkennungsaufgaben"
         ]
       },
       "kognitive_komplexitaet_gy78": {
@@ -1614,8 +1660,10 @@
         "GY-78-HUM-AUS-2",
         "GY-78-HUM-FES-2",
         "GY-78-HUM-FES-3",
+        "GY-78-HUM-FES-6",
         "GY-78-HUM-NER-10",
-        "GY-78-HUM-ZUS-2"
+        "GY-78-HUM-ZUS-2",
+        "GY-78-WIR-INS-7"
       ],
       "konzeptanker_lernziele": [
         {
@@ -1637,12 +1685,12 @@
         "Stufe 1: Thermostat-Schema als technisches Analogon",
         "Stufe 2: Abstraktes Regelkreisdiagramm (Sollwert, Istwert, Sensor, Komparator, Stellglied)",
         "Stufe 3: Blutzuckergraph über die Zeit (mit Mahlzeiten und Insulinwirkung)",
-        "Stufe 4: Biologischer Regelkreis mit konkreten anatomischen Strukturen (Bauchspeicheldrüse, Leber)",
-        "Stufe 5: Vergleich mehrerer Regelkreise in einer Tabelle (Gemeinsamkeiten und Unterschiede)"
+        "Stufe 4: Biologischer Regelkreis mit konkreten anatomischen Strukturen",
+        "Stufe 5: Vergleich mehrerer Regelkreise in einer Tabelle"
       ],
       "alltagsanker": [
         "Thermostat / Raumtemperaturregelung: technisches Modell des biologischen Regelkreises",
-        "Körpertemperatur bei Fieber: Sollwert wird durch Pyrogene erhöht; der Körper 'friert', bis die neue Temperatur erreicht ist",
+        "Körpertemperatur bei Fieber: Sollwert wird durch Pyrogene erhöht",
         "Pupillenreflex bei Lichtwechsel: schnelle Steuerung, kein vollständiger Regelkreis",
         "Hunger und Sättigung: grober Regelkreis der Energieaufnahme"
       ],
@@ -1682,7 +1730,7 @@
           "uebergeordnetes_bk": "bk_steuerung_regelung",
           "paired_teilkonzept": "bk_steuerung_regelung__regelung",
           "beschreibung_kmk": "Steuerung bezeichnet die gerichtete Beeinflussung biologischer Prozesse ohne Rückmeldung über den Ist-Zustand (offener Wirkungskreis). Steuerung ermöglicht eine schnelle, aber nicht selbstkorrigierende Reaktion auf Veränderungen.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Steuerung' beschreibt den einfacheren Fall biologischer Kontrolle: Ein Signal bewirkt eine Reaktion, ohne dass das Ergebnis der Reaktion zurückgemeldet wird. Reflexbögen sind das prototypische Beispiel: schnell, zuverlässig, aber nicht selbstkorrigierend. Steuerung wird im Unterricht vor allem durch seine Abgrenzung von der Regelung didaktisch bedeutsam.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Steuerung' beschreibt den einfacheren Fall biologischer Kontrolle: Ein Signal bewirkt eine Reaktion, ohne dass das Ergebnis der Reaktion zurückgemeldet wird. Reflexbögen sind das prototypische Beispiel.",
           "fokus_prinzipien": [
             "Offener Wirkungskreis (keine Rückkopplung)",
             "Nervöse und hormonelle Steuerung"
@@ -1708,7 +1756,7 @@
           "haeufige_schuelervorstellungen": [
             {
               "fehlvorstellung": "Reflexe können willkürlich kontrolliert werden",
-              "korrekte_vorstellung": "Reflexe laufen auf Rückenmarksebene ab und sind schneller als bewusste Kontrolle; bewusste Kontrolle kann Reflexe teilweise hemmen, aber nicht verhindern",
+              "korrekte_vorstellung": "Reflexe laufen auf Rückenmarksebene ab und sind schneller als bewusste Kontrolle",
               "didaktischer_hinweis": "Kniescheibenreflex demonstrieren: Kann man ihn unterdrücken? → Teilweise, aber nicht vollständig"
             }
           ],
@@ -1726,6 +1774,7 @@
             "GY-78-HUM-NER-5",
             "GY-78-HUM-NER-6",
             "GY-78-HUM-NER-7",
+            "GY-78-HUM-ATM-2",
             "GY-78-WIR-INS-7"
           ],
           "diagnostische_fragen": [
@@ -1749,7 +1798,7 @@
           "uebergeordnetes_bk": "bk_steuerung_regelung",
           "paired_teilkonzept": "bk_steuerung_regelung__steuerung",
           "beschreibung_kmk": "Regelung bezeichnet die Konstanthaltung einer Zustandsgröße (Sollwert) durch Rückmeldung des Ist-Zustands (geschlossener Wirkungskreis). Negative Rückkopplung ist das grundlegende Prinzip biologischer Regelkreise und Grundlage der Homöostase.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Regelung' ist das konzeptuell anspruchsvollste im gesamten Lehrgang der Klassen 7–8. Es erfordert zirkuläres Kausaldenken (Ergebnis beeinflusst Ursache) statt des gewohnten linearen Ursache-Wirkungs-Denkens. Negative Rückkopplung ist das universellste Stabilitätsprinzip der Biologie. Positive Rückkopplung ist seltener, aber biologisch bedeutsam (Blutgerinnung, Geburtswehen). Das abstrakte Regelkreisschema muss als wiederverwendbares Erklärungsmodell eingeführt werden.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Regelung' ist das konzeptuell anspruchsvollste im gesamten Lehrgang der Klassen 7–8. Es erfordert zirkuläres Kausaldenken statt des gewohnten linearen Ursache-Wirkungs-Denkens. Negative Rückkopplung ist das universellste Stabilitätsprinzip der Biologie.",
           "fokus_prinzipien": [
             "Negative Rückkopplung",
             "Positive Rückkopplung",
@@ -1767,12 +1816,12 @@
             "Tage bis Wochen (Osmoregulation, Immunregelung)"
           ],
           "beispielthemen_gy78": [
-            "Blutzuckerregelung: Insulin senkt, Glukagon hebt den Blutzucker; negative Rückkopplung (Organ-/Molekülebene)",
-            "Körpertemperaturregelung: Schwitzen bei Hitze, Muskelzittern bei Kälte als Stellglieder (Organismusebene)",
-            "Atemregulation: CO₂-Konzentration im Blut als Regelgröße → Atemzentrum → Atemfrequenz (Organ-/Molekülebene)",
-            "Osmoregulation durch ADH: Wassergehalt des Blutes als Regelgröße (Organ-/Molekülebene)",
-            "Positive Rückkopplung bei der Blutgerinnung: Verletzung → Thrombozytenaggregation → verstärkt Gerinnung",
-            "Menstruationszyklus als komplexer hormoneller Regelkreis mit positiver und negativer Rückkopplung"
+            "Blutzuckerregelung: Insulin senkt, Glukagon hebt den Blutzucker; negative Rückkopplung",
+            "Körpertemperaturregelung: Schwitzen bei Hitze, Muskelzittern bei Kälte als Stellglieder",
+            "Atemregulation: CO₂-Konzentration im Blut als Regelgröße",
+            "Osmoregulation durch ADH",
+            "Positive Rückkopplung bei der Blutgerinnung",
+            "Menstruationszyklus als komplexer hormoneller Regelkreis"
           ],
           "typische_mechanismen": [
             "Regelkreis: Sensor misst Istwert → Komparator vergleicht mit Sollwert → Stellglied korrigiert → Rückmeldung an Sensor",
@@ -1796,11 +1845,11 @@
             "Grundverständnis des Hormonsystems als Kommunikationssystem (Info/Komm)",
             "Grundverständnis der Blutzusammensetzung und des Kreislaufs (BHK)",
             "Grundverständnis der Verdauung und Glukoseresorption (VD-2, VD-3)",
-            "Einführung des abstrakten Regelkreisschemas (kann aus dem Teilkonzept Steuerung entwickelt werden)"
+            "Einführung des abstrakten Regelkreisschemas"
           ],
           "sequenzierungsempfehlung": {
             "empfohlene_phase": "Klasse 8 (zweites Quartal) – nach Steuerung und nach Einführung des Hormonsystems",
-            "begruendung": "Regelung erfordert zirkuläres Kausaldenken; vorherige Einführung der Steuerung (lineares Denken) als Kontraststrategie ist didaktisch sinnvoll",
+            "begruendung": "Regelung erfordert zirkuläres Kausaldenken; vorherige Einführung der Steuerung als Kontraststrategie ist didaktisch sinnvoll",
             "kritischer_konzeptanker": "Das abstrakte Regelkreisschema muss explizit eingeführt werden (empfohlen: 1–2 Stunden mit Thermostat-Analogon), bevor es auf biologische Beispiele angewendet wird"
           },
           "lernziel_ids_thuringia": [
@@ -1808,6 +1857,8 @@
             "GY-78-HUM-ATM-2",
             "GY-78-HUM-AUS-2",
             "GY-78-HUM-FES-3",
+            "GY-78-HUM-FES-6",
+            "GY-78-HUM-BHK-5",
             "GY-78-HUM-ZUS-2"
           ],
           "konzeptanker_lernziele": [
@@ -1817,7 +1868,7 @@
             }
           ],
           "diagnostische_fragen": [
-            "Zeichne den Regelkreis der Blutzuckerregelung mit allen Komponenten (Sensor, Sollwert, Komparator, Stellglied, Rückkopplung).",
+            "Zeichne den Regelkreis der Blutzuckerregelung mit allen Komponenten.",
             "Erkläre, warum negative Rückkopplung die Homöostase ermöglicht. Was würde ohne Rückkopplung passieren?",
             "Wo tritt im Körper positive Rückkopplung auf? Was ist die biologische Funktion dieser Verstärkung?",
             "Warum ist Diabetes mellitus eine Erkrankung des Regelkreises? Welche Komponente ist gestört?"
@@ -1825,13 +1876,13 @@
           "darstellungsformen_progression": [
             "Stufe 1: Thermostat-Analogie (technisches Modell)",
             "Stufe 2: Abstraktes Regelkreisschema mit Fachbegriffen",
-            "Stufe 3: Blutzuckergraph über Zeit mit Markierungen (Mahlzeit, Insulinpeak, Normalisierung)",
+            "Stufe 3: Blutzuckergraph über Zeit mit Markierungen",
             "Stufe 4: Biologischer Regelkreis mit anatomischen Strukturen und Hormonnamen",
-            "Stufe 5: Vergleichstabelle mehrerer Regelkreise (Blutzucker, Atemregulation, ADH)"
+            "Stufe 5: Vergleichstabelle mehrerer Regelkreise"
           ],
           "alltagsanker": [
-            "Thermostat: Idealmodell des Regelkreises – Sollwert, Sensor (Thermometer), Stellglied (Heizung), Rückkopplung",
-            "Fieber: Sollwert wird durch das Immunsystem erhöht; der Körper 'zittert', bis die neue Temperatur erreicht ist",
+            "Thermostat: Idealmodell des Regelkreises",
+            "Fieber: Sollwert wird durch das Immunsystem erhöht",
             "Blutzucker nach dem Mittagessen: sichtbar als Energieschub, dann Rückkehr zur Baseline"
           ],
           "transfer_potential": 0.9,
@@ -1847,7 +1898,7 @@
       "kurzbezeichnung": "Ind/Evo",
       "paired_concept": "Information und Kommunikation",
       "definition_kmk": "Beschreibt den Sachverhalt, dass sich lebende Systeme über verschiedene Zeiträume im Zusammenhang mit Umwelteinflüssen verändern. Die individuelle Entwicklung von Lebewesen und die Weitergabe ihrer genetischen Information durch Fortpflanzung sind die Grundlage für evolutive Entwicklung. Sexuelle Fortpflanzung führt zur Rekombination von genetischem Material und erhöht die genetische Variation. Zusammen mit Selektion ist genetische Variation eine wichtige Ursache für Artwandel.",
-      "definition_didaktisch": "Lebewesen verändern sich auf zwei grundlegend verschiedenen Zeitskalen: innerhalb eines Lebens (Ontogenese) und über Generationen hinweg (Phylogenese). Beide Prozesse hängen zusammen: Individuelle Entwicklung (Zelldifferenzierung, Fortpflanzung) ist die Grundlage dafür, dass genetische Information weitergegeben und durch Selektion geformt werden kann. Das Basiskonzept verbindet die Biologie des Menschen (Pubertät, Schwangerschaft) mit der Evolutionsbiologie (Angepasstheit der Insekten) und schlägt eine Brücke zwischen zwei sehr unterschiedlichen Zeitskalen.",
+      "definition_didaktisch": "Lebewesen verändern sich auf zwei grundlegend verschiedenen Zeitskalen: innerhalb eines Lebens (Ontogenese) und über Generationen hinweg (Phylogenese). Beide Prozesse hängen zusammen: Individuelle Entwicklung (Zelldifferenzierung, Fortpflanzung) ist die Grundlage dafür, dass genetische Information weitergegeben und durch Selektion geformt werden kann. Das Basiskonzept verbindet die Biologie des Menschen (Pubertät, Schwangerschaft, Nervensystem-Plastizität, Immungedächtnis) mit der Evolutionsbiologie (Angepasstheit der Insekten, Stammbaum der Wirbellosen) und schlägt eine Brücke zwischen zwei sehr unterschiedlichen Zeitskalen.",
       "wesentliche_prinzipien_kmk": [
         "Zelldifferenzierung",
         "Reproduktion",
@@ -1867,37 +1918,44 @@
         "Jahrmillionen (Makroevolution, Artentstehung)"
       ],
       "beispielthemen_gy78": [
-        "Pubertät: hormonelle Steuerung von Körperveränderungen durch Hypophyse, Gonaden (Organism-/Organebene)",
-        "Menstruationszyklus: zyklischer Entwicklungsprozess unter hormoneller Steuerung (Organ-/Molekülebene)",
-        "Vorgeburtliche Entwicklung: Befruchtung → Zygote → Embryo → Fetus (Zell-/Organismusebene)",
-        "Metamorphose bei Insekten: vollständige und unvollständige Verwandlung (Organismusebene)",
+        "Pubertät: hormonelle Steuerung von Körperveränderungen durch Hypophyse, Gonaden",
+        "Menstruationszyklus: zyklischer Entwicklungsprozess unter hormoneller Steuerung",
+        "Vorgeburtliche Entwicklung: Befruchtung → Zygote → Embryo → Fetus",
+        "Metamorphose bei Insekten: vollständige und unvollständige Verwandlung",
         "Sexualität: biologische Diversität von Geschlecht und sexueller Orientierung",
-        "Angepasstheit von Insekten an Lebensräume als Ergebnis evolutiver Selektion (Organismus-/Populationsebene)",
-        "Variabilität als Voraussetzung für Selektion (Populations-/Artebene)",
-        "Natürliche Selektion als Mechanismus des Artwandels (Populationsebene)"
+        "Angepasstheit von Insekten an Lebensräume als Ergebnis evolutiver Selektion",
+        "Variabilität als Voraussetzung für Selektion",
+        "Natürliche Selektion als Mechanismus des Artwandels",
+        "Nervensystem-Plastizität als Entwicklungsmerkmal des menschlichen Gehirns",
+        "Immunologisches Gedächtnis als adaptive Lernkapazität des Immunsystems",
+        "Stammbaum der Wirbellosen: phylogenetische Verwandtschaft",
+        "Evolution des menschlichen Gehirns im Vergleich: Strickleiternervensystem vs. ZNS/PNS"
       ],
       "typische_mechanismen": [
         "Zelldifferenzierung durch gezielte Genexpression: Zygote → spezialisierte Zelltypen",
-        "Mitose für Wachstum, Meiose für Rekombination und Gamtenbildung",
+        "Mitose für Wachstum, Meiose für Rekombination und Gametbildung",
         "Hormonelle Steuerung der Fortpflanzung (FSH, LH, Östrogen, Progesteron, Testosteron)",
-        "Metamorphose durch Häutungshormone (Ecdyson) – hormonelle Steuerung (Ind/Evo + Steu/Reg)",
+        "Metamorphose durch Häutungshormone (Ecdyson) – hormonelle Steuerung",
         "Natürliche Selektion: Differenzielle Reproduktion bevorzugt gut angepasste Individuen",
         "Mutation als zufällige Quelle neuer genetischer Varianten",
-        "Rekombination erhöht genetische Variabilität in Populationen"
+        "Rekombination erhöht genetische Variabilität in Populationen",
+        "Synaptische Plastizität als Mechanismus des Lernens und der Anpassung des Nervensystems"
       ],
       "epistemische_rollen": [
         "Historisch-narratives Erklärungsframework: biologische Merkmale werden durch ihre Entstehungsgeschichte erklärt",
         "Verbindet individuelle Zeitskala (Ontogenese) mit evolutiver Zeitskala (Phylogenese)",
         "Erklärt biologische Diversität als Ergebnis historisch kontingenter Prozesse",
         "Grundlage für Verständnis von Angepasstheit als Ergebnis, nicht als Absicht",
-        "Verbindet Genetik, Entwicklungsbiologie und Evolutionsbiologie zu einem Rahmenkonzept"
+        "Verbindet Genetik, Entwicklungsbiologie und Evolutionsbiologie zu einem Rahmenkonzept",
+        "Erklärt Besonderheiten der menschlichen Biologie (Gehirnentwicklung, Immungedächtnis, lange Kindheitsphase) als evolutive Strategien"
       ],
       "kausale_rollen": [
         "Natürliche Selektion als kausaler Mechanismus des Artwandels: differenzielle Reproduktion führt zu Häufigkeitsverschiebungen",
         "Zelldifferenzierung durch epigenetische Steuerung als kausales Entwicklungsmodell",
         "Mutation als zufällige kausale Quelle neuer genetischer Variation",
         "Rekombination als kausaler Mechanismus zur Erhöhung genetischer Variabilität",
-        "Hormonelle Kaskaden als kausaler Mechanismus der Pubertätsentwicklung"
+        "Hormonelle Kaskaden als kausaler Mechanismus der Pubertätsentwicklung",
+        "Synaptische Plastizität als kausaler Mechanismus der Gehirnentwicklung und des Lernens"
       ],
       "haeufige_schuelervorstellungen": [
         {
@@ -1923,7 +1981,12 @@
         {
           "fehlvorstellung": "Pubertät ist ein sozialer, nicht biologischer Prozess",
           "korrekte_vorstellung": "Pubertät ist ein biologisch gesteuerter Entwicklungsprozess durch hormonelle Aktivitätsänderungen der Hypophyse und der Gonaden",
-          "didaktischer_hinweis": "Biologische und soziale Dimension unterscheiden, aber Verbindung anerkennen: biologische Veränderungen haben soziale Konsequenzen"
+          "didaktischer_hinweis": "Biologische und soziale Dimension unterscheiden, aber Verbindung anerkennen"
+        },
+        {
+          "fehlvorstellung": "Das menschliche Gehirn ist bei der Geburt fertig entwickelt",
+          "korrekte_vorstellung": "Das menschliche Gehirn entwickelt sich postnatal über viele Jahre weiter; Synaptogenese, Pruning und Myelinisierung dauern bis ins frühe Erwachsenenalter – eine evolutive Besonderheit des Menschen",
+          "didaktischer_hinweis": "Vergleich: Insektengehirn (Strickleiternervensystem, bei Schlupf funktional) vs. menschliches Gehirn (jahrelange Reifung)"
         }
       ],
       "typische_misskonzeptionen_entstehung": [
@@ -1940,9 +2003,9 @@
       "sequenzierungsempfehlung": {
         "empfohlene_phase_ontogenese": "Klasse 8 (zweites Halbjahr) – nach Einführung des Nervensystems und des Hormonsystems",
         "empfohlene_phase_phylogenese": "Klasse 7 (erstes Halbjahr) – im Kontext der Wirbellosen als phänomenologischer Einstieg; vertieft in Klasse 8",
-        "begruendung": "Die ontogenetischen Inhalte (Pubertät, Fortpflanzung, vorgeburtliche Entwicklung) setzen Verständnis des Hormonsystems voraus (Info/Komm, Steu/Reg) und sind persönlich relevant für Schüler in diesem Alter. Die phylogenetischen Inhalte (Angepasstheit, Selektion) können phänomenologisch früh eingeführt werden (Insekten) und werden konzeptuell vertieft, wenn genetische Grundlagen bekannter sind.",
+        "begruendung": "Die ontogenetischen Inhalte (Pubertät, Fortpflanzung, vorgeburtliche Entwicklung) setzen Verständnis des Hormonsystems (Info/Komm, Steu/Reg) voraus. Die phylogenetischen Inhalte (Angepasstheit, Selektion) können phänomenologisch früh eingeführt werden (Insekten).",
         "empfohlene_einführungsreihenfolge_ontogenese": [
-          "1. Phänomenologischer Einstieg: Pubertät – was verändert sich und warum? (persönliche Relevanz)",
+          "1. Phänomenologischer Einstieg: Pubertät – was verändert sich und warum?",
           "2. Hormonsystem als Steuerungssystem der Pubertät (Hypophyse, Gonaden)",
           "3. Menstruationszyklus als hormoneller Regelkreis (Verknüpfung mit Steu/Reg)",
           "4. Vorgeburtliche Entwicklung: Befruchtung, Zelldifferenzierung, Organogenese",
@@ -1969,8 +2032,13 @@
         },
         {
           "partner_bk": "bk_information_kommunikation",
-          "begruendung": "Hormonelle Kommunikation ist der Mechanismus der Ontogenese; Info/Komm und Ind/Evo sind im Kontext der Pubertät und des Menstruationszyklus untrennbar",
-          "empfohlene_verschraenkung": "Pubertät als Beispiel für hormonelle Kommunikation (Info/Komm) und Entwicklungsprozess (Ind/Evo) gleichzeitig behandeln"
+          "begruendung": "Hormonelle Kommunikation ist der Mechanismus der Ontogenese; Info/Komm und Ind/Evo sind im Kontext der Pubertät und des Menstruationszyklus untrennbar. Zudem ist Nervensystem-Plastizität (Info/Komm) ein evolutiv einzigartiges Merkmal des menschlichen Gehirns (Ind/Evo).",
+          "empfohlene_verschraenkung": "Pubertät als Beispiel für hormonelle Kommunikation (Info/Komm) und Entwicklungsprozess (Ind/Evo) gleichzeitig behandeln; Lernprozesse als Schnittstelle von NER-10 und evolutiver Hirnanpassung thematisieren"
+        },
+        {
+          "partner_bk": "bk_stoff_energie_umwandlung",
+          "begruendung": "Wachstum, Zellteilung und Differenzierung erfordern Energie; der erhöhte Energiebedarf in der Pubertät und der Schwangerschaft verbindet Stoff/Energie mit Ind/Evo direkt",
+          "empfohlene_verschraenkung": "Energiebedarf in Entwicklungsphasen (Schwangerschaft, Pubertät, Wachstum) als Anwendung von Stoff/Energie im Kontext Ind/Evo thematisieren"
         }
       ],
       "ersteinfuehrung_empfehlung": {
@@ -2019,7 +2087,7 @@
         {
           "ziel_bk": "bk_information_kommunikation",
           "beziehungstyp": "wird_implementiert_durch",
-          "beschreibung": "Hormonelle Kommunikation ist der informationstheoretische Mechanismus, durch den Entwicklungsprozesse gesteuert werden; genetische Information ist die molekulare Grundlage der Weitergabe über Generationen"
+          "beschreibung": "Hormonelle Kommunikation ist der informationstheoretische Mechanismus, durch den Entwicklungsprozesse gesteuert werden; genetische Information ist die molekulare Grundlage der Weitergabe über Generationen; Nervensystem-Plastizität ist eine evolutiv entstandene Kapazität des menschlichen Gehirns"
         },
         {
           "ziel_bk": "bk_stoff_energie_umwandlung",
@@ -2035,6 +2103,14 @@
         "GY-78-HUM-FES-5",
         "GY-78-HUM-FES-6",
         "GY-78-HUM-FES-7",
+        "GY-78-HUM-NER-10",
+        "GY-78-HUM-NER-12",
+        "GY-78-HUM-ABW-5",
+        "GY-78-HUM-ABW-6",
+        "GY-78-HUM-ABW-7",
+        "GY-78-HUM-VD-4",
+        "GY-78-HUM-VD-5",
+        "GY-78-HUM-VD-7",
         "GY-78-WIR-INS-5",
         "GY-78-WIR-INS-6",
         "GY-78-WIR-INS-7",
@@ -2045,7 +2121,10 @@
         "GY-78-WIR-WTG-7",
         "GY-78-ZEL-PTZ-5",
         "GY-78-ZEL-PTZ-7",
-        "GY-78-HUM-ZUS-1"
+        "GY-78-ZEL-BAK-2",
+        "GY-78-HUM-ZUS-1",
+        "GY-78-HUM-ATM-4",
+        "GY-78-HUM-BHK-3"
       ],
       "konzeptanker_lernziele": [
         {
@@ -2059,13 +2138,23 @@
         {
           "lernziel_id": "GY-78-WIR-WTG-5",
           "begruendung": "Das begründete Zuordnen von Tiergruppen ist die erste systematische Anwendung evolutiver Denkweise: Merkmale als Ausdruck evolutiver Verwandtschaft verstehen"
+        },
+        {
+          "lernziel_id": "GY-78-HUM-NER-10",
+          "begruendung": "Nervenzellplastizität als Grundlage des Lernens ist ein einzigartiges evolutives Merkmal des menschlichen Gehirns; dieser Konzeptanker verbindet Info/Komm und Ind/Evo über die Biologie des Menschen"
+        },
+        {
+          "lernziel_id": "GY-78-HUM-ABW-5",
+          "begruendung": "Das immunologische Gedächtnis ist eine evolutiv entstandene adaptive Kapazität; die Analogie zum Lerngedächtnis des Nervensystems zeigt, dass Informationsspeicherung auf Zellebene eine evolutive Errungenschaft ist"
         }
       ],
       "diagnostische_fragen": [
         "Ein Schüler sagt: 'Der Schmetterling hat bunte Flügel entwickelt, weil er damit Feinde abschrecken muss.' Was ist an dieser Aussage biologisch falsch? Formuliere sie korrekt um.",
         "Erkläre, wie aus einer befruchteten Eizelle ein Organismus mit vielen verschiedenen Zelltypen entsteht. Was ist der entscheidende Mechanismus?",
         "Vergleiche die vollständige und die unvollständige Metamorphose bei Insekten. Welchen evolutiven Vorteil könnte die vollständige Metamorphose haben?",
-        "Warum ist genetische Variabilität eine Voraussetzung für natürliche Selektion? Was würde ohne Variabilität passieren?"
+        "Warum ist genetische Variabilität eine Voraussetzung für natürliche Selektion? Was würde ohne Variabilität passieren?",
+        "Das menschliche Gehirn ist bei der Geburt noch lange nicht fertig entwickelt. Welchen evolutiven Vorteil könnte diese verlängerte Entwicklungszeit haben?",
+        "Erkläre, warum das immunologische Gedächtnis als eine Form von 'evolutivem Lernen auf Zellebene' bezeichnet werden kann."
       ],
       "darstellungsformen_progression": [
         "Stufe 1: Lebenszyklusdiagramme (Insektenmetamorphose, menschliche Entwicklung)",
@@ -2078,7 +2167,9 @@
         "Pubertät: persönliche Erfahrung der Schüler als phänomenologischer Einstieg",
         "Schmetterling aus der Raupe: dramatische Metamorphose als Motivation für Entwicklungsbiologie",
         "Hunderassen: extreme Variabilität durch künstliche Selektion – Analogie zur natürlichen Selektion",
-        "Antibiotikaresistenz: Evolution in Echtzeit beobachtbar (Generationsfolge von Bakterien)"
+        "Antibiotikaresistenz: Evolution in Echtzeit beobachtbar (Generationsfolge von Bakterien)",
+        "Impfung und Immungedächtnis: Der Körper 'lernt' aus Erfahrung – evolutiv entstandene Fähigkeit",
+        "Lernen und Vergessen: Synaptische Plastizität als biologische Grundlage – einzigartiges evolutives Erbe des Menschen"
       ],
       "sprachliche_stolpersteine": [
         {
@@ -2094,7 +2185,7 @@
         {
           "begriff": "Selektion / Auslese",
           "problem": "Klingt nach bewusstem Auswählen; tatsächlich: differenzielle Reproduktion aufgrund von Merkmalseigenschaften",
-          "empfehlung": "Immer operationalisieren: 'Selektion bedeutet: Individuen mit Merkmal X hinterlassen mehr Nachkommen als Individuen ohne Merkmal X'"
+          "empfehlung": "Immer operationalisieren: 'Selektion bedeutet: Individuen mit Merkmal X hinterlassen unter Bedingung Y mehr Nachkommen'"
         },
         {
           "begriff": "Mutation",
@@ -2107,12 +2198,13 @@
         "Phylogenetische Analyse: Stammbäume lesen, interpretieren und einfache Stammbäume konstruieren",
         "Argumentieren mit Selektionstheorie: evolutionäre Erklärungen formulieren und bewerten",
         "Vergleichende Analyse von Angepasstheiten verschiedener Tiergruppen",
-        "Ableiten gesundheitlicher Maßnahmen aus entwicklungsbiologischen Kenntnissen"
+        "Ableiten gesundheitlicher Maßnahmen aus entwicklungsbiologischen Kenntnissen",
+        "Vergleichende Betrachtung menschlicher Merkmale (Gehirnentwicklung, Immunsystem) als evolutive Besonderheiten"
       ],
       "transfer_potential": 0.87,
       "complexity_level_gy78": 0.76,
       "centrality_estimate": 0.88,
-      "hinweis_zur_einordnung": "Reproduktion, Variabilität und Angepasstheit sind keine eigenständigen KMK-Basiskonzepte, sondern werden als wesentliche Aspekte innerhalb dieses Basiskonzepts behandelt.",
+      "hinweis_zur_einordnung": "Reproduktion, Variabilität und Angepasstheit sind keine eigenständigen KMK-Basiskonzepte, sondern werden als wesentliche Aspekte innerhalb dieses Basiskonzepts behandelt. Die Biologie des Menschen (Pubertät, vorgeburtliche Entwicklung, Nervensystem-Plastizität, Immungedächtnis) ist als evolutiv erklärbare Ontogenese explizit eingebunden.",
       "teilkonzepte": [
         {
           "id": "bk_individuelle_evolutive_entwicklung__individuell",
@@ -2122,7 +2214,7 @@
           "uebergeordnetes_bk": "bk_individuelle_evolutive_entwicklung",
           "paired_teilkonzept": "bk_individuelle_evolutive_entwicklung__evolutiv",
           "beschreibung_kmk": "Die individuelle Entwicklung (Ontogenese) umfasst alle Veränderungen eines Lebewesens von der befruchteten Eizelle bis zum Tod. Sie schließt Zellteilung, Zelldifferenzierung, Wachstum, Fortpflanzung und Altern ein. Umwelteinflüsse und genetische Programme steuern die Ontogenese gemeinsam. Reproduktion ist die Grundlage für die Weitergabe genetischer Information an die nächste Generation.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Individuelle Entwicklung' beschreibt den Lebenslauf eines einzelnen Organismus als biologischen Prozess. Im Mittelpunkt stehen Zelldifferenzierung (wie entstehen aus einer Zelle viele verschiedene Zelltypen?), die hormonelle Steuerung der Pubertät und des Menstruationszyklus sowie die vorgeburtliche Entwicklung. Dieses Teilkonzept ist für Schüler in Klasse 7/8 durch persönliche Relevanz (Pubertät) besonders zugänglich, erfordert aber gleichzeitig die Verknüpfung mit Info/Komm (Hormonsystem) und Steu/Reg (Regelkreise).",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Individuelle Entwicklung' beschreibt den Lebenslauf eines einzelnen Organismus als biologischen Prozess. Im Mittelpunkt stehen Zelldifferenzierung (wie entstehen aus einer Zelle viele verschiedene Zelltypen?), die hormonelle Steuerung der Pubertät und des Menstruationszyklus sowie die vorgeburtliche Entwicklung. Besonders bedeutsam ist die Biologie des Menschen: Die verlängerte Kindheitsphase, die postnatale Hirnentwicklung (Synaptogenese, Pruning) und das Immungedächtnis sind evolutiv entstandene ontogenetische Besonderheiten des Menschen, die dieses Teilkonzept mit dem evolutiven Teilkonzept direkt verbinden.",
           "fokus_prinzipien": [
             "Zelldifferenzierung",
             "Reproduktion"
@@ -2130,37 +2222,42 @@
           "systemebenen": [
             "Molekül (DNA, Hormone)",
             "Zelle (Zygote, Stammzellen, differenzierte Zellen)",
-            "Organ (Drüsen, Gonaden)",
+            "Organ (Drüsen, Gonaden, Gehirn)",
             "Organismus"
           ],
           "typische_zeitskalen": [
             "Stunden bis Tage (frühe Zellteilung nach Befruchtung)",
             "Wochen bis Monate (Embryonalentwicklung, Organogenese)",
-            "Jahre (Pubertät, Adoleszenz)",
-            "Lebenslang (gesamte Ontogenese)"
+            "Jahre (Pubertät, Adoleszenz, postnatale Hirnentwicklung)",
+            "Lebenslang (gesamte Ontogenese, immunologisches Gedächtnis)"
           ],
           "beispielthemen_gy78": [
-            "Pubertät: hormonelle Aktivitätsänderung von Hypophyse, Hoden und Eierstöcken (Organ-/Molekülebene)",
-            "Menstruationszyklus: Aufbau und Abstoßung der Gebärmutterschleimhaut unter hormoneller Steuerung (Organ-/Molekülebene)",
-            "Vorgeburtliche Entwicklung: Befruchtung → Zygote → Furchung → Embryo → Fetus (Zell-/Organismusebene)",
+            "Pubertät: hormonelle Aktivitätsänderung von Hypophyse, Hoden und Eierstöcken",
+            "Menstruationszyklus: Aufbau und Abstoßung der Gebärmutterschleimhaut unter hormoneller Steuerung",
+            "Vorgeburtliche Entwicklung: Befruchtung → Zygote → Furchung → Embryo → Fetus",
             "Einflussfaktoren auf die vorgeburtliche Entwicklung: Alkohol, Nikotin, Infektionen",
-            "Metamorphose bei Insekten: vollständige (Ei → Larve → Puppe → Imago) und unvollständige Verwandlung (Organ-/Organismusebene)",
-            "Zelldifferenzierung: aus einer Zygote entstehen über 200 verschiedene Zelltypen (Zell-/Molekülebene)",
-            "Sexualität: Varianten des biologischen Geschlechts, Geschlechtsidentitäten, sexuelle Orientierungen"
+            "Metamorphose bei Insekten: vollständige (Ei → Larve → Puppe → Imago) und unvollständige Verwandlung",
+            "Zelldifferenzierung: aus einer Zygote entstehen über 200 verschiedene Zelltypen",
+            "Sexualität: Varianten des biologischen Geschlechts, Geschlechtsidentitäten, sexuelle Orientierungen",
+            "Postnatale Hirnentwicklung des Menschen: Synaptogenese, synaptisches Pruning, Myelinisierung als evolutive Besonderheit",
+            "Immunologisches Gedächtnis als adaptive ontogenetische Kapazität: Aufbau durch Infektion oder Impfung",
+            "Sucht als Fehlentwicklung neuronaler Plastizität: Veränderung von Synapsenverbindungen durch Suchtmittel"
           ],
           "typische_mechanismen": [
             "Mitose für Wachstum: identische Tochterzellen",
-            "Meiose für Gamtenbildung: Rekombination und Haploidisierung",
+            "Meiose für Gametbildung: Rekombination und Haploidisierung",
             "Zelldifferenzierung durch gezielte Genexpression: identisches Erbgut, verschiedene Genaktivität",
             "Hormonelle Steuerung der Pubertät: GnRH → FSH/LH → Testosteron/Östrogen → Körperveränderungen",
             "Menstruationszyklus: FSH → Follikelreifung → Östrogen → LH-Gipfel → Ovulation → Gelbkörper → Progesteron → Menstruation oder Schwangerschaft",
-            "Metamorphose durch Ecdyson (Häutungshormon) und Juvenilhormon"
+            "Metamorphose durch Ecdyson (Häutungshormon) und Juvenilhormon",
+            "Synaptische Plastizität: Stärkung häufig genutzter Verbindungen, Pruning ungenutzter Synapsen",
+            "Klonale Selektion von B-Zellen: passendes Antikörper-B-Zell-Klon proliferiert → Gedächtniszellen entstehen"
           ],
           "haeufige_schuelervorstellungen": [
             {
               "fehlvorstellung": "Alle Körperzellen sind genetisch unterschiedlich, weil sie verschiedene Aufgaben haben",
               "korrekte_vorstellung": "Alle Körperzellen eines Organismus haben (mit wenigen Ausnahmen) identisches Erbgut; Unterschiede entstehen durch verschiedene Genexpression (Zelldifferenzierung)",
-              "didaktischer_hinweis": "Klonierungsbeispiel: Aus einer Körperzelle kann theoretisch ein ganzer Organismus entstehen – das zeigt die Vollständigkeit des Erbguts in jeder Zelle"
+              "didaktischer_hinweis": "Klonierungsbeispiel: Aus einer Körperzelle kann theoretisch ein ganzer Organismus entstehen"
             },
             {
               "fehlvorstellung": "Die Pubertät beginnt beim Mädchen früher als beim Jungen, weil Mädchen schneller 'reifen'",
@@ -2168,27 +2265,33 @@
               "didaktischer_hinweis": "Sachliche, biologische Erklärung ohne Wertung; Variation im Zeitpunkt des Pubertätsbeginns ist normal"
             },
             {
-              "fehlvorstellung": "Schwangerschaftsverhütung ist 'unnatürlich'",
-              "korrekte_vorstellung": "Verhütungsmethoden greifen in natürliche hormonelle Prozesse ein; das ist biologisch erklärbar und ethisch zu bewerten",
-              "didaktischer_hinweis": "Biologische Wirkweise verschiedener Verhütungsmethoden sachlich erklären; Bewertung den Schülern überlassen"
+              "fehlvorstellung": "Das Gehirn ist bei der Geburt fertig und lernt nur durch Erfahrungen 'neue Inhalte'",
+              "korrekte_vorstellung": "Das Gehirn entwickelt sich strukturell nach der Geburt weiter: Synaptogenese, Pruning und Myelinisierung dauern bis ins frühe Erwachsenenalter; Lernen verändert die Synapsenstruktur physisch",
+              "didaktischer_hinweis": "Verknüpfung mit NER-10: Nervenzellverbindungen als plastische Strukturen; Einfluss von Suchtmitteln als Beleg (NER-12)"
             }
           ],
           "konzeptuelle_voraussetzungen": [
             "Grundverständnis der Zellstruktur und Zellteilung (ZEL-PTZ-2)",
             "Grundverständnis des Hormonsystems als Informationssystem (Info/Komm)",
             "Grundverständnis hormoneller Regelkreise (Steu/Reg – Regelung)",
-            "Grundverständnis der Blutbestandteile und des Kreislaufs als Transportweg für Hormone (BHK)"
+            "Grundverständnis der Blutbestandteile und des Kreislaufs als Transportweg für Hormone (BHK)",
+            "Grundverständnis des Nervensystems und synaptischer Plastizität (NER-9, NER-10)"
           ],
           "sequenzierungsempfehlung": {
             "empfohlene_phase": "Klasse 8 (zweites Halbjahr) – nach Einführung des Nervensystems und des Hormonsystems",
             "begruendung": "Die hormonelle Steuerung der Pubertät und des Menstruationszyklus setzt Verständnis des Hormonsystems (Info/Komm) und von Regelkreisen (Steu/Reg) voraus. Die persönliche Relevanz der Pubertät für Schüler in diesem Alter macht dieses Thema zu einem besonders wirksamen Motivationsanker.",
-            "warnung": "Fortpflanzung und Entwicklung sollten nicht am Anfang der Jahrgangsstufe 7 eingeführt werden, wie es die lineare Lehrplanreihenfolge suggeriert, da die konzeptuellen Voraussetzungen (Hormonsystem, Regelkreise) noch fehlen"
+            "warnung": "Fortpflanzung und Entwicklung sollten nicht am Anfang der Jahrgangsstufe 7 eingeführt werden, da die konzeptuellen Voraussetzungen (Hormonsystem, Regelkreise) noch fehlen"
           },
           "interleaving_partner": [
             {
               "partner": "bk_steuerung_regelung__regelung",
               "begruendung": "Der Menstruationszyklus ist gleichzeitig ein Entwicklungsprozess (Ind/Evo) und ein hormoneller Regelkreis (Steu/Reg); beide Perspektiven müssen explizit verknüpft werden",
               "empfohlene_verschraenkung": "Menstruationszyklus-Diagramm gleichzeitig als Entwicklungsdiagramm und als Regelkreisdiagramm analysieren"
+            },
+            {
+              "partner": "bk_information_kommunikation__information",
+              "begruendung": "Synaptische Plastizität (NER-10) ist gleichzeitig ein Informationsspeicherungsprozess (Info/Komm) und ein individueller Entwicklungsprozess (Ind/Evo – Individuell); Suchtmittelmissbrauch (NER-12) zeigt die Verletzbarkeit ontogenetischer Gehirnentwicklung",
+              "empfohlene_verschraenkung": "NER-10 und NER-12 explizit als Entwicklungsbiologie des Gehirns rahmen, nicht nur als Physiologie"
             },
             {
               "partner": "bk_individuelle_evolutive_entwicklung__evolutiv",
@@ -2205,7 +2308,9 @@
               "Schritt 2: Hormonsystem als Ursache: Hypophyse → Gonaden → Körperveränderungen",
               "Schritt 3: Menstruationszyklus als zyklischer Entwicklungsprozess unter hormoneller Steuerung",
               "Schritt 4: Vorgeburtliche Entwicklung: von der Zygote zum Fetus",
-              "Schritt 5: Zelldifferenzierung als Kernmechanismus: eine Zygote → viele Zelltypen"
+              "Schritt 5: Zelldifferenzierung als Kernmechanismus: eine Zygote → viele Zelltypen",
+              "Schritt 6: Postnatale Hirnentwicklung: Warum braucht der Mensch so lange zum Erwachsenwerden?",
+              "Schritt 7: Immungedächtnis: Der Körper lernt aus Erfahrung – Parallele zur neuronalen Plastizität"
             ]
           },
           "kognitive_komplexitaet_gy78": {
@@ -2215,12 +2320,14 @@
               "Zeitliche Prozesse beschreiben und erklären",
               "Hormonelle Kausalketten verfolgen",
               "Gesundheitliche Maßnahmen ableiten",
-              "Biologische und soziale Dimension unterscheiden"
+              "Biologische und soziale Dimension unterscheiden",
+              "Ontogenese als evolutiv entstandenen Prozess verstehen"
             ],
             "typische_kognitionsprobleme": [
               "Verwechslung von Steuerung (Pubertät) und Regelung (Menstruationszyklus)",
               "Fehlende Verbindung zwischen Zelldifferenzierung (molekular) und Organentwicklung (makroskopisch)",
-              "Biologische Fakten und normative Wertungen nicht klar trennen"
+              "Biologische Fakten und normative Wertungen nicht klar trennen",
+              "Fehlende Verbindung zwischen Synaptischer Plastizität (NER-10) und Entwicklungsbiologie des Gehirns"
             ]
           },
           "lernziel_ids_thuringia": [
@@ -2231,6 +2338,15 @@
             "GY-78-HUM-FES-5",
             "GY-78-HUM-FES-6",
             "GY-78-HUM-FES-7",
+            "GY-78-HUM-NER-10",
+            "GY-78-HUM-NER-12",
+            "GY-78-HUM-ABW-5",
+            "GY-78-HUM-ABW-6",
+            "GY-78-HUM-ABW-7",
+            "GY-78-HUM-VD-4",
+            "GY-78-HUM-VD-5",
+            "GY-78-HUM-VD-7",
+            "GY-78-HUM-ZUS-1",
             "GY-78-WIR-INS-7",
             "GY-78-ZEL-PTZ-5",
             "GY-78-ZEL-PTZ-7"
@@ -2243,26 +2359,39 @@
             {
               "lernziel_id": "GY-78-HUM-FES-4",
               "begruendung": "Die vorgeburtliche Entwicklung verbindet Zelldifferenzierung mit Gesundheitsbildung und hat hohe persönliche Relevanz für Schüler"
+            },
+            {
+              "lernziel_id": "GY-78-HUM-NER-10",
+              "begruendung": "Nervenzellplastizität als Grundlage von Lernprozessen ist ein ontogenetisches Schlüsselthema der Humanbiologie: Sie verbindet Entwicklungsbiologie (Ind/Evo – Individuell) mit Informationsverarbeitung (Info/Komm) und hat evolutiven Erklärungswert (langer Reifungsprozess des menschlichen Gehirns)"
+            },
+            {
+              "lernziel_id": "GY-78-HUM-ABW-5",
+              "begruendung": "Das immunologische Gedächtnis ist eine ontogenetisch erworbene Kapazität: Jedes Individuum baut im Laufe seines Lebens sein eigenes Immungedächtnis auf; die Parallele zur synaptischen Plastizität macht das allgemeine Prinzip der biologischen Informationsspeicherung deutlich"
             }
           ],
           "diagnostische_fragen": [
             "Erkläre, welche Drüsen in der Pubertät aktiver werden und welche Veränderungen das auslöst. Was ist die Ursache, was ist die Wirkung?",
             "Beschreibe die Phasen des Menstruationszyklus und erkläre, welche Hormone jeweils dominant sind.",
             "Warum können aus einer einzigen befruchteten Eizelle so viele verschiedene Zelltypen entstehen, obwohl alle dieselbe DNA haben?",
-            "Nenne drei Faktoren, die die vorgeburtliche Entwicklung schädigen können, und erkläre jeweils den biologischen Mechanismus der Schädigung."
+            "Nenne drei Faktoren, die die vorgeburtliche Entwicklung schädigen können, und erkläre jeweils den biologischen Mechanismus der Schädigung.",
+            "Warum braucht das menschliche Gehirn so viel länger zur Reifung als das Insektengehirn? Welchen biologischen Vorteil könnte diese verlängerte Entwicklungszeit haben?",
+            "Erkläre, wie das immunologische Gedächtnis entsteht und warum es als 'biologisches Lernen' bezeichnet werden kann."
           ],
           "darstellungsformen_progression": [
             "Stufe 1: Körpersilhouetten mit eingetragenen Pubertätsveränderungen",
             "Stufe 2: Hormongraph des Menstruationszyklus (Östrogen, Progesteron, FSH, LH über 28 Tage)",
             "Stufe 3: Kausalkettendiagramm: Hypophyse → FSH → Follikelreifung → Östrogen → Uterusschleimhaut",
             "Stufe 4: Zeitstrahl der vorgeburtlichen Entwicklung (Befruchtung bis Geburt)",
-            "Stufe 5: Vergleichsdiagramm: vollständige vs. unvollständige Metamorphose"
+            "Stufe 5: Vergleichsdiagramm: vollständige vs. unvollständige Metamorphose",
+            "Stufe 6: Schema synaptische Plastizität: Nutzung → Stärkung / Nichtnutzung → Pruning"
           ],
           "alltagsanker": [
             "Pubertät als eigene Erfahrung: Was hat sich verändert? Wann begann es?",
             "Filmaufnahmen der Embryonalentwicklung: sichtbare Zellteilung und Organbildung",
             "Raupe wird zum Schmetterling: beobachtbare Metamorphose als Einstieg in Zelldifferenzierung",
-            "Eineiige Zwillinge: selbes Erbgut → warum werden sie trotzdem unterschiedlich?"
+            "Eineiige Zwillinge: selbes Erbgut → warum werden sie trotzdem unterschiedlich?",
+            "Impfung als Eingriff in das Immungedächtnis: Immunsystem wird 'trainiert'",
+            "Lernen für die Schule: Synaptische Verstärkung durch Wiederholung – biologischer Mechanismus des Lernens"
           ],
           "sprachliche_stolpersteine": [
             {
@@ -2276,6 +2405,11 @@
               "empfehlung": "Menstruationszyklus immer mit Tagesangaben und Phasennamen einführen; Phasengraph von Anfang an nutzen"
             },
             {
+              "begriff": "Plastizität",
+              "problem": "Im Alltag: 'formbar' oder 'biegsam'; in der Neurobiologie: Fähigkeit des Gehirns, seine synaptische Verschaltung zu verändern",
+              "empfehlung": "Immer konkret erklären: 'Neuronale Plastizität bedeutet: Das Gehirn kann seine Verbindungen zwischen Nervenzellen stärken, schwächen oder neu bilden'"
+            },
+            {
               "begriff": "Geschlecht / Geschlechtsidentität / sexuelle Orientierung",
               "problem": "Im Alltag oft synonym oder verwechselt; in der Biologie und Psychologie klar unterschiedene Konzepte",
               "empfehlung": "Klare Definitionen: biologisches Geschlecht (chromosomal, gonadal, hormonell), Geschlechtsidentität (Selbstwahrnehmung), sexuelle Orientierung (Anziehung)"
@@ -2286,7 +2420,8 @@
             "Ableiten gesundheitlicher Maßnahmen aus entwicklungsbiologischen Kenntnissen",
             "Bewertung von Verhütungsmethoden nach biologischen Kriterien",
             "Auswertung von Hormongraphen (Menstruationszyklus)",
-            "Sachliche Auseinandersetzung mit biologischen Aspekten von Sexualität und Geschlecht"
+            "Sachliche Auseinandersetzung mit biologischen Aspekten von Sexualität und Geschlecht",
+            "Verknüpfung von Suchtmittelwirkung (NER-12) mit Entwicklungsbiologie des Gehirns"
           ],
           "transfer_potential": 0.82,
           "complexity_level_gy78": 0.65,
@@ -2300,7 +2435,7 @@
           "uebergeordnetes_bk": "bk_individuelle_evolutive_entwicklung",
           "paired_teilkonzept": "bk_individuelle_evolutive_entwicklung__individuell",
           "beschreibung_kmk": "Die evolutive Entwicklung (Phylogenese) beschreibt die Veränderung von Populationen und Arten über lange Zeiträume. Genetische Variation (durch Mutation und Rekombination) und Selektion sind die zentralen Mechanismen. Angepasstheit ist das Ergebnis evolutiver Prozesse, Variabilität deren Voraussetzung.",
-          "beschreibung_didaktisch": "Das Teilkonzept 'Evolutive Entwicklung' ist das konzeptuell anspruchsvollste des gesamten Lehrgangs, weil es ein fundamental anderes Denkmuster erfordert: Populationsdenken statt Individualdenken, statistische Variation statt Einzelmerkmal, Zeiträume von Generationen bis Jahrmillionen statt Minuten und Jahren. Das Überwinden des teleologischen Denkens ist das zentrale Lernziel. Im Kontext des Thüringer Lehrplans für Klassen 7–8 wird dieses Teilkonzept phänomenologisch über die Angepasstheit von Wirbellosen eingeführt und konzeptuell durch den Selektionsmechanismus unterfüttert.",
+          "beschreibung_didaktisch": "Das Teilkonzept 'Evolutive Entwicklung' ist das konzeptuell anspruchsvollste des gesamten Lehrgangs, weil es ein fundamental anderes Denkmuster erfordert: Populationsdenken statt Individualdenken, statistische Variation statt Einzelmerkmal, Zeiträume von Generationen bis Jahrmillionen. Das Überwinden des teleologischen Denkens ist das zentrale Lernziel. Besonders bedeutsam ist der Bezug zur Humanbiologie: Spezifische menschliche Merkmale (großes Gehirn, lange Kindheitsphase, aufrechter Gang, Sprachfähigkeit, soziales Leben, komplexes Immunsystem) lassen sich als evolutive Anpassungen an spezifische Selektionsdrücke erklären – und sind gleichzeitig Teil der Ontogenese (Ind/Evo – Individuell).",
           "fokus_prinzipien": [
             "Selektion",
             "Genetische Variation durch Mutation und Rekombination"
@@ -2317,13 +2452,18 @@
             "Jahrtausende bis Jahrmillionen (Makroevolution, Artentstehung)"
           ],
           "beispielthemen_gy78": [
-            "Natürliche Selektion als Mechanismus des Artwandels: Variation → Selektion → Anpassung (Populationsebene)",
-            "Genetische Variation als Voraussetzung für Selektion: Variabilität in einer Insektenpopulation (Populationsebene)",
-            "Mutation als Quelle neuer genetischer Varianten (Molekülebene)",
-            "Angepasstheiten von Insekten an Lebensräume: Mundwerkzeuge, Tarnfarben, Verhaltensweisen (Organismus-/Organisationsebene)",
-            "Artenvielfalt der Insekten als Ergebnis evolutiver Radiation (Artebene)",
-            "Stammbäume der Wirbellosen: phylogenetische Verwandtschaft aus Merkmalsvergleichen ableiten (Artebene)",
-            "Abgrenzung von Wirbellosen und Wirbeltieren anhand evolutiver Merkmale (Artebene)"
+            "Natürliche Selektion als Mechanismus des Artwandels: Variation → Selektion → Anpassung",
+            "Genetische Variation als Voraussetzung für Selektion: Variabilität in einer Insektenpopulation",
+            "Mutation als Quelle neuer genetischer Varianten",
+            "Angepasstheiten von Insekten an Lebensräume: Mundwerkzeuge, Tarnfarben, Verhaltensweisen",
+            "Artenvielfalt der Insekten als Ergebnis evolutiver Radiation",
+            "Stammbäume der Wirbellosen: phylogenetische Verwandtschaft aus Merkmalsvergleichen ableiten",
+            "Abgrenzung von Wirbellosen und Wirbeltieren anhand evolutiver Merkmale",
+            "Menschliche Merkmale als evolutive Anpassungen: großes Gehirn, Sprachfähigkeit, aufrechter Gang, lange Kindheitsphase, soziales Leben",
+            "Nervensystem-Evolution: Strickleiternervensystem (Insekten) vs. ZNS/PNS (Mensch) als evolutive Stufen der Informationsverarbeitung",
+            "Immunsystem als evolutive Errungenschaft: von unspezifischer zu spezifischer Abwehr",
+            "Antibiotikaresistenz: Evolution in Echtzeit – Selektion durch Antibiotika macht resistente Stämme häufiger",
+            "Haustierrassen als Beispiel für künstliche Selektion (Analogie zur natürlichen Selektion)"
           ],
           "typische_mechanismen": [
             "Natürliche Selektion: Individuen mit vorteilhaften Merkmalen hinterlassen mehr Nachkommen → Merkmalhäufigkeit verändert sich in der Population",
@@ -2339,13 +2479,13 @@
             },
             {
               "fehlvorstellung": "Ein Individuum kann sich im Laufe seines Lebens evolutiv anpassen (Lamarckismus)",
-              "korrekte_vorstellung": "Evolution betrifft Populationen über Generationen, nicht Individuen innerhalb eines Lebens; erworben Merkmale werden nicht vererbt",
+              "korrekte_vorstellung": "Evolution betrifft Populationen über Generationen, nicht Individuen innerhalb eines Lebens; erworbene Merkmale werden nicht vererbt",
               "didaktischer_hinweis": "Gegenbeispiel: Bodybuilder-Muskeln werden nicht vererbt; Giraffenhals-Analogie ausführlich diskutieren"
             },
             {
-              "fehlvorstellung": "Evolution führt immer zu 'besseren' Organismen",
-              "korrekte_vorstellung": "Evolution führt zu besser an den aktuellen Selektionsdruck angepassten Organismen; 'besser' ist kontextabhängig und relativ",
-              "didaktischer_hinweis": "Beispiel: Ein Virus ist 'gut angepasst' an seinen Wirt – ist er deshalb 'besser' als der Mensch?"
+              "fehlvorstellung": "Der Mensch ist das 'höchste' oder 'vollkommenste' Produkt der Evolution",
+              "korrekte_vorstellung": "Evolution führt zu besser an den aktuellen Selektionsdruck angepassten Organismen; 'besser' ist kontextabhängig und relativ; alle lebenden Arten sind gleich 'erfolgreich' im Sinne der Reproduktion",
+              "didaktischer_hinweis": "Insekten: mit über einer Million Arten die artenreichste Tiergruppe – evolutiv mindestens ebenso 'erfolgreich' wie der Mensch"
             },
             {
               "fehlvorstellung": "Alle Individuen einer Art sind gleich; Variation ist Ausnahme",
@@ -2357,7 +2497,7 @@
             "Teleologisches Denken ist kulturell tief verankert (religiöse Schöpfungsvorstellungen, Alltagssprache mit 'damit' und 'um zu')",
             "Lamarckismus entspricht der Alltagserfahrung (Training verbessert Körper) und muss explizit widerlegt werden",
             "Individuum-Population-Verwechslung entsteht, weil wir intuitiv über Individuen, nicht über Populationen nachdenken",
-            "Gerichtetheitsillusion entsteht durch lineare Stammbaumdarstellungen"
+            "Gerichtetheitsillusion entsteht durch lineare Stammbaumdarstellungen, die den Menschen als Endpunkt zeigen"
           ],
           "konzeptuelle_voraussetzungen": [
             "Grundverständnis biologischer Variabilität als beobachtbares Phänomen",
@@ -2367,14 +2507,15 @@
           ],
           "sequenzierungsempfehlung": {
             "empfohlene_phase": "Klasse 7 (phänomenologische Einführung im Kontext Wirbellose) – vertieft in Klasse 8 nach Einführung der Reproduktion",
-            "begruendung": "Die phänomenologische Ebene (Angepasstheit von Insekten) ist früh zugänglich. Der Selektionsmechanismus als kausale Erklärung erfordert Vorverständnis von Variation und Fortpflanzung und sollte nach der Einführung der Ontogenese vertieft werden.",
+            "begruendung": "Die phänomenologische Ebene (Angepasstheit von Insekten) ist früh zugänglich. Der Selektionsmechanismus als kausale Erklärung erfordert Vorverständnis von Variation und Fortpflanzung.",
             "empfohlene_einführungsreihenfolge": [
               "1. Phänomenologie: Variabilität und Angepasstheit bei Insekten beobachten und beschreiben",
               "2. Selektionsgedankenexperiment: Welche Motten überleben auf heller/dunkler Rinde besser?",
               "3. Selektion als Mechanismus formal einführen: Variation → differenzielle Reproduktion → veränderte Populationsfrequenz",
               "4. Mutation und Rekombination als Quellen der Variation einführen",
               "5. Stammbäume lesen und phylogenetische Verwandtschaft interpretieren",
-              "6. Überwindung teleologischen Denkens: explizite Umformulierungsübungen"
+              "6. Überwindung teleologischen Denkens: explizite Umformulierungsübungen",
+              "7. Transfer auf menschliche Merkmale: Welche menschlichen Eigenschaften lassen sich als evolutive Anpassungen erklären?"
             ]
           },
           "interleaving_partner": [
@@ -2387,6 +2528,11 @@
               "partner": "bk_individuelle_evolutive_entwicklung__individuell",
               "begruendung": "Reproduktion (Ontogenese) ist die notwendige Grundlage für Selektion (Phylogenese); beide Teilkonzepte sollten explizit verknüpft werden",
               "empfohlene_verschraenkung": "Nach Einführung der Fortpflanzung (Ind/Evo – Individuell) direkt die Frage stellen: 'Was passiert, wenn manche Individuen mehr Nachkommen haben als andere?'"
+            },
+            {
+              "partner": "bk_information_kommunikation",
+              "begruendung": "Der Vergleich von Insekten-Nervensystem (Strickleiternervensystem) mit menschlichem ZNS/PNS ist eine evolutive Analyse von Informationsverarbeitungssystemen; Nervensystem-Evolution verbindet Info/Komm mit Ind/Evo – Evolutiv direkt",
+              "empfohlene_verschraenkung": "Im Nervensystem-Block (NER-8) explizit den evolutiven Vergleich ziehen: Strickleiternervensystem der Insekten (INS-4) als evolutiv einfachere Lösung desselben Problems (Informationsverarbeitung)"
             }
           ],
           "ersteinfuehrung_empfehlung": {
@@ -2399,7 +2545,8 @@
               "Schritt 3: Gedankenexperiment: Was passiert über viele Generationen?",
               "Schritt 4: Selektion als Mechanismus formal einführen",
               "Schritt 5: Mutation und Rekombination als Variationsquellen",
-              "Schritt 6: Teleologische Formulierungen identifizieren und umformulieren"
+              "Schritt 6: Teleologische Formulierungen identifizieren und umformulieren",
+              "Schritt 7: Transfer auf menschliche Merkmale als evolutive Anpassungen"
             ]
           },
           "kognitive_komplexitaet_gy78": {
@@ -2410,13 +2557,15 @@
               "Zeitskalen von Generationen bis Jahrmillionen denken",
               "Teleologisches Denken bewusst überwinden",
               "Kausale Mechanismen von Ergebnissen unterscheiden",
-              "Wahrscheinlichkeitsdenken: differentielle Reproduktion"
+              "Wahrscheinlichkeitsdenken: differentielle Reproduktion",
+              "Vergleichend-evolutives Denken: Menschliche Merkmale als evolutive Anpassungen erkennen"
             ],
             "typische_kognitionsprobleme": [
               "Teleologisches Denken ist hartnäckig und kehrt unter Zeitdruck zurück",
               "Populationsdenken erfordert bewusste Übung; intuitiv denken Schüler über Individuen",
               "Zeitskalen von Jahrmillionen sind kognitiv schwer zugänglich",
-              "Unterschied zwischen Variation (innerhalb einer Generation) und Artwandel (über Generationen) unklar"
+              "Unterschied zwischen Variation (innerhalb einer Generation) und Artwandel (über Generationen) unklar",
+              "Schwierigkeit, menschliche Biologie als evolutiv kontingent (nicht notwendig) zu verstehen"
             ]
           },
           "lernziel_ids_thuringia": [
@@ -2424,9 +2573,23 @@
             "GY-78-WIR-WTG-5",
             "GY-78-WIR-WTG-6",
             "GY-78-WIR-WTG-7",
+            "GY-78-WIR-INS-1",
+            "GY-78-WIR-INS-2",
+            "GY-78-WIR-INS-3",
+            "GY-78-WIR-INS-4",
             "GY-78-WIR-INS-5",
             "GY-78-WIR-INS-6",
-            "GY-78-WIR-INS-8"
+            "GY-78-WIR-INS-8",
+            "GY-78-WIR-INS-9",
+            "GY-78-ZEL-PTZ-7",
+            "GY-78-ZEL-BAK-2",
+            "GY-78-HUM-NER-8",
+            "GY-78-HUM-NER-10",
+            "GY-78-HUM-ABW-5",
+            "GY-78-HUM-ABW-6",
+            "GY-78-HUM-ATM-4",
+            "GY-78-HUM-BHK-3",
+            "GY-78-HUM-ZUS-1"
           ],
           "konzeptanker_lernziele": [
             {
@@ -2436,26 +2599,42 @@
             {
               "lernziel_id": "GY-78-WIR-WTG-7",
               "begruendung": "Das Bewerten und Begründen von Schutzmaßnahmen für Wirbellose verknüpft evolutive Denkweise mit Bildung für nachhaltige Entwicklung und schafft Anwendungsrelevanz"
+            },
+            {
+              "lernziel_id": "GY-78-HUM-NER-8",
+              "begruendung": "Der Vergleich von ZNS/PNS (Mensch) mit dem Strickleiternervensystem (Insekten, INS-4) ist ein direkter evolutiver Vergleich: Beide sind Lösungen für dasselbe Problem (Informationsverarbeitung), aber evolutiv verschieden komplex – ein zentrales Konzeptanker-Lernziel für humane Evolution"
+            },
+            {
+              "lernziel_id": "GY-78-HUM-ABW-5",
+              "begruendung": "Das spezifische Immunsystem (Antigen-Antikörper, Gedächtniszellen) ist eine evolutiv entstandene Errungenschaft der Wirbeltiere; der Vergleich mit unspezifischer Abwehr (ABW-4) macht die evolutive Steigerung der Abwehrkomplexität sichtbar"
+            },
+            {
+              "lernziel_id": "GY-78-ZEL-PTZ-7",
+              "begruendung": "Die Evolution von Einzellern zu Vielzellern am Beispiel der Grünalgen ist der direkteste Beleg für evolutiven Artwandel im Zellbiologie-Block; Zelldifferenzierung als evolutive Innovation wird hier erstmals sichtbar"
             }
           ],
           "diagnostische_fragen": [
             "Ein Schüler schreibt: 'Die Käfer wurden dunkler, weil sie sich besser tarnen wollten.' Erkläre, was an dieser Aussage biologisch falsch ist, und formuliere eine korrekte evolutive Erklärung.",
             "Was würde passieren, wenn alle Individuen einer Population genetisch identisch wären? Welche Konsequenz hätte das für die evolutive Entwicklung?",
             "Warum gelten Insekten als eine der evolutiv erfolgreichsten Tiergruppen? Welche Merkmale könnten dazu beigetragen haben?",
-            "Erkläre anhand eines Beispiels, wie Mutation und Selektion zusammenwirken, um eine Population über Generationen zu verändern."
+            "Erkläre anhand eines Beispiels, wie Mutation und Selektion zusammenwirken, um eine Population über Generationen zu verändern.",
+            "Erkläre, warum das Nervensystem des Menschen als evolutive Weiterentwicklung des Strickleiternervensystems der Insekten betrachtet werden kann. Welche Vorteile bietet ein ZNS mit großem Gehirn?",
+            "Das spezifische Immunsystem (mit Gedächtniszellen) ist evolutiv nur bei Wirbeltieren vorhanden. Welchen Selektionsvorteil könnte diese Entwicklung gegenüber dem rein unspezifischen Immunsystem der Insekten bieten?"
           ],
           "darstellungsformen_progression": [
             "Stufe 1: Fotodokumentation von Variabilität innerhalb einer Art (Schmetterlinge, Käfer)",
             "Stufe 2: Selektionsdiagramm: Ausgangspopulation → Selektion → veränderte Population (drei Generationen)",
             "Stufe 3: Balkendiagramm: Merkmalhäufigkeit vor und nach Selektion",
             "Stufe 4: Einfacher Stammbaum mit Merkmalszuordnung",
-            "Stufe 5: Komplexer Stammbaum der Wirbellosen mit phylogenetischen Merkmalen"
+            "Stufe 5: Komplexer Stammbaum der Wirbellosen mit phylogenetischen Merkmalen",
+            "Stufe 6: Vergleichsdiagramm Nervensystem: Strickleiternervensystem (Insekt) vs. ZNS/PNS (Mensch) als evolutive Stufendarstellung"
           ],
           "alltagsanker": [
             "Hunderassen: extreme Formenvielfalt durch künstliche Selektion in kurzer Zeit",
             "Antibiotikaresistenz: Evolution in Echtzeit – Selektion durch Antibiotika macht resistente Stämme häufiger",
             "Schmetterlingssammlung: Variabilität innerhalb einer Art direkt beobachtbar",
-            "Fossilien: Lebewesen, die es heute nicht mehr gibt – Artwandel über Zeit"
+            "Fossilien: Lebewesen, die es heute nicht mehr gibt – Artwandel über Zeit",
+            "Menschliches Gehirn im Vergleich: Warum haben Menschen kein Strickleiternervensystem wie Insekten? Was war der Selektionsdruck für ein großes Gehirn?"
           ],
           "sprachliche_stolpersteine": [
             {
@@ -2472,6 +2651,11 @@
               "begriff": "Höherentwicklung / primitiv",
               "problem": "Wertendes Vokabular, das eine Hierarchie impliziert; in der Evolutionsbiologie gibt es keine 'höheren' oder 'primitiveren' Arten",
               "empfehlung": "Ersetzen durch: 'basale' und 'abgeleitete' Merkmale; alle lebenden Arten sind gleich 'erfolgreich' im Sinne der Reproduktion"
+            },
+            {
+              "begriff": "Evolution des Menschen",
+              "problem": "Schüler denken oft an den Übergang Affe → Mensch als linearen Prozess mit dem Menschen als Ziel",
+              "empfehlung": "Klarstellen: Menschen und Menschenaffen haben gemeinsame Vorfahren; kein Tier ist 'Vorfahre' eines anderen heute lebenden Tieres; Menschen sind eine von vielen Evolutionslinien"
             }
           ],
           "wissenschaftliche_praktiken": [
@@ -2479,7 +2663,8 @@
             "Phylogenetische Analyse: Stammbäume lesen, Merkmalszuordnungen vornehmen",
             "Angepasstheitsanalyse: Struktur beschreiben (Str/Fkt) und Selektionsvorteil erklären (Ind/Evo)",
             "Bewertung von Schutzmaßnahmen für Arten und Lebensräume aus evolutionsbiologischer Perspektive",
-            "Vergleichende Analyse von Tiergruppen nach phylogenetischen Merkmalen"
+            "Vergleichende Analyse von Tiergruppen nach phylogenetischen Merkmalen",
+            "Vergleichende evolutive Analyse menschlicher Merkmale (Gehirn, Immunsystem, Fortpflanzungsstrategie) mit anderen Tiergruppen"
           ],
           "transfer_potential": 0.85,
           "complexity_level_gy78": 0.8,
