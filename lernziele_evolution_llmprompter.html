@@ -73,7 +73,7 @@
 
   /* ── LAYOUT ── */
   #app { display: flex; height: calc(100vh - 60px); overflow: hidden; }
-  #sidebar { width: 285px; min-width: 260px; background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; display: flex; flex-direction: column; transition: width 0.25s ease, min-width 0.25s ease; }
+  #sidebar { width: 300px; min-width: 280px; background: var(--surface); border-right: 1px solid var(--border); overflow-y: auto; display: flex; flex-direction: column; transition: width 0.25s ease, min-width 0.25s ease; }
   #sidebar.collapsed { width: 0; min-width: 0; overflow: hidden; }
   #main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
   .view { display: none; flex: 1; overflow: hidden; flex-direction: column; }
@@ -92,9 +92,20 @@
   #search-input:focus { outline: none; border-color: var(--primary-light); background: white; }
   .search-icon { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font-size: 0.8rem; color: var(--text-muted); pointer-events: none; }
 
-  .filter-label { font-size: 0.73rem; font-weight: 700; color: var(--text-muted); margin: 7px 0 4px; display: block; text-transform: uppercase; letter-spacing: 0.04em; }
-  .filter-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
-  .chip { padding: 3px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: var(--surface); color: var(--text-muted); transition: var(--transition); white-space: nowrap; user-select: none; }
+  .filter-label { font-size: 0.73rem; font-weight: 700; color: var(--text-muted); margin: 7px 0 4px; display: flex; align-items: center; justify-content: space-between; text-transform: uppercase; letter-spacing: 0.04em; cursor: pointer; user-select: none; }
+  .filter-label .toggle-arrow { font-size: 0.6rem; transition: transform 0.2s; }
+  .filter-label.collapsed .toggle-arrow { transform: rotate(-90deg); }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+  .filter-chips.hidden { display: none; }
+
+  /* Tag chips - full text, no truncation */
+  .chip {
+    padding: 3px 8px; border-radius: 20px; font-size: 0.68rem; font-weight: 600;
+    cursor: pointer; border: 1.5px solid var(--border); background: var(--surface);
+    color: var(--text-muted); transition: var(--transition);
+    white-space: normal; word-break: break-word; line-height: 1.3;
+    user-select: none; max-width: 100%;
+  }
   .chip:hover { border-color: var(--primary-light); color: var(--primary); }
   .chip.active { background: var(--primary); color: white; border-color: var(--primary); }
   .chip.r1.active { background: #388e3c; border-color: #388e3c; }
@@ -105,14 +116,28 @@
   .chip.edited.active { background: #1565c0; border-color: #1565c0; }
   .chip.usertag.active { background: #6a1b9a; border-color: #6a1b9a; }
 
-  select.filter-select { width: 100%; padding: 6px 9px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.82rem; background: var(--bg); color: var(--text); cursor: pointer; margin-bottom: 2px; }
+  /* Hierarchical evo concept chips */
+  .evo-concept-group { margin-bottom: 4px; }
+  .evo-concept-parent { display: flex; align-items: flex-start; gap: 3px; margin-bottom: 2px; }
+  .evo-concept-parent .chip { flex: 1; }
+  .evo-concept-toggle { background: none; border: 1px solid var(--border); border-radius: 4px; cursor: pointer; font-size: 0.6rem; padding: 2px 4px; color: var(--text-muted); flex-shrink: 0; margin-top: 2px; transition: var(--transition); }
+  .evo-concept-toggle:hover { background: var(--neutral-pale); }
+  .evo-concept-children { padding-left: 12px; display: none; }
+  .evo-concept-children.open { display: block; }
+  .evo-concept-children .chip { margin: 2px 0; display: block; width: 100%; }
+
+  select.filter-select { width: 100%; padding: 6px 9px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.82rem; background: var(--bg); color: var(--text); cursor: pointer; margin-bottom: 4px; }
   select.filter-select:focus { outline: none; border-color: var(--primary-light); }
 
   .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 3px 0; font-size: 0.78rem; color: var(--text-muted); }
   .stat-num { font-weight: 700; color: var(--primary); }
   .stat-bar-wrap { height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 3px; }
   .stat-bar-inner { height: 4px; border-radius: 2px; transition: width 0.4s ease; }
-  canvas#chart-canvas { width: 100%; height: 140px; display: block; }
+
+  /* Chart wrapper */
+  .chart-container { position: relative; width: 100%; }
+  canvas#chart-canvas { width: 100% !important; display: block; }
+
   .reset-btn { background: none; border: 1px dashed var(--border); color: var(--text-muted); padding: 5px 9px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.78rem; width: 100%; margin-top: 5px; }
   .reset-btn:hover { background: var(--neutral-pale); color: var(--text); }
 
@@ -179,8 +204,13 @@
   .rel-dots { display: flex; gap: 3px; }
   .rel-dot { width: 7px; height: 7px; border-radius: 50%; background: #ccc; }
   .r1 .rel-dot.on { background: #2e7d32; } .r2 .rel-dot.on { background: #e65100; } .r3 .rel-dot.on { background: #c62828; }
+
+  /* Concept chips - full text */
   .concept-list { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 4px; }
-  .concept-chip { font-size: 0.67rem; padding: 2px 6px; border-radius: 10px; background: var(--primary-pale); color: var(--primary); font-weight: 600; }
+  .concept-chip { font-size: 0.65rem; padding: 2px 6px; border-radius: 10px; background: var(--primary-pale); color: var(--primary); font-weight: 600; white-space: normal; word-break: break-word; line-height: 1.3; }
+
+  /* Method chips - full text */
+  .method-chip-display { font-size: 0.65rem; padding: 2px 6px; border-radius: 10px; background: #fff3e0; color: #e65100; font-weight: 600; white-space: normal; word-break: break-word; line-height: 1.3; }
 
   .expand-section { border-top: 1px solid var(--border); }
   .expand-trigger { width: 100%; padding: 6px 12px; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-align: left; transition: var(--transition); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -194,9 +224,6 @@
   .didaktik-block { margin-bottom: 8px; }
   .didaktik-block strong { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 3px; }
   .didaktik-block p { font-size: 0.8rem; line-height: 1.5; color: #37474f; }
-  .methoden-list { list-style: none; padding: 0; margin: 0; }
-  .methoden-list li { font-size: 0.79rem; line-height: 1.5; color: #37474f; padding: 2px 0 2px 13px; position: relative; }
-  .methoden-list li::before { content: '→'; position: absolute; left: 0; color: var(--primary-light); }
 
   /* Top3 methods */
   .method-top3 { display: flex; flex-direction: column; gap: 5px; margin-top: 4px; }
@@ -229,7 +256,6 @@
 
   .pg-body { padding: 18px 22px; max-width: 1100px; }
   .pg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .pg-grid.full { grid-template-columns: 1fr; }
 
   .pg-section { background: var(--surface); border-radius: var(--radius); border: 1.5px solid var(--border); padding: 14px 16px; box-shadow: var(--shadow-sm); }
   .pg-section-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--accent2); margin-bottom: 11px; display: flex; align-items: center; gap: 6px; }
@@ -259,6 +285,30 @@
   .subtheme-item.selected label { color: var(--accent2); font-weight: 600; }
   .lz-count { font-size: 0.65rem; background: var(--neutral-pale); color: var(--text-muted); padding: 1px 5px; border-radius: 10px; margin-left: 4px; }
   .lz-count.has-sel { background: var(--accent2-pale); color: var(--accent2); }
+
+  /* LZ list in prompt section */
+  .lz-list-section { margin-top: 10px; border-top: 1px solid var(--border); padding-top: 10px; }
+  .lz-list-section h4 { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+  .lz-filter-bar { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 7px; }
+  .lz-filter-btn { padding: 3px 9px; border-radius: 20px; font-size: 0.68rem; font-weight: 600; border: 1.5px solid var(--border); background: var(--surface); color: var(--text-muted); cursor: pointer; transition: var(--transition); user-select: none; }
+  .lz-filter-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  .lz-filter-btn.active { background: var(--accent2); color: white; border-color: var(--accent2); }
+  .lz-items-container { max-height: 320px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); }
+  .lz-item-row { display: flex; align-items: flex-start; gap: 7px; padding: 6px 9px; border-bottom: 1px solid var(--border); font-size: 0.77rem; cursor: pointer; transition: var(--transition); }
+  .lz-item-row:last-child { border-bottom: none; }
+  .lz-item-row:hover { background: var(--accent2-pale); }
+  .lz-item-row.excluded { opacity: 0.45; background: #fafafa; }
+  .lz-item-check { accent-color: var(--accent2); flex-shrink: 0; margin-top: 2px; }
+  .lz-item-content { flex: 1; min-width: 0; }
+  .lz-item-id { font-family: monospace; font-size: 0.65rem; color: var(--text-muted); font-weight: 700; }
+  .lz-item-text { line-height: 1.3; color: var(--text); }
+  .lz-item-badges { display: flex; gap: 3px; margin-top: 2px; flex-wrap: wrap; }
+  .lz-item-badge { font-size: 0.6rem; padding: 1px 5px; border-radius: 8px; font-weight: 700; }
+  .lz-item-badge.fav { background: #fce4ec; color: #c2185b; }
+  .lz-item-badge.r3 { background: #ffebee; color: #c62828; }
+  .lz-item-badge.r2 { background: #fff3e0; color: #e65100; }
+  .lz-item-badge.r1 { background: #e8f5e9; color: #2e7d32; }
+  .lz-item-badge.tag { background: var(--accent2-pale); color: var(--accent2); }
 
   /* Checkbox / radio */
   .check-group { display: flex; flex-direction: column; gap: 6px; }
@@ -307,7 +357,7 @@
   .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.48); display: flex; align-items: center; justify-content: center; z-index: 500; padding: 20px; backdrop-filter: blur(2px); }
   .modal-overlay.hidden { display: none; }
   .modal { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg); width: 100%; max-width: 660px; max-height: 90vh; overflow-y: auto; display: flex; flex-direction: column; }
-  .modal-sm { max-width: 440px; }
+  .modal-sm { max-width: 480px; }
   .modal-header { padding: 13px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; background: var(--surface); z-index: 1; }
   .modal-header h2 { font-size: 0.92rem; font-weight: 700; }
   .modal-body { padding: 16px 18px; flex: 1; }
@@ -352,9 +402,6 @@
   .toast { background: #1a2327; color: white; padding: 8px 13px; border-radius: var(--radius-sm); font-size: 0.81rem; box-shadow: var(--shadow-md); max-width: 280px; animation: toastIn 0.3s ease; }
   .toast.success { border-left: 4px solid #4caf50; } .toast.error { border-left: 4px solid var(--danger); } .toast.info { border-left: 4px solid var(--secondary); }
   @keyframes toastIn { from { transform: translateX(110%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-
-  /* Section divider */
-  .pg-section-divider { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); padding: 8px 0 4px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
 
   @media (max-width: 760px) {
     #sidebar { width: 100%; position: fixed; top: 60px; left: 0; bottom: 0; z-index: 50; transform: translateX(-100%); transition: transform 0.3s; }
@@ -423,10 +470,21 @@
           <span class="chip r2" data-rel="2">●● Mittel</span>
           <span class="chip r3" data-rel="3">●●● Hoch</span>
         </div>
-        <span class="filter-label">Didaktische Methode</span>
+
+        <!-- Didaktische Methode with toggle -->
+        <span class="filter-label" id="method-label">
+          Didaktische Methode
+          <span class="toggle-arrow">▾</span>
+        </span>
         <div class="filter-chips" id="method-chips"></div>
-        <span class="filter-label">Evolutionskonzept</span>
-        <div class="filter-chips" id="evokonzept-chips"></div>
+
+        <!-- Evolutionskonzept with toggle -->
+        <span class="filter-label" id="evokonzept-label">
+          Evolutionskonzept
+          <span class="toggle-arrow">▾</span>
+        </span>
+        <div id="evokonzept-tree"></div>
+
         <span class="filter-label">Markierungen</span>
         <div class="filter-chips" id="tag-chips">
           <span class="chip fav" data-tag="fav">❤ Favoriten</span>
@@ -447,7 +505,9 @@
     <div class="sidebar-section">
       <div class="sidebar-header" data-target="sec-stats">📊 Statistik <span>▾</span></div>
       <div class="sidebar-body" id="sec-stats">
-        <canvas id="chart-canvas"></canvas>
+        <div class="chart-container">
+          <canvas id="chart-canvas"></canvas>
+        </div>
         <div id="stats-detail"></div>
       </div>
     </div>
@@ -520,13 +580,34 @@
 
       <div class="pg-body">
 
-        <!-- ─ SECTION 1: Themen ─ -->
+        <!-- ─ SECTION 1: Themen, Unterthemen und Lernziele ─ -->
         <div class="pg-grid" style="grid-template-columns:1fr">
           <div class="pg-section">
-            <div class="pg-section-title"><span class="pg-num">1</span> Themen und Unterthemen auswählen</div>
-            <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:9px">Wähle die Themen und Unterthemen aus. Favorisierte und annotierte Lernziele werden im Prompt hervorgehoben.</p>
+            <div class="pg-section-title"><span class="pg-num">1</span> Themen, Unterthemen und Lernziele</div>
+
+            <!-- Theme selector -->
             <div class="theme-selector" id="pg-theme-selector"></div>
             <div class="info-badge" id="pg-lz-badge">0 Lernziele ausgewählt</div>
+
+            <!-- LZ list with filters -->
+            <div class="lz-list-section" id="pg-lz-list-section" style="display:none">
+              <h4 id="pg-lz-list-toggle">
+                Lernziele für diesen Prompt
+                <span style="font-size:0.65rem;color:var(--text-muted);font-weight:400">▾ ein-/ausblenden</span>
+              </h4>
+              <div id="pg-lz-list-body">
+                <div class="lz-filter-bar" id="pg-lz-filter-bar">
+                  <span class="lz-filter-btn" data-lzfilter="all">Alle</span>
+                  <span class="lz-filter-btn" data-lzfilter="fav">❤ Favoriten</span>
+                  <span class="lz-filter-btn" data-lzfilter="r3">🔴 Hoch relevant</span>
+                  <span class="lz-filter-btn" data-lzfilter="r2">🟡 Mittel</span>
+                  <span class="lz-filter-btn" data-lzfilter="notes">📝 Mit Notizen</span>
+                </div>
+                <!-- Dynamic user tag filters added here -->
+                <div id="pg-lz-tag-filters" style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;"></div>
+                <div class="lz-items-container" id="pg-lz-items"></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -602,54 +683,30 @@
         <!-- ─ SECTION 4+5 ─ -->
         <div class="pg-grid" style="margin-top:15px">
 
-          <!-- 4: Wissenschaftlicher Fokus -->
+          <!-- 4: Wissenschaftlicher Fokus - populated dynamically -->
           <div class="pg-section">
             <div class="pg-section-title"><span class="pg-num">4</span> Wissenschaftlich-konzeptueller Fokus</div>
-
+            <p style="font-size:0.74rem;color:var(--text-muted);margin-bottom:8px">Konzepte aus den ausgewählten Lernzielen. Keine Vorauswahl – bitte manuell auswählen.</p>
             <div class="pg-field">
               <label>Evolutionskonzepte besonders betonen</label>
-              <div class="check-group" id="pg-evo-konzepte">
-                <label class="check-item"><input type="checkbox" value="variation" checked> Variation und genetische Diversität</label>
-                <label class="check-item"><input type="checkbox" value="selektion" checked> Natürliche Selektion und Selektionsdruck</label>
-                <label class="check-item"><input type="checkbox" value="anpassung" checked> Anpassung und Angepasstheit</label>
-                <label class="check-item"><input type="checkbox" value="homologie"> Homologie und Analogie</label>
-                <label class="check-item"><input type="checkbox" value="stammbaum"> Stammbäume / Phylogenetische Systematik</label>
-                <label class="check-item"><input type="checkbox" value="koevolution"> Koevolution</label>
-                <label class="check-item"><input type="checkbox" value="endosymbiose"> Endosymbiontentheorie</label>
-                <label class="check-item"><input type="checkbox" value="mismatch"> Evolutionäres Mismatch</label>
-                <label class="check-item"><input type="checkbox" value="evo-devo"> Evo-Devo / Biogenetische Grundregel</label>
-                <label class="check-item"><input type="checkbox" value="artbildung"> Artbildung und adaptive Radiation</label>
-                <label class="check-item"><input type="checkbox" value="molekular"> Molekulare Evolution / Genkonservierung</label>
-              </div>
+              <div class="check-group" id="pg-evo-konzepte"></div>
             </div>
-
             <div class="pg-field" style="margin-top:8px">
               <label>Zusätzliche fachliche Schwerpunkte</label>
-              <textarea id="pg-fach-notizen" placeholder="z.B. Schwerpunkt auf molekulare Belege; Forschungsbeispiele zur Antibiotikaresistenz einbeziehen…"></textarea>
+              <textarea id="pg-fach-notizen" placeholder="z.B. Schwerpunkt auf molekulare Belege; Forschungsbeispiele einbeziehen…"></textarea>
             </div>
           </div>
 
-          <!-- 5: Didaktik -->
+          <!-- 5: Didaktik - populated dynamically -->
           <div class="pg-section">
             <div class="pg-section-title"><span class="pg-num">5</span> Didaktische Methoden</div>
-            <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:8px">Aus den gewählten Lernzielen werden automatisch empfohlene Methoden einbezogen. Hier zusätzliche Präferenzen angeben:</p>
+            <p style="font-size:0.74rem;color:var(--text-muted);margin-bottom:8px">Methoden aus den ausgewählten Lernzielen. Keine Vorauswahl – bitte manuell auswählen.</p>
 
             <div class="pg-field">
-              <label>Lehr-/Lernformen bevorzugen</label>
-              <div class="check-group" id="pg-lehrformen">
-                <label class="check-item"><input type="checkbox" value="inquiry" checked> Forschendes Lernen (Inquiry-Based Learning)</label>
-                <label class="check-item"><input type="checkbox" value="konzept"> Konzeptuelles Lernen (Concept Maps)</label>
-                <label class="check-item"><input type="checkbox" value="kooperativ"> Kooperative Lernformen (Gruppen-/Partnerarbeit)</label>
-                <label class="check-item"><input type="checkbox" value="projektbasiert"> Projektbasiertes Lernen</label>
-                <label class="check-item"><input type="checkbox" value="erfahrungsbasiert"> Erfahrungsbasiertes Lernen (Spiele u.a.)</label>
-                <label class="check-item"><input type="checkbox" value="diskussion"> Diskussion / Argumentation</label>
-                <label class="check-item"><input type="checkbox" value="narrativ"> Narrativer Zugang (Evolutionsgeschichten)</label>
-                <label class="check-item"><input type="checkbox" value="analogien"> Analogien und Vergleiche</label>
-                <label class="check-item"><input type="checkbox" value="modelle"> Modelle und Simulationen</label>
-                <label class="check-item"><input type="checkbox" value="wissenschaftsgeschichte"> Einblick in Wissenschaftsgeschichte</label>
-                <label class="check-item"><input type="checkbox" value="recherche"> Recherche</label>
-                <label class="check-item"><input type="checkbox" value="digital"> Digitale Medien</label>
-              </div>
+              <label>Empfohlene Methoden (aus gewählten Lernzielen)</label>
+              <div class="check-group" id="pg-lehrformen-recommended" style="margin-bottom:8px;"></div>
+              <label style="margin-top:8px">Weitere Methoden</label>
+              <div class="check-group" id="pg-lehrformen-extra"></div>
             </div>
 
             <div class="pg-field" style="margin-top:8px">
@@ -663,7 +720,7 @@
 
             <div class="pg-field" style="margin-top:8px">
               <label>Zusätzliche didaktische Hinweise</label>
-              <textarea id="pg-did-notizen" placeholder="z.B. Außerschulische Lernorte einplanen; starker Alltagsbezug; keine Laborausstattung vorhanden…"></textarea>
+              <textarea id="pg-did-notizen" placeholder="z.B. Außerschulische Lernorte; starker Alltagsbezug; keine Laborausstattung…"></textarea>
             </div>
           </div>
         </div>
@@ -674,11 +731,11 @@
           <!-- 6: Evaluation -->
           <div class="pg-section">
             <div class="pg-section-title"><span class="pg-num">6</span> Evaluation und Leistungserhebung</div>
-
+            <p style="font-size:0.74rem;color:var(--text-muted);margin-bottom:8px">Keine Vorauswahl – bitte manuell auswählen.</p>
             <div class="pg-field">
               <label>Evaluationsmethoden</label>
               <div class="check-group" id="pg-bewertung">
-                <label class="check-item"><input type="checkbox" value="formativ" checked> Formative Beurteilung (laufend)</label>
+                <label class="check-item"><input type="checkbox" value="formativ"> Formative Beurteilung (laufend)</label>
                 <label class="check-item"><input type="checkbox" value="quiz"> Quiz</label>
                 <label class="check-item"><input type="checkbox" value="praesentation"> Schülerpräsentationen, Poster, Flyer u.ä.</label>
                 <label class="check-item"><input type="checkbox" value="reflexion"> Schriftliche Reflexion zu Leitfrage(n)</label>
@@ -687,7 +744,6 @@
                 <label class="check-item"><input type="checkbox" value="praktisch"> Praktische Leistungen (Lab / Experiment)</label>
               </div>
             </div>
-
             <div class="pg-field" style="margin-top:8px">
               <label>Zusätzliche Angaben zur Evaluation</label>
               <textarea id="pg-eval-notizen" placeholder="z.B. Portfolio über die gesamte Einheit; Abschlusspräsentation in Gruppen…"></textarea>
@@ -697,7 +753,7 @@
           <!-- 7: Gesellschaftliche Bezüge -->
           <div class="pg-section">
             <div class="pg-section-title"><span class="pg-num">7</span> Gesellschaftliche Bezüge</div>
-
+            <p style="font-size:0.74rem;color:var(--text-muted);margin-bottom:8px">Keine Vorauswahl – bitte manuell auswählen.</p>
             <div class="pg-field">
               <label>Gesellschaftliche / aktuelle Bezüge einbeziehen</label>
               <div class="check-group" id="pg-kontext">
@@ -706,52 +762,23 @@
                 <label class="check-item"><input type="checkbox" value="klimawandel"> Klimawandel und Artenanpassung</label>
                 <label class="check-item"><input type="checkbox" value="pandemie"> Pandemien und Virusevolution</label>
                 <label class="check-item"><input type="checkbox" value="gesundheit"> Gesundheit und evolutionäre Medizin</label>
-                <label class="check-item"><input type="checkbox" value="antibiotikaresistenz" checked> Antibiotikaresistenz</label>
+                <label class="check-item"><input type="checkbox" value="antibiotikaresistenz"> Antibiotikaresistenz</label>
                 <label class="check-item"><input type="checkbox" value="psychisch"> Psychische Gesundheit</label>
                 <label class="check-item"><input type="checkbox" value="landwirtschaft"> Landwirtschaft und Lebensmittelherstellung</label>
                 <label class="check-item"><input type="checkbox" value="biotechnologie"> Biotechnologie und Gentechnik</label>
               </div>
             </div>
-
             <div class="pg-field" style="margin-top:8px">
               <label>Weitere gesellschaftliche Hinweise</label>
-              <textarea id="pg-kontext-notizen" placeholder="z.B. Bezug zu lokalen Naturschutzprojekten; aktueller Zeitungsartikel zur Antibiotikaresistenz…"></textarea>
+              <textarea id="pg-kontext-notizen" placeholder="z.B. Bezug zu lokalen Naturschutzprojekten…"></textarea>
             </div>
           </div>
         </div>
 
-        <!-- ─ SECTION 8: Fächerübergreifend ─ -->
+        <!-- ─ SECTION 8: Ausgabeformat ─ -->
         <div class="pg-grid" style="margin-top:15px; grid-template-columns:1fr">
           <div class="pg-section">
-            <div class="pg-section-title"><span class="pg-num">8</span> Fächerübergreifende Verbindungen</div>
-            <div class="pg-grid">
-              <div>
-                <div class="pg-field">
-                  <div class="check-group" id="pg-faecherverbindung">
-                    <label class="check-item"><input type="checkbox" value="chemie"> Chemie (Biochemie, Moleküle)</label>
-                    <label class="check-item"><input type="checkbox" value="physik"> Physik (Energetik, Mechanik)</label>
-                    <label class="check-item"><input type="checkbox" value="geographie"> Geographie (Ökosysteme, Klimazonen, Ressourcennutzung)</label>
-                    <label class="check-item"><input type="checkbox" value="geschichte"> Geschichte (Wissenschaftsgeschichte, Seuchen, menschliche Evolution)</label>
-                    <label class="check-item"><input type="checkbox" value="ethik"> Ethik / Philosophie (Mensch und Natur, Bioethik, Epistemologie)</label>
-                    <label class="check-item"><input type="checkbox" value="sozialkunde"> Sozialkunde (Bioethik, nachhaltige Entwicklung, Gesetze)</label>
-                    <label class="check-item"><input type="checkbox" value="mathematik"> Mathematik (Statistik, Populationsmodelle, Diagramme)</label>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="pg-field">
-                  <label>Weitere fächerübergreifende Hinweise</label>
-                  <textarea id="pg-faecher-notizen" placeholder="z.B. Kooperation mit Erdkundekurs geplant; Mathematik-Projekt zu Populationsmodellen…" rows="4"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ─ SECTION 9: Ausgabeformat ─ -->
-        <div class="pg-grid" style="margin-top:15px; grid-template-columns:1fr">
-          <div class="pg-section">
-            <div class="pg-section-title"><span class="pg-num">9</span> Ausgabeformat</div>
+            <div class="pg-section-title"><span class="pg-num">8</span> Ausgabeformat</div>
             <div class="pg-grid">
               <div>
                 <div class="pg-field">
@@ -787,7 +814,7 @@
                 </div>
                 <div class="pg-field" style="margin-top:10px">
                   <label>Sonstige Hinweise für die KI</label>
-                  <textarea id="pg-sonstige-notizen" placeholder="z.B. Antworte auf Deutsch; verwende Markdown-Tabellen; beziehe dich explizit auf den Thüringer Lehrplan…"></textarea>
+                  <textarea id="pg-sonstige-notizen" placeholder="z.B. Antworte auf Deutsch; verwende Markdown-Tabellen…"></textarea>
                 </div>
               </div>
             </div>
@@ -900,11 +927,38 @@
       <button class="icon-btn" id="export-close-btn">✕</button>
     </div>
     <div class="modal-body">
-      <div class="export-opt" data-export="all"><span class="export-icon">📦</span><div><div class="export-title">Vollständiger Datensatz (JSON)</div><div class="export-desc">Alle Einträge mit Bearbeitungen und Markierungen</div></div></div>
-      <div class="export-opt" data-export="favorites"><span class="export-icon">❤</span><div><div class="export-title">Nur Favoriten (JSON)</div><div class="export-desc">Als Favorit markierte Einträge</div></div></div>
-      <div class="export-opt" data-export="filtered"><span class="export-icon">🎛</span><div><div class="export-title">Gefilterte Einträge (JSON)</div><div class="export-desc">Aktuell angezeigte Einträge (<span id="export-count">0</span>)</div></div></div>
-      <div class="export-opt" data-export="csv"><span class="export-icon">📊</span><div><div class="export-title">Gesamtübersicht (CSV)</div><div class="export-desc">Für Excel/LibreOffice Calc</div></div></div>
-      <div class="export-opt" data-export="markdown"><span class="export-icon">📋</span><div><div class="export-title">Unterrichtsplan (Markdown)</div><div class="export-desc">Favoriten als strukturierter Plan</div></div></div>
+      <div class="export-opt" data-export="all">
+        <span class="export-icon">📦</span>
+        <div><div class="export-title">Vollständiger Datensatz (JSON)</div><div class="export-desc">Alle Einträge mit Bearbeitungen, Tags und Notizen</div></div>
+      </div>
+      <div class="export-opt" data-export="edited">
+        <span class="export-icon">✏</span>
+        <div><div class="export-title">Nur bearbeitete Lernziele (JSON)</div><div class="export-desc">Einträge mit nutzerseitig geänderten Feldern</div></div>
+      </div>
+      <div class="export-opt" data-export="with-notes">
+        <span class="export-icon">📝</span>
+        <div><div class="export-title">Nur Lernziele mit Notizen (JSON)</div><div class="export-desc">Einträge mit favNote, incNote oder persönlichen Notizen</div></div>
+      </div>
+      <div class="export-opt" data-export="with-usertags">
+        <span class="export-icon">🏷</span>
+        <div><div class="export-title">Lernziele mit eigenen Tags (JSON)</div><div class="export-desc">Einträge mit nutzerspezifischen Tags</div></div>
+      </div>
+      <div class="export-opt" data-export="favorites">
+        <span class="export-icon">❤</span>
+        <div><div class="export-title">Nur Favoriten (JSON)</div><div class="export-desc">Als Favorit markierte Einträge</div></div>
+      </div>
+      <div class="export-opt" data-export="filtered">
+        <span class="export-icon">🎛</span>
+        <div><div class="export-title">Gefilterte Einträge (JSON)</div><div class="export-desc">Aktuell angezeigte Einträge (<span id="export-count">0</span>)</div></div>
+      </div>
+      <div class="export-opt" data-export="csv">
+        <span class="export-icon">📊</span>
+        <div><div class="export-title">Gesamtübersicht (CSV)</div><div class="export-desc">Für Excel/LibreOffice Calc</div></div>
+      </div>
+      <div class="export-opt" data-export="markdown">
+        <span class="export-icon">📋</span>
+        <div><div class="export-title">Unterrichtsplan (Markdown)</div><div class="export-desc">Favoriten als strukturierter Plan</div></div>
+      </div>
     </div>
   </div>
 </div>
@@ -913,11 +967,11 @@
 <div class="modal-overlay hidden" id="import-modal">
   <div class="modal modal-sm">
     <div class="modal-header">
-      <h2>⬆ Annotationen importieren</h2>
+      <h2>⬆ Importieren</h2>
       <button class="icon-btn" id="import-close-btn">✕</button>
     </div>
     <div class="modal-body">
-      <p style="font-size:0.81rem;color:var(--text-muted);margin-bottom:11px">Importiere eine zuvor exportierte JSON-Datei. Nur Annotationen werden überschrieben.</p>
+      <p style="font-size:0.81rem;color:var(--text-muted);margin-bottom:11px">Importiere eine zuvor exportierte JSON-Datei. Annotationen, Tags und Bearbeitungen werden zusammengeführt.</p>
       <div class="form-group"><label>JSON-Datei</label><input type="file" id="import-file" accept=".json"></div>
     </div>
     <div class="modal-footer">
@@ -936,14 +990,57 @@
   var DATA_URL = 'https://raw.githubusercontent.com/dustineirdosh/thuringia_lp/main/lernziele_gy78_evolution.json';
   var LS_ANN = 'bio_annotations_v3';
   var LS_EDIT = 'bio_edits_v3';
-  var LS_UTAGS = 'bio_user_tags_v1'; // global tag list
+  var LS_UTAGS = 'bio_user_tags_v1';
   var REL_LABELS = { 1: '● Gering', 2: '●● Mittel', 3: '●●● Hoch' };
+
+  // Theme display mapping: original → short label
+  var THEMA_DISPLAY = {
+    'Biologie des Menschen': 'Bio-Mensch'
+  };
+
+  // Hierarchical evo concept taxonomy
+  var EVO_CONCEPT_HIERARCHY = [
+    { parent: 'Variation und Diversität', children: [
+      'genetische Variation', 'phänotypische Variation', 'Rekombination', 'Gentransfer',
+      'Epigenetik', 'Modifikation', 'Phänotypische Plastizität'
+    ]},
+    { parent: 'Vererbung von Merkmalen', children: [
+      'genetische', 'epigenetische', 'soziale/kulturelle', 'ökologische'
+    ]},
+    { parent: 'Natürliche Selektion und Selektionsdruck', children: [
+      'stabilisierende Selektion', 'gerichtete Selektion', 'balancierende Selektion',
+      'frequenzabhängige Selektion', 'Trade-offs/Zielkonflikte', 'sexuelle Selektion', 'Fitness'
+    ]},
+    { parent: 'Anpassung und Angepasstheit', children: [
+      'Funktion von Merkmalen', 'Exaptation (Umfunktionieren von Merkmalen)',
+      'Evolutionäres Mismatch'
+    ]},
+    { parent: 'Gendrift', children: ['Migration/Genfluss', 'Flaschenhalseffekt', 'Gründereffekt'] },
+    { parent: 'Lebensgeschichte / Life-History-Theorie', children: [] },
+    { parent: 'Koevolution', children: ['Domestikation', 'Nischenkonstruktion'] },
+    { parent: 'Multilevel-Selektion', children: [] },
+    { parent: 'Endosymbiontentheorie', children: [] },
+    { parent: 'Evolution von Einzellern zu Vielzellern', children: [] },
+    { parent: 'Verwandtenselektion', children: [] },
+    { parent: 'Evolution von Kooperation/Altruismus', children: [] },
+    { parent: 'Evolutionäre Prozesse innerhalb von Organismen', children: [] },
+    { parent: 'Tiefenzeit', children: ['geologische Epochen', 'Fossilien', 'Übergangsformen/Entwicklungslinien'] },
+    { parent: 'Stammbäume und phylogenetische Systematik', children: [
+      'gemeinsame Abstammung/Verwandtschaft',
+      'Konservierung von Merkmalen (gemeinsame genetische Grundlagen, Baupläne, Entwicklungsprozesse usw.)',
+      'Homologie und Analogie/Konvergente und divergente Evolution'
+    ]},
+    { parent: 'Artbildung und adaptive Radiation', children: [] },
+    { parent: 'Aussterben', children: [] },
+    { parent: 'Evolutionäre Entwicklungsbiologie (Evo-Devo)', children: ['biogenetische Grundregel'] },
+    { parent: 'kulturelle Evolution', children: [] }
+  ];
 
   var rawData = [];
   var filteredData = [];
   var annotations = {};
   var edits = {};
-  var globalUserTags = []; // list of all user-defined tag strings
+  var globalUserTags = [];
   var currentView = 'grid';
   var activeRelFilters = {};
   var activeTagFilters = {};
@@ -959,6 +1056,9 @@
 
   // PG state
   var pgSelectedSubthemas = {};
+  var pgExcludedLZ = {}; // ids excluded from prompt
+  var pgLzActiveFilter = 'all';
+  var pgLzActiveTagFilter = null;
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -981,6 +1081,10 @@
     try { localStorage.setItem(LS_UTAGS, JSON.stringify(globalUserTags)); } catch (e) {}
   }
 
+  function getThemaDisplay(thema) {
+    return THEMA_DISPLAY[thema] || thema;
+  }
+
   // ── FETCH ─────────────────────────────────────────────────────────────────
   function fetchData() {
     var xhr = new XMLHttpRequest();
@@ -993,7 +1097,7 @@
           $('loading-overlay').classList.add('hidden');
           buildSidebar();
           buildMethodFilterChips();
-          buildEvoKonzeptFilterChips();
+          buildEvoKonzeptTree();
           buildUserTagFilterDisplay();
           buildPromptThemeSelector();
           applyFilters();
@@ -1020,7 +1124,7 @@
     themas.forEach(function (t) {
       var chip = document.createElement('span');
       chip.className = 'chip';
-      chip.textContent = t.split(' ')[0];
+      chip.textContent = getThemaDisplay(t);
       chip.title = t;
       chip.addEventListener('click', function () {
         chip.classList.toggle('active');
@@ -1049,7 +1153,8 @@
     Object.keys(methodSet).sort().forEach(function (meth) {
       var chip = document.createElement('span');
       chip.className = 'chip';
-      chip.textContent = meth.split('(')[0].trim().substring(0, 20);
+      // Show full text
+      chip.textContent = meth;
       chip.title = meth;
       chip.addEventListener('click', function () {
         chip.classList.toggle('active');
@@ -1060,26 +1165,133 @@
     });
   }
 
-  function buildEvoKonzeptFilterChips() {
-    var konzSet = {};
+  // Build hierarchical evo concept tree
+  function buildEvoKonzeptTree() {
+    // Collect all concepts actually in data
+    var dataConceptSet = {};
     rawData.forEach(function (d) {
       var ev = d.evolutionsbezug || {};
-      (ev.relevante_evolutionskonzepte || []).forEach(function (k) { if (k) konzSet[k] = true; });
+      (ev.relevante_evolutionskonzepte || []).forEach(function (k) { if (k) dataConceptSet[k] = true; });
     });
-    var kc = $('evokonzept-chips');
-    kc.innerHTML = '';
-    Object.keys(konzSet).sort().forEach(function (k) {
-      var chip = document.createElement('span');
-      chip.className = 'chip';
-      chip.textContent = k.substring(0, 22) + (k.length > 22 ? '…' : '');
-      chip.title = k;
-      chip.addEventListener('click', function () {
-        chip.classList.toggle('active');
-        if (activeEvoKonzeptFilters[k]) delete activeEvoKonzeptFilters[k]; else activeEvoKonzeptFilters[k] = true;
+
+    var tree = $('evokonzept-tree');
+    tree.innerHTML = '';
+
+    // Build lookup: concept → parent
+    var conceptToParent = {};
+    EVO_CONCEPT_HIERARCHY.forEach(function (group) {
+      group.children.forEach(function (child) { conceptToParent[child] = group.parent; });
+    });
+
+    // Collect ungrouped concepts
+    var groupedConcepts = {};
+    EVO_CONCEPT_HIERARCHY.forEach(function (g) {
+      groupedConcepts[g.parent] = true;
+      g.children.forEach(function (c) { groupedConcepts[c] = true; });
+    });
+
+    EVO_CONCEPT_HIERARCHY.forEach(function (group) {
+      var parentInData = dataConceptSet[group.parent];
+      var childrenInData = group.children.filter(function (c) { return dataConceptSet[c]; });
+
+      // Only show groups that have data
+      if (!parentInData && childrenInData.length === 0) return;
+
+      var groupDiv = document.createElement('div');
+      groupDiv.className = 'evo-concept-group';
+
+      var parentRow = document.createElement('div');
+      parentRow.className = 'evo-concept-parent';
+
+      var parentChip = document.createElement('span');
+      parentChip.className = 'chip';
+      parentChip.textContent = group.parent;
+      parentChip.title = group.parent;
+      if (!parentInData) { parentChip.style.opacity = '0.5'; parentChip.style.cursor = 'default'; }
+      parentChip.addEventListener('click', function () {
+        if (!parentInData) return;
+        parentChip.classList.toggle('active');
+        if (activeEvoKonzeptFilters[group.parent]) delete activeEvoKonzeptFilters[group.parent];
+        else activeEvoKonzeptFilters[group.parent] = true;
         applyFilters();
       });
-      kc.appendChild(chip);
+      parentRow.appendChild(parentChip);
+
+      if (childrenInData.length > 0) {
+        var toggleBtn = document.createElement('button');
+        toggleBtn.className = 'evo-concept-toggle';
+        toggleBtn.textContent = '▸';
+        toggleBtn.title = 'Unterkonzepte ein-/ausblenden';
+        parentRow.appendChild(toggleBtn);
+
+        var childrenDiv = document.createElement('div');
+        childrenDiv.className = 'evo-concept-children';
+
+        childrenInData.forEach(function (child) {
+          var childChip = document.createElement('span');
+          childChip.className = 'chip';
+          childChip.textContent = child;
+          childChip.title = child;
+          childChip.addEventListener('click', function () {
+            childChip.classList.toggle('active');
+            if (activeEvoKonzeptFilters[child]) delete activeEvoKonzeptFilters[child];
+            else activeEvoKonzeptFilters[child] = true;
+            applyFilters();
+          });
+          childrenDiv.appendChild(childChip);
+        });
+
+        toggleBtn.addEventListener('click', function () {
+          var isOpen = childrenDiv.classList.toggle('open');
+          toggleBtn.textContent = isOpen ? '▾' : '▸';
+        });
+
+        groupDiv.appendChild(parentRow);
+        groupDiv.appendChild(childrenDiv);
+      } else {
+        groupDiv.appendChild(parentRow);
+      }
+
+      tree.appendChild(groupDiv);
     });
+
+    // Add orphaned concepts not in hierarchy
+    Object.keys(dataConceptSet).forEach(function (k) {
+      if (!groupedConcepts[k]) {
+        var chip = document.createElement('span');
+        chip.className = 'chip';
+        chip.textContent = k;
+        chip.title = k;
+        chip.addEventListener('click', function () {
+          chip.classList.toggle('active');
+          if (activeEvoKonzeptFilters[k]) delete activeEvoKonzeptFilters[k];
+          else activeEvoKonzeptFilters[k] = true;
+          applyFilters();
+        });
+        tree.appendChild(chip);
+      }
+    });
+  }
+
+  // Toggle for method chips and evo concept tree
+  function bindFilterToggleLabels() {
+    var methodLabel = $('method-label');
+    var methodChips = $('method-chips');
+    var evoLabel = $('evokonzept-label');
+    var evoTree = $('evokonzept-tree');
+
+    if (methodLabel && methodChips) {
+      methodLabel.addEventListener('click', function () {
+        var hidden = methodChips.classList.toggle('hidden');
+        methodLabel.classList.toggle('collapsed', hidden);
+      });
+    }
+    if (evoLabel && evoTree) {
+      evoLabel.addEventListener('click', function () {
+        var hidden = evoTree.classList.toggle('hidden');
+        evoLabel.classList.toggle('collapsed', hidden);
+      });
+    }
   }
 
   function buildUserTagFilterDisplay() {
@@ -1088,12 +1300,11 @@
     globalUserTags.forEach(function (tag) {
       var chip = document.createElement('span');
       chip.className = 'user-tag-filter-chip' + (activeUserTagFilters[tag] ? ' active' : '');
-      chip.innerHTML = tag + '<span class="remove-utag" title="Tag global löschen">✕</span>';
+      chip.innerHTML = escHtml(tag) + '<span class="remove-utag" title="Tag global löschen">✕</span>';
       chip.addEventListener('click', function (e) {
         if (e.target.classList.contains('remove-utag')) {
-          if (!confirm('Tag "' + tag + '" global löschen? Er wird von allen Lernzielen entfernt.')) return;
+          if (!confirm('Tag "' + tag + '" global löschen?')) return;
           globalUserTags = globalUserTags.filter(function (t) { return t !== tag; });
-          // remove from all annotations
           Object.keys(annotations).forEach(function (id) {
             if (annotations[id].userTags) {
               annotations[id].userTags = (annotations[id].userTags || []).filter(function (t) { return t !== tag; });
@@ -1117,6 +1328,7 @@
     globalUserTags.push(t);
     saveLS();
     buildUserTagFilterDisplay();
+    updatePgLzTagFilters();
     showToast('✓ Tag "' + t + '" erstellt', 'success');
   }
 
@@ -1135,7 +1347,8 @@
       cb.type = 'checkbox'; cb.className = 'theme-check';
       var lbl = document.createElement('span');
       var lzCount = rawData.filter(function (d) { return d.thema === thema; }).length;
-      lbl.innerHTML = thema + '<span class="lz-count">' + lzCount + '</span>';
+      lbl.innerHTML = getThemaDisplay(thema) + '<span class="lz-count">' + lzCount + '</span>';
+      lbl.title = thema;
       var expandBtn = document.createElement('button');
       expandBtn.className = 'theme-expand-btn'; expandBtn.innerHTML = '▾';
       header.appendChild(cb); header.appendChild(lbl); header.appendChild(expandBtn);
@@ -1151,7 +1364,7 @@
         var subLbl = document.createElement('label');
         subLbl.htmlFor = subCb.id;
         var subLzCount = rawData.filter(function (d) { return d.unterthema === ut; }).length;
-        subLbl.innerHTML = ut + '<span class="lz-count">' + subLzCount + '</span>';
+        subLbl.innerHTML = escHtml(ut) + '<span class="lz-count">' + subLzCount + '</span>';
         subDiv.appendChild(subCb); subDiv.appendChild(subLbl);
         subList.appendChild(subDiv);
 
@@ -1160,6 +1373,9 @@
           else { delete pgSelectedSubthemas[ut]; subDiv.classList.remove('selected'); }
           syncThemaCheck(thema, cb, subthemas, item);
           updatePgLzBadge();
+          updatePgLzList();
+          updatePgEvoKonzepte();
+          updatePgMethods();
         });
       });
       item.appendChild(subList);
@@ -1180,6 +1396,9 @@
         });
         item.classList.toggle('selected', cb.checked);
         updatePgLzBadge();
+        updatePgLzList();
+        updatePgEvoKonzepte();
+        updatePgMethods();
       });
 
       expandBtn.addEventListener('click', function (e) {
@@ -1202,18 +1421,256 @@
   }
 
   function updatePgLzBadge() {
-    var count = getSelectedLernziele().length;
+    var lz = getSelectedLernziele();
+    var active = lz.filter(function (d) { return !pgExcludedLZ[d.id]; });
     var badge = $('pg-lz-badge');
     if (badge) {
-      badge.textContent = count + ' Lernziele ausgewählt';
-      badge.style.background = count > 0 ? 'var(--accent2-pale)' : 'var(--neutral-pale)';
-      badge.style.color = count > 0 ? 'var(--accent2)' : 'var(--text-muted)';
+      badge.textContent = active.length + ' von ' + lz.length + ' Lernzielen im Prompt';
+      badge.style.background = lz.length > 0 ? 'var(--accent2-pale)' : 'var(--neutral-pale)';
+      badge.style.color = lz.length > 0 ? 'var(--accent2)' : 'var(--text-muted)';
     }
+    var section = $('pg-lz-list-section');
+    if (section) section.style.display = lz.length > 0 ? 'block' : 'none';
   }
 
   function getSelectedLernziele() {
     if (!Object.keys(pgSelectedSubthemas).length) return [];
     return rawData.filter(function (d) { return pgSelectedSubthemas[d.unterthema]; });
+  }
+
+  function getActiveLernziele() {
+    return getSelectedLernziele().filter(function (d) { return !pgExcludedLZ[d.id]; });
+  }
+
+  // Update LZ list in section 1
+  function updatePgLzList() {
+    var allLZ = getSelectedLernziele();
+    var listContainer = $('pg-lz-items');
+    if (!listContainer) return;
+
+    // Apply filter
+    var visible = allLZ.filter(function (d) {
+      var a = annotations[d.id] || {};
+      var rel = getRelevanz(d);
+      if (pgLzActiveFilter === 'fav') return !!a.fav;
+      if (pgLzActiveFilter === 'r3') return rel === 3;
+      if (pgLzActiveFilter === 'r2') return rel === 2;
+      if (pgLzActiveFilter === 'notes') return !!(a.favNote || a.incNote || a.notes);
+      if (pgLzActiveTagFilter) return (a.userTags || []).indexOf(pgLzActiveTagFilter) !== -1;
+      return true;
+    });
+
+    listContainer.innerHTML = '';
+    if (visible.length === 0) {
+      listContainer.innerHTML = '<div style="padding:10px;font-size:0.78rem;color:var(--text-muted);text-align:center">Keine Lernziele entsprechen diesem Filter.</div>';
+      return;
+    }
+
+    visible.forEach(function (d) {
+      var a = annotations[d.id] || {};
+      var rel = getRelevanz(d);
+      var isExcluded = !!pgExcludedLZ[d.id];
+
+      var row = document.createElement('div');
+      row.className = 'lz-item-row' + (isExcluded ? ' excluded' : '');
+      row.title = isExcluded ? 'Ausgeschlossen – klicken zum Einschließen' : 'Klicken zum Ausschließen';
+
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.className = 'lz-item-check';
+      cb.checked = !isExcluded;
+      cb.addEventListener('change', function (e) {
+        e.stopPropagation();
+        if (cb.checked) delete pgExcludedLZ[d.id];
+        else pgExcludedLZ[d.id] = true;
+        row.classList.toggle('excluded', !cb.checked);
+        row.title = !cb.checked ? 'Ausgeschlossen – klicken zum Einschließen' : 'Klicken zum Ausschließen';
+        updatePgLzBadge();
+      });
+
+      var content = document.createElement('div');
+      content.className = 'lz-item-content';
+
+      var idSpan = document.createElement('div');
+      idSpan.className = 'lz-item-id';
+      idSpan.textContent = d.id;
+
+      var textSpan = document.createElement('div');
+      textSpan.className = 'lz-item-text';
+      textSpan.textContent = d.originaltext;
+
+      var badges = document.createElement('div');
+      badges.className = 'lz-item-badges';
+      if (a.fav) badges.innerHTML += '<span class="lz-item-badge fav">❤ Favorit</span>';
+      badges.innerHTML += '<span class="lz-item-badge r' + rel + '">' + REL_LABELS[rel] + '</span>';
+      (a.userTags || []).forEach(function (tag) {
+        badges.innerHTML += '<span class="lz-item-badge tag">🏷 ' + escHtml(tag) + '</span>';
+      });
+
+      content.appendChild(idSpan);
+      content.appendChild(textSpan);
+      content.appendChild(badges);
+
+      row.appendChild(cb);
+      row.appendChild(content);
+
+      row.addEventListener('click', function (e) {
+        if (e.target === cb) return;
+        cb.checked = !cb.checked;
+        if (cb.checked) delete pgExcludedLZ[d.id];
+        else pgExcludedLZ[d.id] = true;
+        row.classList.toggle('excluded', !cb.checked);
+        updatePgLzBadge();
+      });
+
+      listContainer.appendChild(row);
+    });
+  }
+
+  // Build filter buttons for LZ list including user tags
+  function updatePgLzTagFilters() {
+    var container = $('pg-lz-tag-filters');
+    if (!container) return;
+    container.innerHTML = '';
+    globalUserTags.forEach(function (tag) {
+      var btn = document.createElement('span');
+      btn.className = 'lz-filter-btn' + (pgLzActiveTagFilter === tag ? ' active' : '');
+      btn.textContent = '🏷 ' + tag;
+      btn.addEventListener('click', function () {
+        if (pgLzActiveTagFilter === tag) {
+          pgLzActiveTagFilter = null;
+          pgLzActiveFilter = 'all';
+        } else {
+          pgLzActiveTagFilter = tag;
+          pgLzActiveFilter = null;
+        }
+        // Reset standard filter buttons
+        document.querySelectorAll('#pg-lz-filter-bar .lz-filter-btn').forEach(function (b) { b.classList.remove('active'); });
+        updatePgLzTagFilters();
+        updatePgLzList();
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  // Update section 4: evo concepts from selected LZ
+  function updatePgEvoKonzepte() {
+    var lz = getSelectedLernziele();
+    var conceptSet = {};
+    lz.forEach(function (d) {
+      var ev = d.evolutionsbezug || {};
+      var e2 = edits[d.id] || {};
+      var konz = e2.konzepte ? e2.konzepte.split(',').map(function (s) { return s.trim(); }) : (ev.relevante_evolutionskonzepte || []);
+      konz.forEach(function (k) { if (k) conceptSet[k] = true; });
+    });
+
+    var container = $('pg-evo-konzepte');
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (Object.keys(conceptSet).length === 0) {
+      container.innerHTML = '<span style="font-size:0.78rem;color:var(--text-muted)">Bitte zuerst Themen auswählen.</span>';
+      return;
+    }
+
+    Object.keys(conceptSet).sort().forEach(function (k) {
+      var label = document.createElement('label');
+      label.className = 'check-item';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.value = k;
+      // NO default checked
+      var span = document.createElement('span');
+      span.textContent = k;
+      label.appendChild(cb);
+      label.appendChild(span);
+      container.appendChild(label);
+    });
+  }
+
+  // All possible methods from data
+  var ALL_METHODS = [
+    'Forschendes Lernen', 'Konzeptuelles Lernen', 'Kooperative Lernformen',
+    'Projektbasiertes Lernen', 'Erfahrungsbasiertes Lernen', 'Diskussion',
+    'Narrativer Zugang', 'Analogien und Vergleiche', 'Modelle und Simulationen',
+    'Einblick in Wissenschaftsgeschichte', 'Recherche', 'Digitale Medien'
+  ];
+
+  // Update section 5: methods from selected LZ
+  function updatePgMethods() {
+    var lz = getSelectedLernziele();
+    var methodFreq = {};
+    lz.forEach(function (d) {
+      var ds = d.didaktische_strategien || {};
+      var top3 = ds.top3_methoden || [];
+      top3.forEach(function (m) {
+        if (m.methode) {
+          // Normalize to standard names
+          var normalized = normalizeMethodName(m.methode);
+          if (normalized) methodFreq[normalized] = (methodFreq[normalized] || 0) + 1;
+        }
+      });
+    });
+
+    var recContainer = $('pg-lehrformen-recommended');
+    var extraContainer = $('pg-lehrformen-extra');
+    if (!recContainer || !extraContainer) return;
+
+    recContainer.innerHTML = '';
+    extraContainer.innerHTML = '';
+
+    var recommendedMethods = Object.keys(methodFreq).sort(function (a, b) { return methodFreq[b] - methodFreq[a]; });
+    var extraMethods = ALL_METHODS.filter(function (m) { return !methodFreq[m]; });
+
+    if (recommendedMethods.length === 0) {
+      recContainer.innerHTML = '<span style="font-size:0.78rem;color:var(--text-muted)">Bitte zuerst Themen auswählen.</span>';
+    } else {
+      recommendedMethods.forEach(function (m) {
+        var label = document.createElement('label');
+        label.className = 'check-item';
+        var cb = document.createElement('input');
+        cb.type = 'checkbox';
+        cb.value = m;
+        // NO default checked
+        var span = document.createElement('span');
+        span.textContent = m + ' (' + methodFreq[m] + '×)';
+        label.appendChild(cb);
+        label.appendChild(span);
+        recContainer.appendChild(label);
+      });
+    }
+
+    extraMethods.forEach(function (m) {
+      var label = document.createElement('label');
+      label.className = 'check-item';
+      var cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.value = m;
+      var span = document.createElement('span');
+      span.textContent = m;
+      label.appendChild(cb);
+      label.appendChild(span);
+      extraContainer.appendChild(label);
+    });
+  }
+
+  function normalizeMethodName(raw) {
+    var map = {
+      'forschendes lernen': 'Forschendes Lernen',
+      'konzeptuelles lernen': 'Konzeptuelles Lernen',
+      'kooperative lernformen': 'Kooperative Lernformen',
+      'projektbasiertes lernen': 'Projektbasiertes Lernen',
+      'erfahrungsbasiertes lernen': 'Erfahrungsbasiertes Lernen',
+      'diskussion': 'Diskussion',
+      'narrativer zugang': 'Narrativer Zugang',
+      'analogien und vergleiche': 'Analogien und Vergleiche',
+      'modelle und simulationen': 'Modelle und Simulationen',
+      'einblick in wissenschaftsgeschichte': 'Einblick in Wissenschaftsgeschichte',
+      'recherche': 'Recherche',
+      'digitale medien': 'Digitale Medien'
+    };
+    var lower = raw.toLowerCase().trim();
+    return map[lower] || raw;
   }
 
   function sanitizeId(str) {
@@ -1238,7 +1695,6 @@
       var rel = getRelevanz(d);
       if (relKeys.length && !activeRelFilters[String(rel)]) return false;
 
-      // Method filter
       if (methodKeys.length) {
         var ds = d.didaktische_strategien || {};
         var top3 = ds.top3_methoden || [];
@@ -1247,7 +1703,6 @@
         if (!hasMethod) return false;
       }
 
-      // Evo konzept filter
       if (konzeptKeys.length) {
         var ev = d.evolutionsbezug || {};
         var konz = ev.relevante_evolutionskonzepte || [];
@@ -1264,7 +1719,6 @@
         if (activeTagFilters['edited'] && !edits[d.id]) return false;
       }
 
-      // User tag filter
       if (uTagKeys.length) {
         var userTags = a.userTags || [];
         var hasAll = uTagKeys.every(function (t) { return userTags.indexOf(t) !== -1; });
@@ -1338,6 +1792,7 @@
     var impuls = e.impuls || ds.evolutionsdidaktischer_impuls || '';
     var top3Methods = ds.top3_methoden || [];
     var methoden = e.methoden ? e.methoden.split('\n').filter(Boolean) : [];
+    var fehlvors = ds.moegliche_fehlvorstellungen || '';
     var lehrplan = ds.bezug_zum_lehrplan_kontext || '';
     var notes = a.notes || '';
     var userTags = a.userTags || [];
@@ -1353,9 +1808,10 @@
     card.id = 'card-' + id;
 
     var dots = [1,2,3].map(function (i) { return '<div class="rel-dot' + (i <= rel ? ' on' : '') + '"></div>'; }).join('');
+    // Full text for concept chips
     var konzHtml = konzepte.map(function (k) { return '<span class="concept-chip">' + hl(k, query) + '</span>'; }).join('');
 
-    // Top3 methods HTML
+    // Top3 methods HTML - full text
     var top3Html = '';
     if (top3Methods.length > 0) {
       top3Html = '<div class="method-top3">';
@@ -1373,7 +1829,6 @@
 
     var legacyMethHtml = methoden.length ? methoden.map(function (m) { return '<li>' + hl(m, query) + '</li>'; }).join('') : '';
 
-    // Tags section
     var tagHtml = '';
     var hasTags = a.fav || a.inc || isEdited || notes || userTags.length;
     if (hasTags) {
@@ -1384,7 +1839,6 @@
       tagHtml = '<div class="card-tags">' + tags + '</div>';
     }
 
-    // User tags section
     var userTagHtml = '<div class="card-user-tags" id="utags-' + id + '">';
     userTags.forEach(function (t) {
       userTagHtml += '<span class="card-user-tag">' + escHtml(t) + '<span class="rm-tag" data-id="' + id + '" data-tag="' + escHtml(t) + '">✕</span></span>';
@@ -1403,7 +1857,7 @@
       '<div class="card-header">' +
         '<span class="card-id">' + hl(id, query) + '</span>' +
         '<div class="card-titles">' +
-          '<div class="card-thema">' + hl(d.thema, query) + '</div>' +
+          '<div class="card-thema">' + hl(getThemaDisplay(d.thema), query) + '</div>' +
           '<div class="card-unterthema">' + hl(d.unterthema, query) + '</div>' +
         '</div>' +
         '<div class="card-actions">' +
@@ -1430,7 +1884,8 @@
         '<div class="expand-content">' +
           (impuls ? '<div class="didaktik-block"><strong>Evolutionsdidaktischer Impuls</strong><p>' + hl(impuls, query) + '</p></div>' : '') +
           (top3Methods.length ? '<div class="didaktik-block"><strong>Top 3 Methoden (★ anklicken zum Favorisieren)</strong>' + top3Html + '</div>' : '') +
-          (legacyMethHtml ? '<div class="didaktik-block"><strong>Weitere Methoden</strong><ul class="methoden-list">' + legacyMethHtml + '</ul></div>' : '') +
+          (legacyMethHtml ? '<div class="didaktik-block"><strong>Weitere Methoden</strong><ul>' + legacyMethHtml + '</ul></div>' : '') +
+          (fehlvors ? '<div class="didaktik-block"><strong>Mögliche Fehlvorstellungen</strong><p>' + hl(fehlvors, query) + '</p></div>' : '') +
           (lehrplan ? '<div class="didaktik-block"><strong>Bezug zum Lehrplan</strong><p>' + escHtml(lehrplan) + '</p></div>' : '') +
         '</div>' +
       '</div>' +
@@ -1443,7 +1898,6 @@
   document.addEventListener('click', function (evt) {
     var t = evt.target;
 
-    // Method favorite toggle
     var mi = t.closest ? t.closest('.method-item') : null;
     if (mi && mi.hasAttribute('data-rang')) {
       var mId = mi.getAttribute('data-id');
@@ -1452,7 +1906,6 @@
       if (!annotations[mId].methFavs) annotations[mId].methFavs = {};
       annotations[mId].methFavs[rang] = !annotations[mId].methFavs[rang];
       saveLS();
-      // refresh card
       var card = $('card-' + mId);
       var q = ($('search-input').value || '').toLowerCase().trim();
       if (card) {
@@ -1463,7 +1916,6 @@
       return;
     }
 
-    // Remove user tag from card
     if (t.classList && t.classList.contains('rm-tag')) {
       var rmId = t.getAttribute('data-id');
       var rmTag = t.getAttribute('data-tag');
@@ -1474,7 +1926,6 @@
       return;
     }
 
-    // Expand trigger
     var trigger = t.closest ? t.closest('.expand-trigger') : null;
     if (trigger && !trigger.hasAttribute('data-action')) {
       trigger.classList.toggle('open');
@@ -1483,7 +1934,6 @@
       return;
     }
 
-    // Action buttons
     var btn = t.closest ? t.closest('[data-action]') : null;
     if (btn) {
       var action = btn.getAttribute('data-action');
@@ -1495,11 +1945,9 @@
       return;
     }
 
-    // Export opt
     var eo = t.closest ? t.closest('.export-opt') : null;
     if (eo) { doExport(eo.getAttribute('data-export')); return; }
 
-    // Modal overlay close
     if (t.classList && t.classList.contains('modal-overlay')) t.classList.add('hidden');
   });
 
@@ -1526,6 +1974,7 @@
       '<div class="stat-row"><span>🏷 Getaggt</span><span class="stat-num">' + tagN + '</span></div>' +
       '<div class="stat-row"><span>📋 Gefiltert</span><span class="stat-num">' + filteredData.length + '</span></div>';
     updatePlannerInfo();
+    drawChart();
   }
 
   function updatePlannerInfo() {
@@ -1540,37 +1989,103 @@
   function drawChart() {
     var canvas = $('chart-canvas');
     if (!canvas || !canvas.getContext) return;
+
+    var container = canvas.parentElement;
+    var cw = container ? container.offsetWidth : 260;
+    if (cw < 10) cw = 260;
+    var ch = 200;
+
     var dpr = window.devicePixelRatio || 1;
-    var cw = canvas.offsetWidth;
-    var ch = 140;
-    canvas.width = cw * dpr; canvas.height = ch * dpr;
+    canvas.width = cw * dpr;
+    canvas.height = ch * dpr;
+    canvas.style.width = cw + 'px';
+    canvas.style.height = ch + 'px';
+
     var ctx = canvas.getContext('2d');
     ctx.scale(dpr, dpr);
-    var themas = unique(rawData.map(function (d) { return d.thema; }));
-    var colors = ['#388e3c', '#e65100', '#c62828'];
-    var pad = 28;
-    var bw = themas.length ? (cw - pad * 2) / themas.length : 1;
     ctx.clearRect(0, 0, cw, ch);
+
+    var themas = unique(rawData.map(function (d) { return d.thema; }));
+    var colors = ['#388e3c', '#e65100', '#c62828']; // r1=gering, r2=mittel, r3=hoch
+
+    // Legend on the right
+    var legendW = 60;
+    var chartW = cw - legendW - 8;
+    var padLeft = 4;
+    var padBottom = 32;
+    var padTop = 8;
+    var availH = ch - padBottom - padTop;
+
+    // Find max count for scaling
+    var maxCount = 0;
+    themas.forEach(function (thema) {
+      var items = rawData.filter(function (d) { return d.thema === thema; });
+      var total = items.length;
+      if (total > maxCount) maxCount = total;
+    });
+    if (maxCount === 0) return;
+
+    var barGroupW = themas.length > 0 ? (chartW - padLeft) / themas.length : 1;
+    var barW = Math.max(6, Math.min(18, barGroupW / 4));
+
     themas.forEach(function (thema, i) {
       var items = rawData.filter(function (d) { return d.thema === thema; });
-      var relCounts = [1, 2, 3].map(function (r) { return items.filter(function (d) { return getRelevanz(d) === r; }).length; });
-      var availH = ch - 26;
-      var y = ch - 17;
-      relCounts.forEach(function (c, ri) {
-        var barH = Math.min((c / Math.max(rawData.length, 1)) * availH * 3, availH);
-        ctx.fillStyle = colors[ri];
-        ctx.fillRect(pad + i * bw + 3, y - barH, bw - 6, barH);
-        y -= barH;
+      var relCounts = [1, 2, 3].map(function (r) {
+        return items.filter(function (d) { return getRelevanz(d) === r; }).length;
       });
-      ctx.fillStyle = '#607d8b'; ctx.font = '8px sans-serif'; ctx.textAlign = 'center';
-      var label = thema.split(' ')[0]; if (label.length > 6) label = label.substring(0, 5) + '…';
-      ctx.fillText(label, pad + i * bw + bw / 2, ch - 3);
+
+      var groupX = padLeft + i * barGroupW + barGroupW / 2 - (barW * 3 + 4) / 2;
+
+      relCounts.forEach(function (c, ri) {
+        var barH = maxCount > 0 ? (c / maxCount) * availH : 0;
+        var x = groupX + ri * (barW + 2);
+        var y = padTop + availH - barH;
+        ctx.fillStyle = colors[ri];
+        ctx.fillRect(x, y, barW, barH);
+
+        // Value label on bar if > 0
+        if (c > 0 && barH > 12) {
+          ctx.fillStyle = '#fff';
+          ctx.font = 'bold 9px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(c, x + barW / 2, y + barH - 3);
+        } else if (c > 0) {
+          ctx.fillStyle = colors[ri];
+          ctx.font = 'bold 9px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(c, x + barW / 2, y - 2);
+        }
+      });
+
+      // X axis label
+      var label = getThemaDisplay(thema);
+      if (label.length > 9) label = label.substring(0, 8) + '…';
+      ctx.fillStyle = '#607d8b';
+      ctx.font = '8px sans-serif';
+      ctx.textAlign = 'center';
+      var labelX = padLeft + i * barGroupW + barGroupW / 2;
+      ctx.fillText(label, labelX, ch - padBottom + 12);
     });
-    ['Gering', 'Mittel', 'Hoch'].forEach(function (l, i) {
-      ctx.fillStyle = colors[i]; ctx.fillRect(cw - 65, 5 + i * 13, 8, 8);
-      ctx.fillStyle = '#607d8b'; ctx.font = '8px sans-serif'; ctx.textAlign = 'left';
-      ctx.fillText(l, cw - 54, 13 + i * 13);
+
+    // Legend placed on the right side of chart, next to bars
+    var legendLabels = ['Gering (1)', 'Mittel (2)', 'Hoch (3)'];
+    var legendX = cw - legendW + 4;
+    legendLabels.forEach(function (l, i) {
+      ctx.fillStyle = colors[i];
+      ctx.fillRect(legendX, padTop + i * 18, 10, 10);
+      ctx.fillStyle = '#607d8b';
+      ctx.font = '9px sans-serif';
+      ctx.textAlign = 'left';
+      ctx.fillText(l, legendX + 13, padTop + i * 18 + 9);
     });
+
+    // X axis line
+    ctx.strokeStyle = '#cfd8dc';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(padLeft, padTop + availH);
+    ctx.lineTo(chartW, padTop + availH);
+    ctx.stroke();
   }
 
   // ── EDIT MODAL ────────────────────────────────────────────────────────────
@@ -1674,10 +2189,10 @@
     if (!annotations[id]) annotations[id] = {};
     if (!annotations[id].userTags) annotations[id].userTags = [];
     if (annotations[id].userTags.indexOf(tag) === -1) annotations[id].userTags.push(tag);
-    // also ensure global tag exists
     if (globalUserTags.indexOf(tag) === -1) globalUserTags.push(tag);
     saveLS();
     buildUserTagFilterDisplay();
+    updatePgLzTagFilters();
   }
 
   function removeUserTagFromItem(id, tag) {
@@ -1720,9 +2235,6 @@
       delete annotations[id][type];
       if (type === 'fav') delete annotations[id].favNote;
       else delete annotations[id].incNote;
-      if (!annotations[id].fav && !annotations[id].inc && !annotations[id].notes &&
-          !(annotations[id].userTags && annotations[id].userTags.length) &&
-          !Object.keys(annotations[id].methFavs || {}).length) delete annotations[id];
     }
     saveLS(); closeModal('annot-modal'); applyFilters();
     showToast('Markierung entfernt', 'info');
@@ -1750,20 +2262,56 @@
   function doExport(type) {
     closeModal('export-modal');
     var data, filename, content, mime;
+
     if (type === 'all') {
-      data = rawData.map(enrichItem); filename = 'bio_lernziele_alle.json';
+      data = rawData.map(enrichItem);
+      filename = 'bio_lernziele_alle.json';
       content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
       mime = 'application/json';
+
+    } else if (type === 'edited') {
+      data = rawData.filter(function (d) { return !!edits[d.id]; }).map(enrichItem);
+      if (!data.length) { showToast('Keine bearbeiteten Lernziele', 'error'); return; }
+      filename = 'bio_bearbeitet.json';
+      content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
+      mime = 'application/json';
+
+    } else if (type === 'with-notes') {
+      data = rawData.filter(function (d) {
+        var a = annotations[d.id] || {};
+        return !!(a.favNote || a.incNote || a.notes);
+      }).map(enrichItem);
+      if (!data.length) { showToast('Keine Lernziele mit Notizen', 'error'); return; }
+      filename = 'bio_mit_notizen.json';
+      content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
+      mime = 'application/json';
+
+    } else if (type === 'with-usertags') {
+      data = rawData.filter(function (d) {
+        var a = annotations[d.id] || {};
+        return (a.userTags || []).length > 0;
+      }).map(enrichItem);
+      if (!data.length) { showToast('Keine Lernziele mit eigenen Tags', 'error'); return; }
+      filename = 'bio_mit_tags.json';
+      content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
+      mime = 'application/json';
+
     } else if (type === 'favorites') {
       data = rawData.filter(function (d) { return (annotations[d.id] || {}).fav; }).map(enrichItem);
       if (!data.length) { showToast('Keine Favoriten', 'error'); return; }
-      filename = 'bio_favoriten.json'; content = JSON.stringify({ eintraege: data }, null, 2); mime = 'application/json';
+      filename = 'bio_favoriten.json';
+      content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
+      mime = 'application/json';
+
     } else if (type === 'filtered') {
-      data = filteredData.map(enrichItem); filename = 'bio_gefiltert.json';
-      content = JSON.stringify({ eintraege: data }, null, 2); mime = 'application/json';
+      data = filteredData.map(enrichItem);
+      filename = 'bio_gefiltert.json';
+      content = JSON.stringify({ exportiert: new Date().toISOString(), globalUserTags: globalUserTags, eintraege: data }, null, 2);
+      mime = 'application/json';
+
     } else if (type === 'csv') {
       var hdrs = ['ID', 'Thema', 'Unterthema', 'Lernziel', 'Relevanz', 'Konzepte', 'Favorit', 'Fehlerhaft', 'UserTags', 'Notizen'];
-      var rows = rawData.map(function (d) {
+      var csvRows = rawData.map(function (d) {
         var a = annotations[d.id] || {}; var rel = getRelevanz(d);
         var konz = ((d.evolutionsbezug || {}).relevante_evolutionskonzepte || []).join('; ');
         return [d.id, d.thema, d.unterthema, d.originaltext, rel, konz,
@@ -1771,7 +2319,10 @@
           (a.userTags || []).join('; '), (a.notes || a.favNote || a.incNote || '')
         ].map(function (v) { return '"' + String(v).replace(/"/g, '""') + '"'; }).join(',');
       });
-      filename = 'bio_lernziele.csv'; content = '\uFEFF' + hdrs.join(',') + '\n' + rows.join('\n'); mime = 'text/csv;charset=utf-8;';
+      filename = 'bio_lernziele.csv';
+      content = '\uFEFF' + hdrs.join(',') + '\n' + csvRows.join('\n');
+      mime = 'text/csv;charset=utf-8;';
+
     } else if (type === 'markdown') {
       var favs = rawData.filter(function (d) { return (annotations[d.id] || {}).fav; });
       if (!favs.length) { showToast('Keine Favoriten', 'error'); return; }
@@ -1779,7 +2330,7 @@
       favs.forEach(function (d) { if (!byThema[d.thema]) byThema[d.thema] = []; byThema[d.thema].push(d); });
       var md = '# Unterrichtsplan – Evolutionsbezug Biologie Gy 7/8\n\n_Erstellt: ' + new Date().toLocaleDateString('de-DE') + '_\n\n';
       Object.keys(byThema).forEach(function (thema) {
-        md += '## ' + thema + '\n\n';
+        md += '## ' + getThemaDisplay(thema) + '\n\n';
         byThema[thema].forEach(function (d) {
           var a = annotations[d.id] || {}; var rel = getRelevanz(d);
           var relStr = ['', '🟢 Gering', '🟡 Mittel', '🔴 Hoch'][rel] || '';
@@ -1804,6 +2355,7 @@
       });
       filename = 'unterrichtsplan.md'; content = md; mime = 'text/markdown;charset=utf-8;';
     } else { return; }
+
     downloadFile(content, filename, mime);
     showToast('✓ ' + filename + ' exportiert', 'success');
   }
@@ -1828,10 +2380,35 @@
         var items = json.eintraege || [];
         var count = 0;
         if (json.globalUserTags) {
-          json.globalUserTags.forEach(function (t) { if (globalUserTags.indexOf(t) === -1) globalUserTags.push(t); });
+          json.globalUserTags.forEach(function (t) {
+            if (globalUserTags.indexOf(t) === -1) globalUserTags.push(t);
+          });
         }
         items.forEach(function (item) {
-          if (item._annotation && item.id) {
+          if (!item.id) return;
+          // Import edits from enriched fields
+          var ev = item.evolutionsbezug || {};
+          var ds = item.didaktische_strategien || {};
+          var origD = rawData.find(function (x) { return x.id === item.id; });
+          if (origD) {
+            var origEv = origD.evolutionsbezug || {};
+            var editObj = {};
+            var hasEdit = false;
+            if (ev.wissenschaftliche_begruendung && ev.wissenschaftliche_begruendung !== origEv.wissenschaftliche_begruendung) {
+              editObj.wiss = ev.wissenschaftliche_begruendung; hasEdit = true;
+            }
+            if (ev.relevante_evolutionskonzepte && JSON.stringify(ev.relevante_evolutionskonzepte) !== JSON.stringify(origEv.relevante_evolutionskonzepte || [])) {
+              editObj.konzepte = ev.relevante_evolutionskonzepte.join(', '); hasEdit = true;
+            }
+            if (ev.evolutionsrelevanz_beurteilung && ev.evolutionsrelevanz_beurteilung !== origEv.evolutionsrelevanz_beurteilung) {
+              editObj.relevanz = String(ev.evolutionsrelevanz_beurteilung); hasEdit = true;
+            }
+            if (ds.evolutionsdidaktischer_impuls && ds.evolutionsdidaktischer_impuls !== (origD.didaktische_strategien || {}).evolutionsdidaktischer_impuls) {
+              editObj.impuls = ds.evolutionsdidaktischer_impuls; hasEdit = true;
+            }
+            if (hasEdit) edits[item.id] = editObj;
+          }
+          if (item._annotation) {
             var ann = item._annotation;
             if (!annotations[item.id]) annotations[item.id] = {};
             if (ann.favorit) annotations[item.id].fav = true;
@@ -1839,14 +2416,16 @@
             if (ann.favNote) annotations[item.id].favNote = ann.favNote;
             if (ann.incNote) annotations[item.id].incNote = ann.incNote;
             if (ann.notizen) annotations[item.id].notes = ann.notizen;
-            if (ann.userTags) annotations[item.id].userTags = ann.userTags;
-            if (ann.methFavs) annotations[item.id].methFavs = ann.methFavs;
+            if (ann.userTags && ann.userTags.length) annotations[item.id].userTags = ann.userTags;
+            if (ann.methFavs && Object.keys(ann.methFavs).length) annotations[item.id].methFavs = ann.methFavs;
             count++;
           }
         });
         saveLS(); closeModal('import-modal');
-        buildUserTagFilterDisplay(); applyFilters();
-        showToast('✓ ' + count + ' Annotationen importiert', 'success');
+        buildUserTagFilterDisplay();
+        buildEvoKonzeptTree();
+        applyFilters(); drawChart();
+        showToast('✓ ' + count + ' Einträge importiert', 'success');
       } catch (err) { showToast('⚠ Fehler: ' + err.message, 'error'); }
     };
     reader.readAsText(file);
@@ -1894,6 +2473,14 @@
     var vals = []; cbs.forEach(function (cb) { vals.push(cb.value); }); return vals;
   }
 
+  // Get checked vals from both recommended and extra methods
+  function getPgMethodVals() {
+    var vals = [];
+    document.querySelectorAll('#pg-lehrformen-recommended input[type="checkbox"]:checked').forEach(function (cb) { vals.push(cb.value); });
+    document.querySelectorAll('#pg-lehrformen-extra input[type="checkbox"]:checked').forEach(function (cb) { vals.push(cb.value); });
+    return vals;
+  }
+
   // ── VIEW SWITCHING ─────────────────────────────────────────────────────────
   function switchView(viewName) {
     currentAppView = viewName;
@@ -1907,10 +2494,8 @@
   // PROMPT GENERATOR
   // ══════════════════════════════════════════════════════════════════════════
   function bindPromptGeneratorEvents() {
-    // Range
     bindRange('pg-num-lessons', 'pg-num-lessons-val');
 
-    // Radio chips
     document.querySelectorAll('.radio-group .radio-chip').forEach(function (chip) {
       chip.addEventListener('click', function () {
         var group = chip.closest('.radio-group');
@@ -1922,7 +2507,6 @@
       });
     });
 
-    // Pct chips
     document.querySelectorAll('.pct-chip').forEach(function (chip) {
       chip.addEventListener('click', function () {
         var group = chip.closest('.pct-group');
@@ -1931,12 +2515,37 @@
       });
     });
 
+    // LZ filter buttons
+    document.querySelectorAll('#pg-lz-filter-bar .lz-filter-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('#pg-lz-filter-bar .lz-filter-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        pgLzActiveFilter = btn.getAttribute('data-lzfilter');
+        pgLzActiveTagFilter = null;
+        // Reset tag filter buttons
+        document.querySelectorAll('#pg-lz-tag-filters .lz-filter-btn').forEach(function (b) { b.classList.remove('active'); });
+        updatePgLzList();
+      });
+    });
+
+    // LZ list toggle
+    var lzToggle = $('pg-lz-list-toggle');
+    var lzBody = $('pg-lz-list-body');
+    if (lzToggle && lzBody) {
+      lzToggle.addEventListener('click', function () {
+        var hidden = lzBody.style.display === 'none';
+        lzBody.style.display = hidden ? 'block' : 'none';
+      });
+    }
+
     $('pg-generate-btn').addEventListener('click', generatePrompt);
     $('pg-regenerate-btn').addEventListener('click', generatePrompt);
 
     $('pg-copy-btn').addEventListener('click', function () {
       var text = $('prompt-preview').textContent;
-      if (!text || $('prompt-preview').classList.contains('empty')) { showToast('Bitte zuerst Prompt generieren', 'error'); return; }
+      if (!text || $('prompt-preview').classList.contains('empty')) {
+        showToast('Bitte zuerst Prompt generieren', 'error'); return;
+      }
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(function () { showToast('✓ Prompt kopiert!', 'success'); });
       } else {
@@ -1948,25 +2557,53 @@
 
     $('pg-reset-btn').addEventListener('click', function () {
       if (!confirm('Alle Einstellungen im Prompt Generator zurücksetzen?')) return;
+
+      // Reset radio groups to first option
       document.querySelectorAll('.radio-group').forEach(function (group) {
         var chips = group.querySelectorAll('.radio-chip');
         chips.forEach(function (c) { c.classList.remove('selected'); });
         if (chips.length > 0) chips[0].classList.add('selected');
       });
+
+      // Reset pct chips to middle
       document.querySelectorAll('.pct-group').forEach(function (group) {
         var chips = group.querySelectorAll('.pct-chip');
         chips.forEach(function (c) { c.classList.remove('selected'); });
         var mid = chips[Math.floor(chips.length / 2)];
         if (mid) mid.classList.add('selected');
       });
-      document.querySelectorAll('#pg-evo-konzepte input, #pg-lehrformen input, #pg-differenzierung input, #pg-bewertung input, #pg-kontext input, #pg-ausgabe-typ input, #pg-faecherverbindung input').forEach(function (cb) { cb.checked = false; });
-      ['variation','selektion','anpassung','inquiry','formativ','sequenzplan','methoden','transferfragen','antibiotikaresistenz'].forEach(function (v) {
-        var el = document.querySelector('input[value="' + v + '"]'); if (el) el.checked = true;
+
+      // Uncheck ALL checkboxes (no defaults)
+      ['pg-evo-konzepte', 'pg-lehrformen-recommended', 'pg-lehrformen-extra',
+       'pg-differenzierung', 'pg-bewertung', 'pg-kontext', 'pg-ausgabe-typ'].forEach(function (id) {
+        var el = $(id);
+        if (el) el.querySelectorAll('input[type="checkbox"]').forEach(function (cb) { cb.checked = false; });
       });
+      // Re-check only output format defaults
+      ['sequenzplan', 'methoden', 'transferfragen'].forEach(function (v) {
+        var el = document.querySelector('#pg-ausgabe-typ input[value="' + v + '"]');
+        if (el) el.checked = true;
+      });
+
       $('pg-num-lessons').value = 4; $('pg-num-lessons-val').textContent = '4';
-      ['pg-fach-notizen','pg-did-notizen','pg-eval-notizen','pg-kontext-notizen','pg-faecher-notizen','pg-sonstige-notizen','pg-vorwissen-notiz'].forEach(function (id) { if ($(id)) $(id).value = ''; });
+      ['pg-fach-notizen','pg-did-notizen','pg-eval-notizen','pg-kontext-notizen','pg-sonstige-notizen','pg-vorwissen-notiz'].forEach(function (id) {
+        if ($(id)) $(id).value = '';
+      });
       $('pg-format-other-wrap').style.display = 'none';
       $('pg-output-wrap').style.display = 'none';
+
+      // Reset theme selections
+      pgSelectedSubthemas = {};
+      pgExcludedLZ = {};
+      document.querySelectorAll('.theme-check').forEach(function (cb) { cb.checked = false; });
+      document.querySelectorAll('.subtheme-item input[type="checkbox"]').forEach(function (cb) { cb.checked = false; });
+      document.querySelectorAll('.theme-item').forEach(function (el) { el.classList.remove('selected'); });
+      document.querySelectorAll('.subtheme-item').forEach(function (el) { el.classList.remove('selected'); });
+      updatePgLzBadge();
+      updatePgLzList();
+      updatePgEvoKonzepte();
+      updatePgMethods();
+
       showToast('↺ Zurückgesetzt', 'info');
     });
   }
@@ -1977,14 +2614,14 @@
     range.addEventListener('input', function () { val.textContent = range.value; });
   }
 
+  // ── GENERATE PROMPT ───────────────────────────────────────────────────────
   function generatePrompt() {
-    var selectedLZ = getSelectedLernziele();
-    if (selectedLZ.length === 0) {
+    var activeLZ = getActiveLernziele();
+    if (activeLZ.length === 0) {
       showToast('⚠ Bitte mindestens ein Thema auswählen', 'error');
       $('pg-output-wrap').style.display = 'none'; return;
     }
 
-    // Gather settings
     var klasse = getRadioVal('pg-klasse') || '7-8';
     var klasseLabel = { '7': 'Klasse 7', '8': 'Klasse 8', '7-8': 'Klassen 7–8' }[klasse] || klasse;
     var numLessons = parseInt($('pg-num-lessons').value, 10);
@@ -1995,75 +2632,46 @@
     var evoPct = getPctVal('pg-evo-pct');
     var evoKonzepte = getCheckedVals('pg-evo-konzepte');
     var fachNotizen = $('pg-fach-notizen').value.trim();
-    var lehrformen = getCheckedVals('pg-lehrformen');
+    var lehrformen = getPgMethodVals();
     var differenzierung = getCheckedVals('pg-differenzierung');
     var didNotizen = $('pg-did-notizen').value.trim();
     var bewertung = getCheckedVals('pg-bewertung');
     var evalNotizen = $('pg-eval-notizen').value.trim();
     var kontexte = getCheckedVals('pg-kontext');
     var kontextNotizen = $('pg-kontext-notizen').value.trim();
-    var faecherverbindung = getCheckedVals('pg-faecherverbindung');
-    var faecherNotizen = $('pg-faecher-notizen').value.trim();
     var ausgabeTyp = getCheckedVals('pg-ausgabe-typ');
     var ausgabeTon = getRadioVal('pg-ausgabe-ton');
     var ausgabeLaenge = getRadioVal('pg-ausgabe-laenge');
     var sonstigeNotizen = $('pg-sonstige-notizen').value.trim();
 
-    // Grouping
+    // Group active LZ by thema/unterthema
     var byThema = {};
-    selectedLZ.forEach(function (d) {
+    activeLZ.forEach(function (d) {
       if (!byThema[d.thema]) byThema[d.thema] = {};
       if (!byThema[d.thema][d.unterthema]) byThema[d.thema][d.unterthema] = [];
       byThema[d.thema][d.unterthema].push(d);
     });
-    var favLZ = selectedLZ.filter(function (d) { return (annotations[d.id] || {}).fav; });
-    var highRelLZ = selectedLZ.filter(function (d) { return getRelevanz(d) === 3; });
 
-    // Favourite methods across selected LZ
+    var favLZ = activeLZ.filter(function (d) { return (annotations[d.id] || {}).fav; });
+    var highRelLZ = activeLZ.filter(function (d) { return getRelevanz(d) === 3; });
+
     var favMethods = [];
-    selectedLZ.forEach(function(d) {
+    activeLZ.forEach(function (d) {
       var a = annotations[d.id] || {};
       var methFavs = a.methFavs || {};
       var ds = d.didaktische_strategien || {};
       var top3 = ds.top3_methoden || [];
-      top3.forEach(function(m) {
-        if (methFavs[m.rang]) favMethods.push(m.methode + ' (' + d.id + ')');
+      top3.forEach(function (m) {
+        if (methFavs[m.rang]) favMethods.push(m.methode + ' [' + d.id + ']');
       });
     });
 
-    // Labels
     var vorwissensLabels = {
       keins: 'Die Lerngruppe hat noch kein Vorwissen zur Evolutionsbiologie.',
       grundlagen: 'Die Lerngruppe kennt Grundbegriffe der Evolution aus früheren Einheiten.',
       solide: 'Die Lerngruppe verfügt über solides Grundwissen zur Evolution.'
     };
-    var evoKonzeptNames = {
-      variation: 'Variation und genetische Diversität',
-      selektion: 'Natürliche Selektion und Selektionsdruck',
-      anpassung: 'Anpassung und Angepasstheit',
-      homologie: 'Homologie und Analogie',
-      stammbaum: 'Stammbäume und phylogenetische Systematik',
-      koevolution: 'Koevolution',
-      endosymbiose: 'Endosymbiontentheorie',
-      mismatch: 'Evolutionäres Mismatch und evolutionäre Medizin',
-      'evo-devo': 'Evolutionäre Entwicklungsbiologie (Evo-Devo)',
-      artbildung: 'Artbildung und adaptive Radiation',
-      molekular: 'Molekulare Evolution und Genkonservierung'
-    };
-    var lehrformenNames = {
-      inquiry: 'Forschendes Lernen (Inquiry-Based Learning)',
-      konzept: 'Konzeptuelles Lernen / Concept Maps',
-      kooperativ: 'Kooperative Lernformen (Gruppen-/Partnerarbeit)',
-      projektbasiert: 'Projektbasiertes Lernen',
-      erfahrungsbasiert: 'Erfahrungsbasiertes Lernen (Spiele u.a.)',
-      diskussion: 'Diskussion und wissenschaftliche Argumentation',
-      narrativ: 'Narrativer Zugang (Evolutionsgeschichten)',
-      analogien: 'Analogien und Vergleiche',
-      modelle: 'Modelle und Simulationen',
-      wissenschaftsgeschichte: 'Einblick in Wissenschaftsgeschichte',
-      recherche: 'Recherche (eigenständige Informationsrecherche)',
-      digital: 'Digitale Medien und Werkzeuge'
-    };
+
     var bewertungsNames = {
       formativ: 'Formative Beurteilung (laufend)',
       quiz: 'Quiz',
@@ -2073,6 +2681,7 @@
       klassenarbeit: 'Klassenarbeit / Lernerfolgskontrolle',
       praktisch: 'Praktische Leistungen (Lab / Experiment)'
     };
+
     var kontextNames = {
       biodiversitaet: 'Biodiversitätskrise',
       naturschutz: 'Naturschutz und Arterhaltung',
@@ -2084,15 +2693,7 @@
       landwirtschaft: 'Landwirtschaft und Lebensmittelherstellung',
       biotechnologie: 'Biotechnologie und Gentechnik'
     };
-    var faecherNames = {
-      chemie: 'Chemie (Biochemie, Moleküle)',
-      physik: 'Physik (Energetik, Mechanik)',
-      geographie: 'Geographie (Ökosysteme, Klimazonen, Ressourcennutzung)',
-      geschichte: 'Geschichte (Wissenschaftsgeschichte, Seuchen, menschliche Evolution)',
-      ethik: 'Ethik / Philosophie (Mensch und Natur, Bioethik, Epistemologie)',
-      sozialkunde: 'Sozialkunde (Bioethik, nachhaltige Entwicklung, Gesetze)',
-      mathematik: 'Mathematik (Statistik, Populationsmodelle, Diagramme)'
-    };
+
     var ausgabeTypNames = {
       sequenzplan: 'Vollständige Unterrichtssequenz mit Stundenverlaufsplänen',
       lernziele: 'Operationalisierte Lernziele pro Stunde',
@@ -2103,6 +2704,7 @@
       transferfragen: 'Transfer- und Diskussionsfragen',
       querverbindungen: 'Querverbindungen zwischen Lernzielen'
     };
+
     var tonLabels = {
       akademisch: 'akademisch-fachwissenschaftlich',
       professionell: 'professionell und lehrkorientiert',
@@ -2112,37 +2714,59 @@
 
     // ── BUILD PROMPT ─────────────────────────────────────────────────────────
     var L = [];
-    var push = function (s) { L.push(s || ''); };
+    var push = function (s) { L.push(s !== undefined ? s : ''); };
 
     push('═══════════════════════════════════════════════════════════════');
     push('KI-UNTERRICHTSPLANUNGSAUFTRAG: EVOLUTIONSBIOLOGIE');
     push('Thüringer Lehrplan Biologie · Gymnasium · ' + klasseLabel);
-    push('Erstellt: ' + new Date().toLocaleDateString('de-DE') + ' · ' + selectedLZ.length + ' Lernziele');
+    push('Erstellt: ' + new Date().toLocaleDateString('de-DE') + ' · ' + activeLZ.length + ' Lernziele');
     push('═══════════════════════════════════════════════════════════════');
     push('');
     push('ROLLE: Du bist Experte für Biologiedidaktik mit Schwerpunkt Evolutionsbiologie');
     push('und konzeptuelles Lernen am Gymnasium. Du kennst den Thüringer Lehrplan Biologie');
-    push('Gy 7–8 sehr gut und planst Unterricht, der echtes konzeptuelles Verständnis');
-    push('evolutionärer Prinzipien aufbaut.');
+    push('Gy 7–8 und planst Unterricht, der echtes konzeptuelles Verständnis evolutionärer');
+    push('Prinzipien aufbaut.');
     push('');
 
     push('━━━ 1. PLANUNGSRAHMEN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     push('• Klassenstufe:         ' + klasseLabel);
     push('• Unterrichtsstunden:   ' + numLessons + ' Stunden à ' + formatLabel);
-    push('• Evolutionsbezug:      ' + evoPct + '% der Unterrichtszeit');
+    push('• Evolutionsbezug:      ' + (evoPct || '50') + '% der Unterrichtszeit');
     push('');
     push('LERNGRUPPE – VORWISSEN:');
-    push((vorwissensLabels[vorwissen] || ''));
+    push(vorwissensLabels[vorwissen] || '');
     if (vorwissenNotiz) push('Weitere Angaben: ' + vorwissenNotiz);
     push('');
 
-    push('━━━ 2. LERNZIELE (Thüringer Lehrplan, aufbereitet) ━━━━━━━━━━');
-    push('Nutze folgende Lernziele als inhaltliche Grundlage. Lernziel-IDs in der');
-    push('Planung angeben. ❤ = Favorit der Lehrkraft (besonders tief behandeln).');
+    // ── VERLAUFSPLAN FORMAT INSTRUCTIONS ──────────────────────────────────
+    push('━━━ FORMAT FÜR STUNDENVERLAUFSPLÄNE ━━━━━━━━━━━━━━━━━━━━━━━━━');
+    push('Erstelle tabellarische Verlaufspläne mit folgenden Spalten:');
+    push('  Zeit (Min) | Didaktische Funktion | Teilziele | Unterrichtsmittel |');
+    push('  Lehrertätigkeit | Schülertätigkeit');
+    push('');
+    push('Didaktische Funktionen (verwende diese Begriffe):');
+    push('  Motivation · Zielangabe/Zielorientierung · Erarbeitung · Teilvermittlung');
+    push('  Festigung · Transfer · Übergabe · Ergebnisermittlung/-bewertung');
+    push('  Reflexion · Aussicht');
+    push('');
+    push('Teilziele formulieren mit Operatoren (Thüringer LP Biologie):');
+    push('  ableiten · abschätzen · analysieren · angeben/nennen · aufstellen ·');
+    push('  auswerten · begründen · berechnen · beschreiben · beurteilen ·');
+    push('  bewerten · darstellen · diskutieren · erklären · erläutern ·');
+    push('  ermitteln · herleiten · interpretieren/deuten · ordnen · planen ·');
+    push('  skizzieren · untersuchen · vergleichen · zeichnen');
+    push('');
+    push('Teilziele-Format: "Die Schüler:innen [Operator] …"');
+    push('Lehrertätigkeiten-Format: "Die Lehrkraft …"');
+    push('Schülertätigkeiten-Format: "Die Schüler:innen [Operator] … [Sozialform]"');
+    push('');
+
+    push('━━━ 2. LERNZIELE (Thüringer Lehrplan) ━━━━━━━━━━━━━━━━━━━━━━━');
+    push('❤ = Favorit der Lehrkraft (besonders tief behandeln)');
     push('');
 
     Object.keys(byThema).forEach(function (thema) {
-      push('▶ ' + thema.toUpperCase());
+      push('▶ ' + getThemaDisplay(thema).toUpperCase() + ' (' + thema + ')');
       Object.keys(byThema[thema]).forEach(function (ut) {
         var list = byThema[thema][ut];
         push('  ┌ Unterthema: ' + ut + ' (' + list.length + ' LZ)');
@@ -2158,16 +2782,18 @@
           push(marker + '[' + d.id + '] ' + d.originaltext);
           push('  │   Relevanz: ' + relStr + ' ' + REL_LABELS[rel]);
 
-          var konzepte = e2.konzepte ? e2.konzepte.split(',').map(function (s) { return s.trim(); }) : (ev.relevante_evolutionskonzepte  || []);
+          var konzepte = e2.konzepte ? e2.konzepte.split(',').map(function (s) { return s.trim(); }) : (ev.relevante_evolutionskonzepte || []);
           if (konzepte.length) push('  │   Konzepte: ' + konzepte.join(' · '));
 
           var wiss = e2.wiss || ev.wissenschaftliche_begruendung || '';
-          if (wiss) push('  │   Bezug: ' + (wiss.length > 280 ? wiss.substring(0, 280) + '…' : wiss));
+          if (wiss) push('  │   Bezug: ' + (wiss.length > 300 ? wiss.substring(0, 300) + '…' : wiss));
 
           var impuls = e2.impuls || ds.evolutionsdidaktischer_impuls || '';
           if (impuls) push('  │   Leitfrage: ' + impuls);
 
-          // Top3 methods with favorites
+          var fehlvors = ds.moegliche_fehlvorstellungen || '';
+          if (fehlvors) push('  │   Fehlvorstellung: ' + fehlvors);
+
           var top3 = ds.top3_methoden || [];
           var methFavs = a.methFavs || {};
           if (top3.length) {
@@ -2177,7 +2803,7 @@
             push('  │   Methoden: ' + methStr);
           }
 
-          if (a.fav && a.favNote) push('  │   💬 Notiz: "' + a.favNote + '"');
+          if (a.fav && a.favNote) push('  │   💬 Lehrernotiz: "' + a.favNote + '"');
           if (a.notes) push('  │   📝 "' + a.notes + '"');
           if ((a.userTags || []).length) push('  │   🏷 Tags: ' + a.userTags.join(', '));
           if (idx < list.length - 1) push('  │');
@@ -2187,15 +2813,15 @@
       });
     });
 
-    push('ZUSAMMENFASSUNG: ' + selectedLZ.length + ' LZ aus ' + Object.keys(byThema).length + ' Themen');
+    push('ZUSAMMENFASSUNG: ' + activeLZ.length + ' LZ aus ' + Object.keys(byThema).length + ' Themen');
     if (favLZ.length) push('❤ Favoriten (' + favLZ.length + '): ' + favLZ.map(function (d) { return d.id; }).join(', '));
-    if (highRelLZ.length) push('🔴 Hohe Relevanz (' + highRelLZ.length + '): ' + highRelLZ.slice(0, 8).map(function (d) { return d.id; }).join(', ') + (highRelLZ.length > 8 ? ' …' : ''));
-    if (favMethods.length) push('★ Favorisierte Methoden der Lehrkraft: ' + favMethods.slice(0, 6).join(', '));
+    if (highRelLZ.length) push('🔴 Hohe Relevanz (' + highRelLZ.length + '): ' + highRelLZ.slice(0, 10).map(function (d) { return d.id; }).join(', ') + (highRelLZ.length > 10 ? ' …' : ''));
+    if (favMethods.length) push('★ Favorisierte Methoden: ' + favMethods.slice(0, 8).join(', '));
     push('');
 
     if (evoKonzepte.length) {
       push('━━━ 3. EVOLUTIONSKONZEPTE SCHWERPUNKT ━━━━━━━━━━━━━━━━━━━━━━');
-      evoKonzepte.forEach(function (k) { push('  → ' + (evoKonzeptNames[k] || k)); });
+      evoKonzepte.forEach(function (k) { push('  → ' + k); });
       push('');
       push('WICHTIG: Konzepte als kohärentes Erklärungsframework vermitteln,');
       push('nicht als isolierte Fakten. Konzeptuelle Progression einplanen.');
@@ -2210,7 +2836,7 @@
     if (lehrformen.length) {
       push('━━━ 4. DIDAKTISCHE METHODEN ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
       push('Bevorzugte Lehr-/Lernformen:');
-      lehrformen.forEach(function (k) { push('  → ' + (lehrformenNames[k] || k)); });
+      lehrformen.forEach(function (k) { push('  → ' + k); });
       push('');
     }
     if (differenzierung.length) {
@@ -2234,23 +2860,12 @@
 
     if (kontexte.length || kontextNotizen) {
       push('━━━ 6. GESELLSCHAFTLICHE BEZÜGE ━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-      if (kontexte.length) {
-        kontexte.forEach(function (k) { push('  → ' + (kontextNames[k] || k)); });
-      }
+      if (kontexte.length) kontexte.forEach(function (k) { push('  → ' + (kontextNames[k] || k)); });
       if (kontextNotizen) { push('Weitere Hinweise: ' + kontextNotizen); }
       push('');
     }
 
-    if (faecherverbindung.length || faecherNotizen) {
-      push('━━━ 7. FÄCHERÜBERGREIFENDE VERBINDUNGEN ━━━━━━━━━━━━━━━━━━━');
-      if (faecherverbindung.length) {
-        faecherverbindung.forEach(function (f) { push('  → ' + (faecherNames[f] || f)); });
-      }
-      if (faecherNotizen) { push('Weitere Hinweise: ' + faecherNotizen); }
-      push('');
-    }
-
-    push('━━━ 8. ANFORDERUNGEN AN DIE KI-AUSGABE ━━━━━━━━━━━━━━━━━━━━━');
+    push('━━━ 7. ANFORDERUNGEN AN DIE KI-AUSGABE ━━━━━━━━━━━━━━━━━━━━━');
     push('Stil: ' + (tonLabels[ausgabeTon] || ausgabeTon) + ' · Umfang: ' + (laengeLabels[ausgabeLaenge] || ausgabeLaenge));
     push('Sprache: AUSSCHLIESSLICH DEUTSCH');
     push('');
@@ -2265,19 +2880,18 @@
     push('1. ÜBERBLICK: Titel, didaktische Leitidee, übergeordnetes Lernziel,');
     push('   tabellarische Stundenübersicht, konzeptueller roter Faden');
     push('');
-    push('2. PRO STUNDE: Stundentitel + Leitfrage, phasierter Verlaufsplan');
-    push('   (Phase | Zeit | Inhalt | Sozialform | Material | Evolutionsbezug),');
-    push('   Kernaufgabe, Bezug zu Lehrplan-IDs, Verbindung zur Vor-/Folgestunde');
+    push('2. PRO STUNDE: Tabellarischer Stundenverlaufsplan mit Spalten:');
+    push('   Zeit (Min) | Didaktische Funktion | Teilziele (SuS …) |');
+    push('   Unterrichtsmittel | Lehrertätigkeit | Schülertätigkeit');
+    push('   + Kernaufgabe, Bezug zu Lehrplan-IDs, Verbindung zur Vor-/Folgestunde');
     push('');
-    push('3. KONZEPTUELLE VERNETZUNG: Concept Map oder strukturierte Übersicht');
-    push('   der behandelten Evolutionskonzepte; explizite Brücken zwischen LZ;');
-    push('   2–3 "Big Questions" die sich durch die gesamte Reihe ziehen');
+    push('3. KONZEPTUELLE VERNETZUNG: Übersicht behandelter Evolutionskonzepte;');
+    push('   explizite Brücken zwischen LZ; 2–3 "Big Questions" durch die Reihe');
     push('');
-    push('4. FEHLVORSTELLUNGEN: Liste typischer Fehlvorstellungen aus den LZ-');
-    push('   Beschreibungen; Diagnose-Aufgaben + Conceptual Change-Strategien;');
-    push('   besonders: teleologisches Denken, Lamarckismus, Analogie vs. Homologie');
+    push('4. FEHLVORSTELLUNGEN: Aus den LZ-Beschreibungen; Diagnose-Aufgaben;');
+    push('   Conceptual Change-Strategien; teleologisches Denken, Lamarckismus');
     push('');
-    push('5. TRANSFER: Pro Einheit ≥2 Transferfragen auf neue Phänomene;');
+    push('5. TRANSFER: ≥2 Transferfragen auf neue Phänomene pro Einheit;');
     push('   1 Diskussions-/Bewertungsaufgabe; abschließende integrierende Aufgabe');
     push('');
 
@@ -2286,7 +2900,7 @@
       favLZ.forEach(function (d) {
         var a = annotations[d.id] || {};
         push('   ❤ [' + d.id + '] ' + d.originaltext);
-        if (a.favNote) push('     → Lehrerperson-Hinweis: "' + a.favNote + '"');
+        if (a.favNote) push('     → Lehrerhinweis: "' + a.favNote + '"');
       });
       push('   → Je Favorit: mindestens eine vollständige Stunde mit Vertiefungsaufgaben');
       push('');
@@ -2305,10 +2919,11 @@
     push('✓ Vernetzt: Querverbindungen explizit, nicht dem Zufall überlassen');
     push('✓ Lehrplankonform: Alle LZ-IDs aus der Liste vollständig abgedeckt');
     push('✓ Realistisch: Zeitplanung für ' + klasseLabel + ' mit Puffern');
+    push('✓ Operatoren: Aus dem Thüringer LP Biologie für alle Teilziele verwenden');
     push('');
     push('═══════════════════════════════════════════════════════════════');
     push('BITTE BEGINNE JETZT MIT DER VOLLSTÄNDIGEN UNTERRICHTSPLANUNG.');
-    push('Verwende klare Überschriften und Tabellen (Markdown).');
+    push('Verwende klare Überschriften und Markdown-Tabellen.');
     push('═══════════════════════════════════════════════════════════════');
 
     var promptText = L.join('\n');
@@ -2361,13 +2976,15 @@
       });
     });
 
-    // Global tag add
     $('global-tag-add-btn').addEventListener('click', function () {
       var val = $('global-tag-input').value.trim();
       if (val) { addGlobalTag(val); $('global-tag-input').value = ''; }
     });
     $('global-tag-input').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') { var val = $('global-tag-input').value.trim(); if (val) { addGlobalTag(val); $('global-tag-input').value = ''; } }
+      if (e.key === 'Enter') {
+        var val = $('global-tag-input').value.trim();
+        if (val) { addGlobalTag(val); $('global-tag-input').value = ''; }
+      }
     });
 
     $('clear-filters-btn').addEventListener('click', function () {
@@ -2375,6 +2992,8 @@
       activeMethodFilters = {}; activeEvoKonzeptFilters = {}; activeUserTagFilters = {};
       document.querySelectorAll('.chip.active').forEach(function (c) { c.classList.remove('active'); });
       document.querySelectorAll('.user-tag-filter-chip.active').forEach(function (c) { c.classList.remove('active'); });
+      // Reset evo concept tree chips
+      document.querySelectorAll('#evokonzept-tree .chip.active').forEach(function (c) { c.classList.remove('active'); });
       $('search-input').value = ''; $('unterthema-select').value = '';
       applyFilters();
     });
@@ -2404,22 +3023,19 @@
     $('reset-all-btn').addEventListener('click', function () {
       if (!confirm('Alle Markierungen, Bearbeitungen und Tags wirklich zurücksetzen?')) return;
       annotations = {}; edits = {}; globalUserTags = [];
-      saveLS(); buildUserTagFilterDisplay(); applyFilters(); drawChart();
+      saveLS(); buildUserTagFilterDisplay(); buildEvoKonzeptTree(); applyFilters(); drawChart();
       showToast('↺ Alle Daten zurückgesetzt', 'info');
     });
 
-    // Edit modal
     $('edit-close-btn').addEventListener('click', function () { closeModal('edit-modal'); });
     $('edit-cancel-btn').addEventListener('click', function () { closeModal('edit-modal'); });
     $('edit-save-btn').addEventListener('click', saveEdit);
 
-    // Annotation modal
     $('annot-close-btn').addEventListener('click', function () { closeModal('annot-modal'); });
     $('annot-cancel-btn').addEventListener('click', function () { closeModal('annot-modal'); });
     $('annot-save-btn').addEventListener('click', saveAnnotation);
     $('annot-remove-btn').addEventListener('click', removeAnnotation);
 
-    // Tag modal
     $('tag-close-btn').addEventListener('click', function () { closeModal('tag-modal'); });
     $('tag-cancel-btn').addEventListener('click', function () { closeModal('tag-modal'); });
     $('tag-save-btn').addEventListener('click', saveTagModal);
@@ -2444,14 +3060,12 @@
       }
     });
 
-    // Export / Import
     $('export-close-btn').addEventListener('click', function () { closeModal('export-modal'); });
     $('import-close-btn').addEventListener('click', function () { closeModal('import-modal'); });
     $('import-cancel-btn').addEventListener('click', function () { closeModal('import-modal'); });
     $('import-save-btn').addEventListener('click', doImport);
     $('export-plan-btn').addEventListener('click', function () { doExport('markdown'); });
 
-    // Keyboard
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         ['edit-modal','annot-modal','tag-modal','export-modal','import-modal'].forEach(function (id) {
@@ -2463,7 +3077,12 @@
       }
     });
 
-    window.addEventListener('resize', function () { if (rawData.length) drawChart(); });
+    window.addEventListener('resize', function () {
+      if (rawData.length) drawChart();
+    });
+
+    // Bind filter toggle labels after DOM is ready
+    bindFilterToggleLabels();
   }
 
   function setView(v) {
