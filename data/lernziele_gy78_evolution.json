@@ -1,5 +1,5 @@
 {
-  "exportiert": "2026-05-30T06:33:03.101Z",
+  "exportiert": "2026-06-12T11:39:18.621Z",
   "globalUserTags": [],
   "eintraege": [
     {
@@ -164,7 +164,7 @@
       "unterthema": "Wirbellose als vielfältige Tiergruppe",
       "originaltext": "Gliederfüßer (Krebstiere, Spinnentiere, Insekten): ausgewählte Merkmale (Körpergliederung/äußerer Bau, Atmungsorgane, Körperoberfläche) nennen",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Gliederfüßer (Arthropoda) sind die artenreichste Tiergruppe der Erde und ein Musterbeispiel für adaptive Radiation ausgehend von einem gemeinsamen Bauplan. Das Exoskelett aus Chitin, die gegliederten Extremitäten und die Tagmosis sind evolutionäre Schlüsselinnovationen. Die Unterschiede in den Atmungsorganen – Kiemen bei Krebstieren, Buchlungen und Tracheen bei Spinnentieren, Tracheen bei Insekten – dokumentieren evolutionäre Anpassungen an unterschiedliche Lebensräume. Die Körpergliederung (Tagmosis) ist bei den drei Gruppen unterschiedlich ausgeprägt und lässt sich phylogenetisch interpretieren. Die genetisch festgelegten Unterschiede in Beinzahl und Körpergliederung zwischen den Gruppen (vier Beinpaare bei Spinnentieren, fünf oder mehr bei Krebstieren, drei bei Insekten) spiegeln ihre divergente Evolution wider.",
+        "wissenschaftliche_begruendung": "Die Gliederfüßer (Arthropoda) sind die artenreichste Tiergruppe der Erde und ein Musterbeispiel für adaptive Radiation ausgehend von einem gemeinsamen Bauplan. Das Exoskelett aus Chitin, die gegliederten Extremitäten und die Tagmosis sind evolutionäre Schlüsselinnovationen. Die Unterschiede in den Atmungsorganen – Kiemen bei Krebstieren, Buchlungen und Tracheen bei Spinnentieren, Tracheen bei Insekten – dokumentieren evolutionäre Anpassungen an unterschiedliche Lebensräume. Die Körpergliederung (Tagmosis) ist bei den drei Gruppen unterschiedlich ausgeprägt und lässt sich phylogenetisch interpretieren. Die genetisch festgelegten Unterschiede in Beinzahl und Körpergliederung zwischen den Gruppen (vier Beinpaare bei Spinnentieren, fünf oder mehr bei Krebstieren, drei bei Insekten) spiegeln ihre divergente Evolution wider. Der Begriff 'Modifikation' wird hier bewusst vermieden, da es sich um genetisch verankerte, durch Selektion entstandene Unterschiede handelt, nicht um umweltbedingte phänotypische Reaktionen.",
         "relevante_evolutionskonzepte": [
           "Artbildung und adaptive Radiation",
           "Anpassung und Angepasstheit",
@@ -185,18 +185,18 @@
           {
             "rang": 2,
             "methode": "Modelle und Simulationen",
-            "beschreibung": "Phylogenetisches Stammbaum-Puzzle: Schüler ordnen Arthropodengruppen anhand von Merkmalen in einen einfachen Stammbaum ein und begründen die Verwandtschaftsverhältnisse.",
+            "beschreibung": "Phylogenetisches Stammbaum-Puzzle: Schüler ordnen Arthropodengruppen anhand von Merkmalen in einen einfachen Stammbaum ein, begründen die Verwandtschaftsverhältnisse und interpretieren, was der Stammbaum über die gemeinsame Abstammung aussagt.",
             "favorit": false
           },
           {
             "rang": 3,
             "methode": "Analogien und Vergleiche",
-            "beschreibung": "Bildervergleich: Krebs im Wasser, Spinne im Netz, Käfer auf Blatt – Was zeigt die äußere Form über den Lebensraum? Warum haben Spinnen acht und Insekten sechs Beine?",
+            "beschreibung": "Bildervergleich: Krebs im Wasser, Spinne im Netz, Käfer auf Blatt – Was zeigt die äußere Form über den Lebensraum? Warum haben Spinnen acht und Insekten sechs Beine – was sagt das über ihre genetisch fixierte Verwandtschaft?",
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Alle drei Gruppen – Krebse, Spinnen, Insekten – haben ein Chitin-Exoskelett und gegliederte Beine. Was sagt uns das über ihre Verwandtschaft? Und warum haben Spinnen acht, Insekten aber nur sechs Beine?' Einstieg in die stammesgeschichtliche Betrachtung.",
-        "moegliche_fehlvorstellungen": "Schüler könnten Spinnen mit Insekten verwechseln; die unterschiedliche Beinzahl und Körpergliederung muss klar herausgearbeitet werden.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Alle drei Gruppen – Krebse, Spinnen, Insekten – haben ein Chitin-Exoskelett und gegliederte Beine. Was sagt uns das über ihre Verwandtschaft? Und warum haben Spinnen acht, Insekten aber nur sechs Beine – und wie lässt sich das im Stammbaum ablesen?' Einstieg in die stammesgeschichtliche Betrachtung.",
+        "moegliche_fehlvorstellungen": "Schüler könnten Spinnen mit Insekten verwechseln; die unterschiedliche Beinzahl und Körpergliederung muss klar herausgearbeitet werden. Außerdem sollte darauf geachtet werden, dass 'Modifikation' nicht im Sinne einer umweltbedingten Reaktion verwendet wird – die Unterschiede zwischen den Gruppen sind genetisch fixiert und durch natürliche Selektion entstanden.",
         "bezug_zum_lehrplan_kontext": "Zentrale Voraussetzung für GY-78-WIR-INS (Insekten) und für das spätere Verständnis von Stammbäumen"
       },
       "_annotation": {
@@ -236,7 +236,7 @@
           {
             "rang": 2,
             "methode": "Konzeptuelles Lernen",
-            "beschreibung": "Stammbaum-Erstellung und -Interpretation: Schüler ordnen Tiergruppen anhand von Merkmalstabellen in einen Stammbaum ein und begründen die Verwandtschaftsverhältnisse; Diskussion, welche Merkmale für die Einordnung geeignet sind.",
+            "beschreibung": "Stammbaum-Erstellung und -Interpretation: Schüler ordnen Tiergruppen anhand von Merkmalstabellen in einen Stammbaum ein und begründen die Verwandtschaftsverhältnisse; Diskussion, welche Merkmale für die Einordnung geeignet sind und was der Stammbaum über gemeinsame Abstammung aussagt.",
             "favorit": false
           },
           {
@@ -267,7 +267,7 @@
       "unterthema": "Wirbellose als vielfältige Tiergruppe",
       "originaltext": "die Bedeutung Wirbelloser in der Natur (z. B. als Glieder von Nahrungsketten, Bestäuber, Krankheitsüberträger) an Beispielen erläutern",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die ökologischen Rollen Wirbelloser sind Ergebnis langer koevolutiver Prozesse. Die Bestäubung durch Insekten ist eines der bekanntesten Beispiele für Koevolution: Die wechselseitige Abhängigkeit von Blütenpflanzen und bestäubenden Insekten hat sowohl die Diversifikation der Angiospermen als auch die der Insekten maßgeblich vorangetrieben. Blütenformen, Duftstoffe, Nektarangebote und Farbmuster auf der Seite der Pflanzen sowie Sinnesorgane, Mundwerkzeuge und Körperbau auf der Seite der Insekten sind durch wechselseitige Selektion aufeinander abgestimmt worden. Wirbellose als Krankheitsüberträger (z. B. Stechmücken als Vektoren für Malaria) sind Beispiele für koevolutive Wettbewerbe zwischen Pathogen, Vektor und Wirt.",
+        "wissenschaftliche_begruendung": "Die ökologischen Rollen Wirbelloser sind Ergebnis langer koevolutiver Prozesse. Die Bestäubung durch Insekten ist eines der bekanntesten Beispiele für Koevolution: Die wechselseitige Abhängigkeit von Blütenpflanzen und bestäubenden Insekten hat sowohl die Diversifikation der Angiospermen als auch die der Insekten maßgeblich vorangetrieben. Auf der Seite der Pflanzen sind Blütenformen, Duftstoffe, Nektarangebote und Farbmuster (einschließlich UV-Muster) durch wechselseitige Selektion auf die Sensorik der Bestäuber hin optimiert worden. Auf der Seite der Insekten sind Mundwerkzeuge, Körperform und Sinnesorgane (z. B. UV-Sehvermögen, Blütenduft-Rezeptoren) koevolutiv auf die Pflanzen abgestimmt. Wirbellose als Krankheitsüberträger (z. B. Stechmücken als Vektoren für Malaria) sind Beispiele für koevolutive Wettbewerbe zwischen Pathogen, Vektor und Wirt.",
         "relevante_evolutionskonzepte": [
           "Koevolution",
           "Natürliche Selektion und Selektionsdruck",
@@ -282,7 +282,7 @@
           {
             "rang": 1,
             "methode": "Narrativer Zugang",
-            "beschreibung": "Fallstudie Biene und Blüte: Schüler analysieren, welche Merkmale der Biene zur Bestäubung beitragen und welche Merkmale der Blüte (Farbe, Form, Duft, Nektar) evolutionär auf die Sensorik der Bestäuber abgestimmt sind.",
+            "beschreibung": "Fallstudie Biene und Blüte: Schüler analysieren, welche Merkmale der Biene zur Bestäubung beitragen und – ebenso wichtig – welche Merkmale der Blüte (Farbe, Form, Duft, UV-Muster, Nektarangebot) evolutionär auf die Sensorik der Bestäuber abgestimmt sind. Beide Seiten der Koevolution werden gleichwertig betrachtet.",
             "favorit": false
           },
           {
@@ -298,8 +298,8 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Warum sehen manche Blüten genau so aus, dass nur bestimmte Insekten sie bestäuben können? Und warum haben diese Insekten genau die Sinnesorgane, die dazu passen? War das ein Zufall?' Einstieg in das Konzept der Koevolution.",
-        "moegliche_fehlvorstellungen": "Schüler könnten denken, Pflanzen 'wollen' bestäubt werden oder Insekten 'wollen' helfen – teleologische Deutungen müssen korrigiert werden.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Warum sehen manche Blüten genau so aus, dass nur bestimmte Insekten sie bestäuben können – und warum haben diese Insekten genau die Sinnesorgane und Mundwerkzeuge, die dazu passen? War das ein Zufall?' Einstieg in das Konzept der Koevolution auf beiden Seiten – Pflanze und Insekt.",
+        "moegliche_fehlvorstellungen": "Schüler könnten denken, Pflanzen 'wollen' bestäubt werden oder Insekten 'wollen' helfen – teleologische Deutungen müssen korrigiert werden. Außerdem sollte betont werden, dass Koevolution immer beide Partner betrifft.",
         "bezug_zum_lehrplan_kontext": "Verbindung zu Umweltbildung und Naturschutz (GY-78-WIR-WTG-7); Anknüpfung an Ökologie aus Klasse 5/6"
       },
       "_annotation": {
@@ -319,7 +319,7 @@
       "unterthema": "Wirbellose als vielfältige Tiergruppe",
       "originaltext": "Eingriffe des Menschen in Lebensräume von Wirbellosen bewerten und Maßnahmen zum Schutz begründen",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Anthropogene Eingriffe in Lebensräume stellen evolutionär relevante Selektionsdrücke dar, die in kurzen Zeiträumen zu messbaren evolutionären Veränderungen führen können (z. B. Pestizidresistenz bei Insekten durch gerichtete Selektion). Habitatverlust und -fragmentierung reduzieren die Populationsgrößen und erhöhen den genetischen Drift, was zur Verarmung der genetischen Diversität und langfristig zum Aussterben führen kann. Der Verlust von Wirbellosen unterbricht koevolutiv entstandene ökologische Netzwerke mit oft irreversiblen Folgen. Die Bewertung von Schutzmaßnahmen verbindet evolutionsbiologisches Wissen mit bioethischen Fragestellungen: Welche Verantwortung trägt der Mensch gegenüber dem Ergebnis von Milliarden Jahren Evolution?",
+        "wissenschaftliche_begruendung": "Anthropogene Eingriffe in Lebensräume stellen evolutionär relevante Selektionsdrücke dar, die in kurzen Zeiträumen zu messbaren evolutionären Veränderungen führen können (z. B. Pestizidresistenz bei Insekten durch gerichtete Selektion). Habitatverlust und -fragmentierung reduzieren die Populationsgrößen und erhöhen den genetischen Drift, was zur Verarmung der genetischen Diversität und langfristig zum Aussterben führen kann. Der Verlust von Wirbellosen unterbricht koevolutiv entstandene ökologische Netzwerke mit oft irreversiblen Folgen. Die Bewertung von Schutzmaßnahmen verbindet evolutionsbiologisches Wissen mit bioethischen Fragestellungen: Welche Verantwortung trägt der Mensch gegenüber dem Ergebnis von Milliarden Jahren Evolution? Biodiversität als evolutionär entstandenes Naturkapital ist einmal verloren nicht wiederherstellbar.",
         "relevante_evolutionskonzepte": [
           "gerichtete Selektion",
           "Gendrift",
@@ -334,7 +334,7 @@
           {
             "rang": 1,
             "methode": "Diskussion",
-            "beschreibung": "Bioethische Diskussionsrunde: Landwirtschaftliche Nutzung vs. Naturschutz – Schüler argumentieren aus verschiedenen Perspektiven und reflektieren die Verantwortung des Menschen gegenüber dem Ergebnis der Evolution.",
+            "beschreibung": "Bioethische Diskussionsrunde: Landwirtschaftliche Nutzung vs. Naturschutz – Schüler argumentieren aus verschiedenen Perspektiven und reflektieren die Verantwortung des Menschen gegenüber dem Ergebnis der Evolution. Explizite Einbeziehung bioethischer Fragen: Haben wir eine Pflicht, evolutionäre Diversität zu erhalten?",
             "favorit": false
           },
           {
@@ -350,7 +350,7 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Wenn Insekten durch Pestizide dezimiert werden – welche Arten überleben? Ist das ein evolutionärer Prozess? Und welche Verantwortung haben wir, wenn wir in die Evolution eingreifen?' Führt zur Diskussion über anthropogene Selektion und Bioethik.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Wenn Insekten durch Pestizide dezimiert werden – welche Arten überleben? Ist das ein evolutionärer Prozess? Und welche bioethische Verantwortung haben wir, wenn wir in die Evolution eingreifen?' Führt zur Diskussion über anthropogene Selektion und Bioethik.",
         "moegliche_fehlvorstellungen": "Schüler könnten glauben, dass 'die Natur sich selbst hilft' und der Mensch nicht eingreifen muss; die Irreversibilität von Artensterben und der Verlust evolutionärer Diversität muss deutlich gemacht werden.",
         "bezug_zum_lehrplan_kontext": "Integrationslernziel mit Bezug zu Bildung für nachhaltige Entwicklung (BNE) und Bioethik"
       },
@@ -473,7 +473,7 @@
       "unterthema": "Insekten",
       "originaltext": "wesentliche Merkmale beschreiben: Atmung (Tracheen)",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das Tracheensystem der Insekten ist eine evolutionäre Anpassung an die terrestrische Lebensweise, die eine direkte Sauerstoffversorgung aller Gewebe ohne den Umweg über ein Kreislaufsystem ermöglicht. Im Vergleich zu Kiemen oder Lungen stellt das Tracheensystem eine konvergente, aber grundlegend andere evolutionäre Lösung für das Problem des Gasaustauschs auf dem Land dar. Die Einschränkung des Tracheensystems auf eine bestimmte Körpergröße erklärt eine evolutionäre Begrenzung der Insektengröße. Historische Rieseninsekten aus dem Karbon (z. B. Meganeura) lebten in sauerstoffreicherer Atmosphäre, was für die Rolle der atmosphärischen O₂-Konzentration als Selektionsfaktor spricht. Daneben war möglicherweise auch das Fehlen von Prädatoren für den Flug ein weiterer Faktor für die damaligen Körpergrößen.",
+        "wissenschaftliche_begruendung": "Das Tracheensystem der Insekten ist eine evolutionäre Anpassung an die terrestrische Lebensweise, die eine direkte Sauerstoffversorgung aller Gewebe ohne den Umweg über ein Kreislaufsystem ermöglicht. Im Vergleich zu Kiemen oder Lungen stellt das Tracheensystem eine konvergente, aber grundlegend andere evolutionäre Lösung für das Problem des Gasaustauschs auf dem Land dar. Die Einschränkung des Tracheensystems auf eine bestimmte Körpergröße (passive Gasdiffusion wird bei großen Körpern ineffizient) erklärt eine evolutionäre Begrenzung der Insektengröße. Historische Rieseninsekten aus dem Karbon (z. B. Meganeura) lebten in sauerstoffreicherer Atmosphäre, was für die Rolle der atmosphärischen O₂-Konzentration als Selektionsfaktor spricht. Daneben diskutieren Wissenschaftler auch das Fehlen effizienter Flugprädatoren als möglichen weiteren Faktor für die damals erreichbaren Körpergrößen – ein Beispiel für den hypothetisch-wissenschaftlichen Charakter der Evolutionsbiologie.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "Trade-offs/Zielkonflikte",
@@ -500,7 +500,7 @@
           {
             "rang": 3,
             "methode": "Einblick in Wissenschaftsgeschichte",
-            "beschreibung": "Historischer Bezug: Fotos von fossilen Rieseninsekten aus dem Karbon – Warum wurden Insekten so groß? Welche Hypothesen gibt es (höherer O₂-Gehalt, fehlende Prädatoren für Flug)?",
+            "beschreibung": "Historischer Bezug: Fotos von fossilen Rieseninsekten aus dem Karbon – Warum wurden Insekten so groß? Welche Hypothesen gibt es (höherer O₂-Gehalt der Atmosphäre, möglicherweise auch fehlendes Räuberdruckdruck auf fliegende Tiere)? Diskussion der Evidenzlage und der offenen Forschungsfragen als Einblick in die Natur der Wissenschaft.",
             "favorit": false
           }
         ],
@@ -525,7 +525,7 @@
       "unterthema": "Insekten",
       "originaltext": "wesentliche Merkmale beschreiben: Nervensystem (Strickleiternervensystem)",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das Strickleiternervensystem ist ein evolutionär ursprüngliches Merkmal der Protostomia (Urmünder), das bei Anneliden und Arthropoden vorkommt und auf eine gemeinsame Abstammung hindeutet. Im Vergleich zum Röhrennervensystem der Wirbeltiere (dorsal gelegen) zeigt das Strickleiternervensystem einen grundsätzlich anderen Bauplan – ein klares Beispiel für die phylogenetische Trennung von Protostomia und Deuterostomia. Die Konzentration von Ganglien im Kopfbereich (Cephalisierung) ist ein evolutionärer Trend, der bei höher organisierten Insekten besonders ausgeprägt ist und die Grundlage für komplexe Verhaltensweisen (z. B. Lernfähigkeit bei Bienen) schafft. Experimente zum Lernverhalten der Bienen (z. B. Farbdiskriminierung, räumliche Orientierung) belegen die überraschende kognitive Leistungsfähigkeit des Insektennervensystems.",
+        "wissenschaftliche_begruendung": "Das Strickleiternervensystem ist ein evolutionär ursprüngliches Merkmal der Protostomia (Urmünder), das bei Anneliden und Arthropoden vorkommt und auf eine gemeinsame Abstammung hindeutet. Im Vergleich zum Röhrennervensystem der Wirbeltiere (dorsal gelegen) zeigt das Strickleiternervensystem einen grundsätzlich anderen Bauplan – ein klares Beispiel für die phylogenetische Trennung von Protostomia und Deuterostomia. Die Konzentration von Ganglien im Kopfbereich (Cephalisierung) ist ein evolutionärer Trend, der bei höher organisierten Insekten besonders ausgeprägt ist und die Grundlage für komplexe Verhaltensweisen (z. B. Lernfähigkeit bei Bienen) schafft. Experimente und Sachinformationen zum Lernverhalten der Bienen (z. B. Farbdiskriminierung, räumliche Orientierung, Tanzsprache) belegen die überraschende kognitive Leistungsfähigkeit des Insektennervensystems eindrucksvoll.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "gemeinsame Abstammung/Verwandtschaft",
@@ -545,7 +545,7 @@
           {
             "rang": 2,
             "methode": "Narrativer Zugang",
-            "beschreibung": "Verbindung zu Verhalten: Bienen können lernen – was sagt das über die Komplexität ihres Nervensystems? Sachinformationen oder einfache Experimente zum Lernverhalten der Bienen (z. B. Farbpräferenz, Tanzsprache) besprechen.",
+            "beschreibung": "Verbindung zu Verhalten und Lernfähigkeit: Sachinformationen oder einfache Experimente zum Lernverhalten der Bienen (z. B. Farbpräferenz, Tanzsprache, räumliche Orientierung) besprechen – was sagt das über die Komplexität des Insektennervensystems?",
             "favorit": false
           },
           {
@@ -576,7 +576,7 @@
       "unterthema": "Insekten",
       "originaltext": "die Angepasstheit an ihre Lebensweise bzw. Lebensräume erläutern: Nahrungsaufnahme",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Mundwerkzeuge der Insekten sind eines der eindrucksvollsten Beispiele für adaptive Evolution: Ausgehend von einem ursprünglichen beißend-kauenden Grundtyp haben sich zahlreiche spezialisierte Formen entwickelt – saugend-leckende bei Bienen, stechend-saugende bei Stechmücken, saugende Rüssel bei Schmetterlingen. Diese Diversifikation hat in vielen Fällen Hand in Hand mit der Diversifikation der Nahrungsquellen (insbesondere Blütenpflanzen) stattgefunden – ein klassisches Beispiel für Koevolution. Dabei entstanden auf Pflanzenseite spezifische Blütenformen, Farbmuster, Duftstoffe und Nektarangebote, die auf die Mundwerkzeuge und Sinnesorgane der jeweiligen Bestäuber abgestimmt sind. Die spezifische Angepasstheit der Mundwerkzeuge illustriert das Konzept der ökologischen Nischendifferenzierung.",
+        "wissenschaftliche_begruendung": "Die Mundwerkzeuge der Insekten sind eines der eindrucksvollsten Beispiele für adaptive Evolution: Ausgehend von einem ursprünglichen beißend-kauenden Grundtyp haben sich zahlreiche spezialisierte Formen entwickelt – saugend-leckende bei Bienen, stechend-saugende bei Stechmücken, saugende Rüssel bei Schmetterlingen. Diese Diversifikation hat in vielen Fällen Hand in Hand mit der Diversifikation der Nahrungsquellen (insbesondere Blütenpflanzen) stattgefunden – ein klassisches Beispiel für Koevolution. Dabei sind auf der Seite der Pflanzen spezifische Blütenformen, Farbmuster, Duftstoffe und Nektarangebote entstanden, die auf die Mundwerkzeuge und Sinnesorgane der jeweiligen Bestäuber abgestimmt sind. Umgekehrt haben sich die Mundwerkzeuge der Insekten an die Blütenstrukturen ihrer Nahrungsquellen angepasst. Die spezifische Angepasstheit der Mundwerkzeuge illustriert das Konzept der ökologischen Nischendifferenzierung.",
         "relevante_evolutionskonzepte": [
           "Artbildung und adaptive Radiation",
           "Koevolution",
@@ -597,7 +597,7 @@
           {
             "rang": 2,
             "methode": "Konzeptuelles Lernen",
-            "beschreibung": "Zuordnungsaufgabe: Mundwerkzeugtyp → Nahrungsquelle → Insektenart und entsprechende Blütenmerkmal → Bestäuber; Schüler begründen koevolutionäre Zusammenhänge auf beiden Seiten.",
+            "beschreibung": "Zuordnungsaufgabe: Mundwerkzeugtyp → Nahrungsquelle → Insektenart und entsprechendes Blütenmerkmal (Blütenform, Farbe, Duft, Nektarangebot) → Bestäuber; Schüler begründen koevolutionäre Zusammenhänge auf beiden Seiten.",
             "favorit": false
           },
           {
@@ -607,7 +607,7 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Warum sieht der Rüssel eines Schmetterlings so anders aus als das Mundwerkzeug eines Maikäfers, obwohl beide Insekten sind? Und welche Blüten haben sich an den Schmetterlingsrüssel angepasst?' Einstieg in adaptive Evolution der Nahrungsaufnahme und Koevolution.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Warum sieht der Rüssel eines Schmetterlings so anders aus als das Mundwerkzeug eines Maikäfers, obwohl beide Insekten sind? Und welche Blütenmerkmale haben sich an den Schmetterlingsrüssel angepasst?' Einstieg in adaptive Evolution der Nahrungsaufnahme und Koevolution auf beiden Seiten.",
         "moegliche_fehlvorstellungen": "Schüler könnten denken, Insekten 'suchen sich aus', was sie fressen; der Zusammenhang zwischen Mundwerkzeug-Morphologie und Selektionsvorteil muss erklärt werden.",
         "bezug_zum_lehrplan_kontext": "Verbindung zu GY-78-WIR-WTG-6 (Bestäuber) und GY-78-WIR-FPA-2 (Mikroskopie von Mundwerkzeugen)"
       },
@@ -628,7 +628,7 @@
       "unterthema": "Insekten",
       "originaltext": "die Angepasstheit an ihre Lebensweise bzw. Lebensräume erläutern: Fortbewegung",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Fortbewegungsorgane der Insekten – sechs gegliederte Beine und bei vielen Gruppen Flügel – sind genetisch festgelegte evolutionäre Anpassungen, die ihnen die Erschließung unterschiedlichster Lebensräume ermöglicht haben. Der Insektenflug ist eine der bedeutendsten Schlüsselinnovationen in der Erdgeschichte. Die Entstehung der Insektenflügel ist evolutionsbiologisch noch nicht vollständig geklärt (paranotal vs. Kiemenplattentheorie), was dieses Thema besonders interessant für die Wissenschaftsgeschichte macht. Verschiedene Fortbewegungsformen innerhalb der Insekten – Laufen, Springen, Graben, Schwimmen, Fliegen – illustrieren, wie ein gemeinsamer genetisch konservierter Grundbauplan (sechs Beine, dreigeteilter Körper) durch evolutionäre Umgestaltung für sehr unterschiedliche Fortbewegungsweisen genutzt werden kann. Diese Diversifikation ist auf genetisch verankerte Unterschiede zurückzuführen, nicht auf individuelle Reaktionen auf Umwelteinflüsse.",
+        "wissenschaftliche_begruendung": "Die Fortbewegungsorgane der Insekten – sechs gegliederte Beine und bei vielen Gruppen Flügel – sind genetisch festgelegte evolutionäre Anpassungen, die ihnen die Erschließung unterschiedlichster Lebensräume ermöglicht haben. Der Insektenflug ist eine der bedeutendsten Schlüsselinnovationen in der Erdgeschichte. Die Entstehung der Insektenflügel ist evolutionsbiologisch noch nicht vollständig geklärt (paranotal vs. Kiemenplattentheorie), was dieses Thema besonders interessant für die Wissenschaftsgeschichte macht. Verschiedene Fortbewegungsformen innerhalb der Insekten – Laufen, Springen, Graben, Schwimmen, Fliegen – illustrieren, wie ein gemeinsamer genetisch konservierter Grundbauplan (sechs Beine, dreigeteilter Körper) durch evolutionäre Differenzierung für sehr unterschiedliche Fortbewegungsweisen genutzt werden kann. Diese Diversifikation ist auf genetisch verankerte Unterschiede zurückzuführen, nicht auf individuelle Reaktionen auf Umwelteinflüsse (Modifikation im umweltbedingten Sinne). Es lohnt sich auch zu fragen, warum Insekten sechs Gliedmaßen haben – und nicht vier wie Säugetiere oder acht wie Spinnen – und was das über die genetisch fixierten Baupläne der Arthropodengruppen aussagt.",
         "relevante_evolutionskonzepte": [
           "Exaptation (Umfunktionieren von Merkmalen)",
           "Anpassung und Angepasstheit",
@@ -642,7 +642,7 @@
           {
             "rang": 1,
             "methode": "Forschendes Lernen",
-            "beschreibung": "Vergleichsaufgabe: Beine von Lauf-, Spring-, Grab- und Schwimminsekten vergleichen – Funktion aus Form ableiten. Diskussion: Wie sind diese Unterschiede genetisch festgelegt und durch natürliche Selektion entstanden?",
+            "beschreibung": "Vergleichsaufgabe: Beine von Lauf-, Spring-, Grab- und Schwimminsekten vergleichen – Funktion aus Form ableiten. Diskussion: Wie sind diese Unterschiede genetisch festgelegt und durch natürliche Selektion entstanden – nicht durch individuelle Anpassung an die Umwelt?",
             "favorit": false
           },
           {
@@ -654,12 +654,12 @@
           {
             "rang": 3,
             "methode": "Diskussion",
-            "beschreibung": "Evolutionsdebatte: 'Woher kamen die Insektenflügel?' – Schüler recherchieren zwei Hypothesen und diskutieren die Evidenz (Einblick in Wissenschaftsgeschichte).",
+            "beschreibung": "Evolutionsdebatte: 'Woher kamen die Insektenflügel?' – Schüler recherchieren zwei Hypothesen und diskutieren die Evidenz (Einblick in die Natur der Wissenschaft). Anschlusskfrage: Warum haben Insekten sechs Beine – im Kontrast zu Spinnen mit acht?",
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Insekten haben alle sechs Beine – trotzdem gibt es springende, grabende, schwimmende und fliegende Arten. Wie ist diese Vielfalt durch evolutionäre Differenzierung des gemeinsamen Grundbaus entstanden?' Einführung in adaptive Diversifikation bei konserviertem Grundplan.",
-        "moegliche_fehlvorstellungen": "Schüler könnten Flügel und Beine als unabhängige Entwicklungen sehen; die evolutionäre Reihenfolge (zuerst Beine, dann Flügel) sollte thematisiert werden.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Insekten haben alle sechs Beine – trotzdem gibt es springende, grabende, schwimmende und fliegende Arten. Wie ist diese Vielfalt durch genetisch fixierte evolutionäre Differenzierung des gemeinsamen Grundbaus entstanden? Und warum sechs Beine – nicht vier oder acht?' Einführung in adaptive Diversifikation bei konserviertem Grundplan.",
+        "moegliche_fehlvorstellungen": "Schüler könnten Flügel und Beine als unabhängige Entwicklungen sehen; die evolutionäre Reihenfolge (zuerst Beine, dann Flügel) sollte thematisiert werden. Außerdem muss klar sein, dass 'Modifikation' hier nicht im Sinne einer umweltbedingten phänotypischen Reaktion zu verstehen ist – die Unterschiede zwischen Insektenarten in der Fortbewegung sind genetisch verankert.",
         "bezug_zum_lehrplan_kontext": "Verbindung zu GY-78-WIR-INS-8 (Flügelausbildung als Klassifikationsmerkmal)"
       },
       "_annotation": {
@@ -731,7 +731,7 @@
       "unterthema": "Insekten",
       "originaltext": "die Insektengruppe der Käfer, Hautflügler, Zweiflügler und Schmetterlinge anhand ihrer Flügelausbildung unterscheiden und Vertreter begründet zuordnen",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Flügelausbildung ist ein zentrales taxonomisches und evolutionsbiologisches Merkmal der Insekten. Die vier genannten Ordnungen gehören alle zu den Holometabola und stellen die vier artenreichsten Insektenordnungen der Erde dar. Die unterschiedliche Ausprägung der Flügel (Deckflügel bei Käfern, Häutungsflügel bei Hautflüglern, Halteren bei Zweiflüglern, Schuppenflügel bei Schmetterlingen) illustriert, wie ein gemeinsames Grundmerkmal durch evolutionäre Umgestaltung in verschiedene Richtungen diversifiziert worden ist. Diese Diversifikation ist genetisch verankert und durch natürliche Selektion in verschiedene ökologische Nischen gelenkt worden – nicht das Ergebnis individueller Reaktionen auf Umwelteinflüsse. Die Reduktion des Hinterflügels zu Halteren bei den Zweiflüglern ist ein Beispiel für Exaptation und adaptive Umgestaltung. Die Deckflügel der Käfer zeigen den evolutionären Kompromiss (Trade-off) zwischen Schutz und Flugfähigkeit.",
+        "wissenschaftliche_begruendung": "Die Flügelausbildung ist ein zentrales taxonomisches und evolutionsbiologisches Merkmal der Insekten. Die vier genannten Ordnungen gehören alle zu den Holometabola und stellen die vier artenreichsten Insektenordnungen der Erde dar. Die unterschiedliche Ausprägung der Flügel (Deckflügel bei Käfern, Häutungsflügel bei Hautflüglern, Halteren bei Zweiflüglern, Schuppenflügel bei Schmetterlingen) illustriert, wie ein gemeinsames Grundmerkmal durch genetisch verankerte evolutionäre Differenzierung in verschiedene Richtungen diversifiziert worden ist – nicht durch individuelle Reaktionen auf Umwelteinflüsse. Diese Diversifikation ist das Ergebnis natürlicher Selektion in verschiedene ökologische Nischen. Die Reduktion des Hinterflügels zu Halteren bei den Zweiflüglern ist ein Beispiel für Exaptation und adaptive Umgestaltung. Die Deckflügel der Käfer zeigen den evolutionären Kompromiss (Trade-off) zwischen Schutz und Flugfähigkeit.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "Trade-offs/Zielkonflikte",
@@ -751,7 +751,7 @@
           {
             "rang": 2,
             "methode": "Konzeptuelles Lernen",
-            "beschreibung": "Stammbaum der Holometabola: Schüler erstellen oder interpretieren einen Stammbaum der vier Ordnungen mit Kennzeichnung der Flügeltypen als evolutionäre Merkmale; Diskussion der Verwandtschaftsverhältnisse.",
+            "beschreibung": "Stammbaum der Holometabola: Schüler erstellen oder interpretieren einen Stammbaum der vier Ordnungen mit Kennzeichnung der Flügeltypen als evolutionäre Merkmale; Diskussion der Verwandtschaftsverhältnisse und der Frage, wann welcher Flügeltyp in der Evolutionsgeschichte entstanden ist.",
             "favorit": false
           },
           {
@@ -761,8 +761,8 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Käfer, Bienen, Fliegen und Schmetterlinge – alle haben Flügel, aber alle sehen anders aus. Wie ist diese Vielfalt durch evolutionäre Umgestaltung homologer Strukturen entstanden? Was verrät ein Stammbaum über ihre Verwandtschaft?' Einführung in evolutionäre Diversifikation homologer Strukturen.",
-        "moegliche_fehlvorstellungen": "Schüler könnten denken, Käfer können nicht fliegen (da die Deckflügel starr sind); die Funktion der Hinterflügel zum Fliegen muss demonstriert werden.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Käfer, Bienen, Fliegen und Schmetterlinge – alle haben Flügel, aber alle sehen anders aus. Wie ist diese Vielfalt durch genetisch verankerte evolutionäre Differenzierung homologer Strukturen entstanden? Was verrät ein Stammbaum über ihre Verwandtschaft?' Einführung in evolutionäre Diversifikation homologer Strukturen.",
+        "moegliche_fehlvorstellungen": "Schüler könnten denken, Käfer können nicht fliegen (da die Deckflügel starr sind); die Funktion der Hinterflügel zum Fliegen muss demonstriert werden. Außerdem sollte klar sein, dass die unterschiedlichen Flügeltypen genetisch verankerte Merkmale sind, keine umweltbedingten Reaktionen.",
         "bezug_zum_lehrplan_kontext": "Anwendung der Merkmale aus GY-78-WIR-INS-1 bis -7 auf die Klassifikation; Grundlage für spätere systematische Einheiten"
       },
       "_annotation": {
@@ -782,7 +782,7 @@
       "unterthema": "Insekten",
       "originaltext": "das Zusammenleben in einem Insektenstaat an einem Beispiel erläutern",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Der Insektenstaat (Eusozialität) ist eines der faszinierendsten Phänomene der Evolutionsbiologie und hat lange als Rätsel für Darwins Evolutionstheorie gegolten: Wie kann die natürliche Selektion sterile Arbeiterinnen hervorbringen? Die Lösung lieferten William Hamilton (1964) mit dem Konzept der Gesamteignung (inclusive fitness) und der Verwandtenselektion (kin selection). Das Kastensystem im Insektenstaat ist das Ergebnis von Selektionsprozessen auf Gruppen- und Genebene. Die phänotypische Plastizität (Entwicklung zur Arbeiterin oder Königin abhängig von der Ernährung) zeigt, wie Umweltfaktoren die Genexpression steuern können. Vergleiche zwischen Insektenstaaten und menschlichen Gesellschaften können das Verständnis fördern, wobei die mechanistischen Unterschiede – genetisch-selektive Grundlage beim Insektenstaat vs. kulturelle Normen beim Menschen – klar herausgearbeitet werden sollten.",
+        "wissenschaftliche_begruendung": "Der Insektenstaat (Eusozialität) ist eines der faszinierendsten Phänomene der Evolutionsbiologie und hat lange als Rätsel für Darwins Evolutionstheorie gegolten: Wie kann die natürliche Selektion sterile Arbeiterinnen hervorbringen? Die Lösung lieferten William Hamilton (1964) mit dem Konzept der Gesamteignung (inclusive fitness) und der Verwandtenselektion (kin selection). Das Kastensystem im Insektenstaat ist das Ergebnis von Selektionsprozessen auf Gruppen- und Genebene. Die phänotypische Plastizität (Entwicklung zur Arbeiterin oder Königin abhängig von der Ernährung) zeigt, wie Umweltfaktoren die Genexpression steuern können. Ein Vergleich mit menschlichen Gesellschaften oder Familienstrukturen kann das Verständnis fördern und motivieren – dabei sollten aber die fundamentalen Unterschiede (genetisch-selektive Grundlage beim Insektenstaat vs. kulturelle Normen beim Menschen) klar herausgearbeitet werden, um Anthropomorphismen zu vermeiden. Eine Verbindung zur Evolution von Kooperation allgemein (z. B. Endosymbiose) ist ebenfalls wertvoll.",
         "relevante_evolutionskonzepte": [
           "Verwandtenselektion",
           "Evolution von Kooperation/Altruismus",
@@ -809,7 +809,7 @@
           {
             "rang": 3,
             "methode": "Diskussion",
-            "beschreibung": "Analogie und Abgrenzung: Vergleich des Insektenstaates mit einer menschlichen Gesellschaft oder Familie – Gemeinsamkeiten (Arbeitsteilung, Kooperation) und grundlegende Unterschiede (genetisch-selektive Grundlage vs. kulturelle Normen) herausarbeiten.",
+            "beschreibung": "Analogie und Abgrenzung: Vergleich des Insektenstaates mit einer menschlichen Gesellschaft oder Familie – Gemeinsamkeiten (Arbeitsteilung, Kooperation) und grundlegende Unterschiede (genetisch-selektive Grundlage vs. kulturelle Normen) herausarbeiten. Auch: Verbindung zur Evolution von Kooperation allgemein (z. B. Endosymbiose als weiteres Beispiel).",
             "favorit": false
           }
         ],
@@ -884,7 +884,7 @@
       "unterthema": "Fachpraktisches Arbeiten",
       "originaltext": "mikroskopieren: z. B. Beine und Mundwerkzeuge von Insekten (Dauerpräparat)",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Mikroskopie von Insektenbeinen und Mundwerkzeugen ermöglicht die direkte Beobachtung evolutionärer Anpassungen auf morphologischer Ebene. Insektenbeine zeigen eine außergewöhnliche Diversität in Abhängigkeit von der Funktion – alle ausgehend vom gleichen Grundbauplan mit fünf Beinabschnitten. Diese Diversität ist ein klassisches Beispiel für homologe Strukturen, die durch evolutionäre Umgestaltung an unterschiedliche Funktionen angepasst wurden; diese Unterschiede sind genetisch festgelegt und durch natürliche Selektion entstanden. Mundwerkzeuge illustrieren die koevolutive Spezialisierung auf Nahrungsquellen. Die Mikroskopie trainiert dieselbe Kompetenz, die in der taxonomischen und evolutionären Forschung zur Unterscheidung kryptischer Arten eingesetzt wird.",
+        "wissenschaftliche_begruendung": "Die Mikroskopie von Insektenbeinen und Mundwerkzeugen ermöglicht die direkte Beobachtung evolutionärer Anpassungen auf morphologischer Ebene. Insektenbeine zeigen eine außergewöhnliche Diversität in Abhängigkeit von der Funktion – alle ausgehend vom gleichen Grundbauplan mit fünf Beinabschnitten. Diese Diversität ist ein klassisches Beispiel für homologe Strukturen, die durch genetisch verankerte evolutionäre Differenzierung an unterschiedliche Funktionen angepasst wurden. Mundwerkzeuge illustrieren die koevolutive Spezialisierung auf Nahrungsquellen. Die Mikroskopie trainiert dieselbe Kompetenz, die in der taxonomischen und evolutionären Forschung zur Unterscheidung kryptischer Arten eingesetzt wird.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "Koevolution",
@@ -914,7 +914,7 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Impuls: 'Alle Insektenbeine haben dieselben fünf Abschnitte – aber schaut euch an, wie unterschiedlich sie geformt sind! Diese Unterschiede sind genetisch festgelegt und durch natürliche Selektion entstanden – was sagt euch das über Evolution?' Einführung in homologe Strukturen.",
+        "evolutionsdidaktischer_impuls": "Impuls: 'Alle Insektenbeine haben dieselben fünf Abschnitte – aber schaut euch an, wie unterschiedlich sie geformt sind! Diese Unterschiede sind genetisch verankert und durch natürliche Selektion entstanden – was sagt euch das über Evolution?' Einführung in homologe Strukturen.",
         "moegliche_fehlvorstellungen": "Schüler könnten mikroskopische Unterschiede als 'zufällig' sehen; der systematische Zusammenhang zwischen Beinform und Lebensweise muss explizit hergestellt werden.",
         "bezug_zum_lehrplan_kontext": "Direkte Vertiefung von GY-78-WIR-INS-5 und -6; Vorbereitung auf mikroskopische Arbeit in ZEL-FPA"
       },
@@ -987,7 +987,7 @@
       "unterthema": "Pflanzliche und tierische Zellen",
       "originaltext": "den grundlegenden Aufbau pflanzlicher und tierischer Zellen beschreiben und den Bestandteilen Funktionen zuordnen: Zellkern, Zellmembran, Zellplasma, Chloroplast, Mitochondrium, Zellwand und Vakuole",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Der Aufbau eukaryotischer Zellen ist das Ergebnis einer langen Evolutionsgeschichte. Besonders bedeutsam ist die Endosymbiontentheorie (Lynn Margulis, 1967): Mitochondrien und Chloroplasten gehen auf endosymbiotisch aufgenommene Bakterien zurück. Diese Theorie wird durch zahlreiche molekulare Belege gestützt (eigene DNA, eigene Ribosomen, doppelte Membran). Die Unterschiede zwischen pflanzlichen und tierischen Zellen spiegeln die evolutionäre Differenzierung der eukaryotischen Linien wider: Zellwand und Chloroplasten als pflanzliche Besonderheiten illustrieren die Divergenz seit der Aufspaltung beider Linien vor ca. 1–1,5 Milliarden Jahren. Der Schwerpunkt dieses Lernziels liegt auf den Funktionen der Zellbestandteile und der evolutionären Geschichte dieser Differenzierung.",
+        "wissenschaftliche_begruendung": "Der Aufbau eukaryotischer Zellen ist das Ergebnis einer langen Evolutionsgeschichte. Besonders bedeutsam ist die Endosymbiontentheorie (Lynn Margulis, 1967): Mitochondrien und Chloroplasten gehen auf endosymbiotisch aufgenommene Bakterien zurück. Diese Theorie wird durch zahlreiche molekulare Belege gestützt (eigene DNA, eigene Ribosomen, doppelte Membran). Der Schwerpunkt dieses Lernziels liegt auf den Funktionen der einzelnen Zellbestandteile sowie auf der evolutionären Geschichte der Differenzierung zwischen pflanzlichen und tierischen Zellen: Zellwand, Chloroplasten und Vakuole als pflanzliche Besonderheiten illustrieren die Divergenz beider Zelllinien seit ihrer Aufspaltung vor ca. 1–1,5 Milliarden Jahren. Das Verständnis der Endosymbiontentheorie wird in GY-78-ZEL-PTZ-3 vertieft und soll hier nicht im Mittelpunkt stehen.",
         "relevante_evolutionskonzepte": [
           "Endosymbiontentheorie",
           "gemeinsame Abstammung/Verwandtschaft",
@@ -1001,7 +1001,7 @@
           {
             "rang": 1,
             "methode": "Konzeptuelles Lernen",
-            "beschreibung": "Funktion und Herkunft der Zellbestandteile: Schüler erarbeiten für jeden Bestandteil sowohl die Funktion als auch die evolutionäre Herkunft (z. B. Mitochondrium als ehemaliges Bakterium, Chloroplast als endosymbiotisches Cyanobakterium).",
+            "beschreibung": "Funktion und Herkunft der Zellbestandteile: Schüler erarbeiten für jeden Bestandteil sowohl die Funktion als auch die evolutionäre Herkunft (z. B. Mitochondrium als ehemaliges Bakterium, Chloroplast als endosymbiotisches Cyanobakterium). Der Fokus liegt hier auf Funktion und evolutionärer Differenzierung – der vertiefte Endosymbiontenvergleich erfolgt in ZEL-PTZ-3.",
             "favorit": false
           },
           {
@@ -1013,11 +1013,11 @@
           {
             "rang": 3,
             "methode": "Analogien und Vergleiche",
-            "beschreibung": "Vergleichstabelle: Bakterienzelle – Mitochondrium – tierische Zelle: Gemeinsamkeiten herausarbeiten als Beleg für die Endosymbiose.",
+            "beschreibung": "Gegenüberstellung pflanzlicher und tierischer Zelle: Welche Bestandteile hat nur die Pflanzenzelle, welche nur die Tierzelle, welche beide? Ableitung der evolutionären Differenzierung aus dem Vergleich.",
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Das Mitochondrium hat seine eigene DNA – warum? Wie kam es dazu? Und warum haben Pflanzenzellen Chloroplasten, tierische Zellen aber nicht?' Einstieg in die Endosymbiontentheorie und die evolutionäre Differenzierung von Pflanzen- und Tierzelllinien.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Warum hat eine Pflanzenzelle Chloroplasten und eine tierische Zelle nicht? Und was haben Chloroplast und Mitochondrium mit Bakterien zu tun?' Einstieg in die Funktionen der Zellbestandteile und die evolutionäre Differenzierung von Pflanzen- und Tierzelllinien.",
         "moegliche_fehlvorstellungen": "Schüler könnten Mitochondrien und Chloroplasten als einfache Zellbestandteile sehen; ihre evolutionäre Herkunft als ehemalige freie Lebewesen ist ein zentrales Konzept.",
         "bezug_zum_lehrplan_kontext": "Direkte Verbindung zu ZEL-BAK-1 (Bakterienzelle) und ZEL-PTZ-3 (Vergleich pflanzlicher und tierischer Zellen)"
       },
@@ -1191,7 +1191,7 @@
       "unterthema": "Pflanzliche und tierische Zellen",
       "originaltext": "Viren von lebenden Zellen abgrenzen",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Viren sind evolutionär hochinteressante Entitäten, die die Grenze zwischen lebendig und nichtlebendig markieren. Aus evolutionärer Perspektive sind Viren wahrscheinlich degenerierte genetische Elemente, die von Zellen abstammen (Reduktionsevolution) oder aus springenden Genen (Transposons) entstanden sind. Trotz ihrer Einfachheit sind Viren bedeutsam für die Evolution: Sie sind wichtige Agenten des horizontalen Gentransfers und haben die Genome aller Organismen beeinflusst (virale DNA-Sequenzen machen einen substanziellen Anteil des menschlichen Genoms aus). Viren zeigen, dass Evolution nicht nur durch Mutation, sondern auch durch Rekombination und Gentransfer zwischen Organismen vorangetrieben wird. Die hohe Mutationsrate von RNA-Viren (z. B. Influenza, SARS-CoV-2) ermöglicht schnelle evolutionäre Veränderungen, die direkte gesellschaftliche Relevanz haben.",
+        "wissenschaftliche_begruendung": "Viren sind evolutionär hochinteressante Entitäten, die die Grenze zwischen lebendig und nichtlebendig markieren. Aus evolutionärer Perspektive sind Viren wahrscheinlich degenerierte genetische Elemente, die von Zellen abstammen (Reduktionsevolution) oder aus springenden Genen (Transposons) entstanden sind. Trotz ihrer Einfachheit sind Viren bedeutsam für die Evolution: Sie sind wichtige Agenten des horizontalen Gentransfers und haben die Genome aller Organismen beeinflusst (virale DNA-Sequenzen machen einen substanziellen Anteil des menschlichen Genoms aus – der genaue Prozentsatz ist Gegenstand laufender Forschung). Viren zeigen, dass Evolution nicht nur durch Mutation, sondern auch durch Rekombination und Gentransfer zwischen Organismen vorangetrieben wird. Die hohe Mutationsrate von RNA-Viren (z. B. Influenza, SARS-CoV-2) ermöglicht schnelle evolutionäre Veränderungen, die direkte gesellschaftliche Relevanz haben.",
         "relevante_evolutionskonzepte": [
           "Gentransfer",
           "Koevolution",
@@ -1217,7 +1217,7 @@
           {
             "rang": 3,
             "methode": "Modelle und Simulationen",
-            "beschreibung": "Simulation der Virusevolution: Anhand von vereinfachten Modellen oder digitalen Simulationen verfolgen Schüler, wie sich ein Virus durch Mutation und Selektion verändert (z. B. Influenza von Jahr zu Jahr).",
+            "beschreibung": "Simulation der Virusevolution: Anhand von vereinfachten Modellen oder digitalen Simulationen verfolgen Schüler, wie sich ein Virus durch Mutation und Selektion verändert (z. B. Influenza von Jahr zu Jahr, SARS-CoV-2 Varianten).",
             "favorit": false
           }
         ],
@@ -2048,7 +2048,7 @@
       "unterthema": "Nervensystem",
       "originaltext": "Bau und Funktion eines Sinnesorgans (Auge oder Ohr) erläutern",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das Auge ist eines der bedeutendsten Beispiele für evolutionäre Komplexifizierung. Die moderne Evolutionsbiologie hat gezeigt, dass das Wirbeltierauge aus einfachsten lichtempfindlichen Zellen in einer kontinuierlichen Reihe von Zwischenstufen entstanden sein kann. Das Tintenfischauge und das Wirbeltierauge sind ein klassisches Beispiel für konvergente Evolution: Obwohl strukturell ähnlich, sind sie nicht homolog. Das Ohr ist ebenfalls evolutionär bedeutsam: Die Gehörknöchelchen der Säugetiere sind evolutionäre Abkömmlinge von Kieferknochen – ein eindrückliches Beispiel für Exaptation.",
+        "wissenschaftliche_begruendung": "Das Auge ist eines der bedeutendsten Beispiele für evolutionäre Komplexifizierung. Die moderne Evolutionsbiologie hat gezeigt, dass das Wirbeltierauge aus einfachsten lichtempfindlichen Zellen in einer kontinuierlichen Reihe von Zwischenstufen entstanden sein kann. Das Tintenfischauge und das Wirbeltierauge sind ein klassisches Beispiel für konvergente Evolution: Obwohl strukturell ähnlich, sind sie nicht homolog. Das Ohr ist ebenfalls evolutionär bedeutsam: Die Gehörknöchelchen der Säugetiere sind evolutionäre Abkömmlinge von Kieferknochen früherer Wirbeltiere – ein eindrückliches Beispiel für Exaptation, bei der eine Struktur evolutionär umfunktioniert wurde.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "Exaptation (Umfunktionieren von Merkmalen)",
@@ -2074,11 +2074,11 @@
           {
             "rang": 3,
             "methode": "Einblick in Wissenschaftsgeschichte",
-            "beschreibung": "Fossil/Entwicklungszeugen: Schädelpräparate oder Abbildungen, die Kieferknochen zeigen, die bei Säugetieren zu Gehörknöchelchen wurden – Exaptation am konkreten Beispiel.",
+            "beschreibung": "Fossil/Entwicklungszeugen: Schädelpräparate oder Abbildungen, die zeigen, wie Kieferknochen bei Säugetieren zu Gehörknöchelchen (Hammer, Amboss, Steigbügel) wurden – Exaptation am konkreten Beispiel verdeutlichen.",
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Könnte das Auge wirklich durch schrittweise Selektion entstanden sein? Welche Zwischenstufen würden wir erwarten?' – Direkte Auseinandersetzung mit einem zentralen evolutionsbiologischen Argument.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Könnte das Auge wirklich durch schrittweise Selektion entstanden sein? Welche Zwischenstufen würden wir erwarten? Und wie kamen die Gehörknöchelchen zu ihrer heutigen Funktion – sie waren ursprünglich Kieferknochen!' Direkte Auseinandersetzung mit zentralen evolutionsbiologischen Argumenten und dem Konzept der Exaptation.",
         "moegliche_fehlvorstellungen": "Schüler könnten das Auge als 'zu komplex' für Evolution halten; die schrittweise Entstehung durch dokumentierte Zwischenstufen muss überzeugend dargestellt werden.",
         "bezug_zum_lehrplan_kontext": "Einer der stärksten Evolutionsbezüge im Nervensystem-Thema; Verbindung zur Widerlegung von Intelligent-Design-Argumenten"
       },
@@ -2866,7 +2866,7 @@
           "Anpassung und Angepasstheit",
           "Nischenkonstruktion"
         ],
-        "evolutionsrelevanz_beurteilung": 2
+        "evolutionsrelevanz_beurteilung": 3
       },
       "didaktische_strategien": {
         "top3_methoden": [
@@ -2899,7 +2899,7 @@
         "favNote": "",
         "incNote": "",
         "notizen": "",
-        "bearbeitet": false,
+        "bearbeitet": true,
         "userTags": [],
         "methFavs": {}
       }
@@ -3515,7 +3515,7 @@
       "unterthema": "Blut und Herz-Kreislauf-System",
       "originaltext": "Bau und Funktion des Herz-Kreislauf-Systems beschreiben: Blutkreislauf (Lungen- und Körperkreislauf, Arterien, Venen, Kapillare)",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das geschlossene Blutkreislaufsystem der Wirbeltiere ist eine evolutionäre Errungenschaft, die durch den Doppelkreislauf bei Säugetieren und Vögeln seine höchste Effizienz erreicht. Die Trennung von sauerstoffreichem und sauerstoffarmem Blut durch das vierkammerige Herz korreliert evolutionär mit der Entstehung der Homoiothermie. Fische haben einen einfachen Kreislauf mit zweikammerigem Herz, Amphibien und viele Reptilien haben einen unvollständigen Doppelkreislauf, während Vögel und Säugetiere den vollständigen Doppelkreislauf besitzen. Kapillaren als feinste Blutgefäße mit nur einer Zellschicht Wanddicke sind evolutionär auf maximalen Stoffaustausch ausgelegt.",
+        "wissenschaftliche_begruendung": "Das geschlossene Blutkreislaufsystem der Wirbeltiere ist eine evolutionäre Errungenschaft, die durch den Doppelkreislauf bei Säugetieren und Vögeln seine höchste Effizienz erreicht. Die Trennung von sauerstoffreichem und sauerstoffarmem Blut durch das vierkammerige Herz korreliert evolutionär mit der Entstehung der Homoiothermie. Fische haben einen einfachen Kreislauf mit zweikammerigem Herz, Amphibien und viele Reptilien haben einen unvollständigen Doppelkreislauf, während Vögel und Säugetiere den vollständigen Doppelkreislauf besitzen. Kapillaren als feinste Blutgefäße mit nur einer Zellschicht Wanddicke sind durch natürliche Selektion auf maximalen Stoffaustausch hin optimiert worden.",
         "relevante_evolutionskonzepte": [
           "Homologie und Analogie/Konvergente und divergente Evolution",
           "Anpassung und Angepasstheit",
@@ -3668,7 +3668,7 @@
       "unterthema": "Blut und Herz-Kreislauf-System",
       "originaltext": "die Klassifikation der Blutgruppen nach dem AB0- und Rhesus-System erläutern und deren Bedeutung z. B. für Bluttransfusionen ableiten",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das AB0-Blutgruppensystem ist ein eindrückliches Beispiel für balancierende Selektion: Alle drei Allele (A, B, 0) werden in menschlichen Populationen weltweit beibehalten, weil verschiedene Blutgruppen unterschiedliche Vor- und Nachteile gegenüber verschiedenen Pathogenen bieten. Blutgruppe 0 scheint Schutz gegen schwere Malaria zu bieten. Das AB0-System existiert auch bei anderen Primaten, was auf eine evolutionäre Entstehung vor der Trennung der Menschenaffen hindeutet. Die Blutgruppen sind ein klassisches Lehrbeispiel für Polymorphismus als Ergebnis balancierter Selektion.",
+        "wissenschaftliche_begruendung": "Das AB0-Blutgruppensystem ist ein eindrückliches Beispiel für balancierende Selektion: Alle drei Allele (A, B, 0) werden in menschlichen Populationen weltweit beibehalten, weil verschiedene Blutgruppen unterschiedliche Vor- und Nachteile gegenüber verschiedenen Pathogenen bieten. Blutgruppe 0 scheint Schutz gegen schwere Malaria zu bieten. Das AB0-System existiert auch bei anderen Primaten, was auf eine evolutionäre Entstehung vor der Trennung der Menschenaffen hindeutet. Die Blutgruppen sind ein klassisches Lehrbeispiel für Polymorphismus als Ergebnis balancierter Selektion. Die Evolutionsgeschichte des ABO-Merkmals lässt sich im Stammbaum der Primaten veranschaulichen.",
         "relevante_evolutionskonzepte": [
           "balancierende Selektion",
           "genetische Variation",
@@ -3694,7 +3694,7 @@
           {
             "rang": 3,
             "methode": "Forschendes Lernen",
-            "beschreibung": "Recherche: 'Blutgruppe 0 schützt vor Malaria – wie haben Wissenschaftler das herausgefunden? Was bedeutet das für die Verteilung von Blutgruppen in Malariagebieten?' – Stammbaum des ABO-Merkmals als Ergänzung.",
+            "beschreibung": "Recherche und Stammbaum: 'Blutgruppe 0 schützt vor Malaria – wie haben Wissenschaftler das herausgefunden? Was bedeutet das für die Verteilung von Blutgruppen in Malariagebieten?' Ergänzend: Stammbaum des ABO-Merkmals in der Primatenlinie als Veranschaulichung der evolutionären Geschichte.",
             "favorit": false
           }
         ],
@@ -3719,7 +3719,7 @@
       "unterthema": "Blut und Herz-Kreislauf-System",
       "originaltext": "Maßnahmen zur Gesunderhaltung begründen: regelmäßige sportliche Betätigung",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Regelmäßige körperliche Betätigung ist evolutionär der Normalzustand des Menschen: In der evolutionären Umwelt des Homo sapiens war körperliche Aktivität ein täglicher Bestandteil des Lebens. Die Persistenzjagd-Hypothese erklärt die außergewöhnliche Ausdauerleistungsfähigkeit des Menschen. Die physiologischen Adaptationen an Training (Herzvolumenzunahme, Kapillarisierung, Hormonveränderungen) sind evolutionäre Plastizitäten, die sich sowohl auf das Herz-Kreislauf-System als auch auf Nervensystem, Hormonsystem und psychische Gesundheit auswirken. Bewegungsmangel als modernes Phänomen ist ein evolutionäres Mismatch.",
+        "wissenschaftliche_begruendung": "Regelmäßige körperliche Betätigung ist evolutionär der Normalzustand des Menschen: In der evolutionären Umwelt des Homo sapiens war körperliche Aktivität ein täglicher Bestandteil des Lebens. Die Persistenzjagd-Hypothese erklärt die außergewöhnliche Ausdauerleistungsfähigkeit des Menschen. Die physiologischen Adaptationen an Training sind evolutionäre Plastizitäten, die nicht nur das Herz-Kreislauf-System betreffen (Herzvolumenzunahme, Kapillarisierung), sondern auch das Nervensystem (verbesserte Kognition, Stressresistenz), das Hormonsystem (Regulation von Cortisol, Endorphinen) und die psychische Gesundheit positiv beeinflussen. Bewegungsmangel als modernes Phänomen ist ein evolutionäres Mismatch mit nachweisbaren negativen Folgen für mehrere Organsysteme.",
         "relevante_evolutionskonzepte": [
           "Evolutionäres Mismatch",
           "Anpassung und Angepasstheit",
@@ -3739,7 +3739,7 @@
           {
             "rang": 2,
             "methode": "Diskussion",
-            "beschreibung": "'Steinzeitmenschen haben täglich viele Kilometer gelaufen – was macht das mit dem Herz-Kreislauf-System, dem Nervensystem und den Hormonen? Und was macht Bewegungsmangel damit?' – Wirkungen von Sport auf mehrere Organsysteme thematisieren.",
+            "beschreibung": "'Steinzeitmenschen haben täglich viele Kilometer gelaufen – was macht das mit dem Herz-Kreislauf-System, dem Nervensystem, den Hormonen und der psychischen Gesundheit? Und was macht Bewegungsmangel damit?' – Wirkungen von Sport auf mehrere Organsysteme thematisieren.",
             "favorit": false
           },
           {
@@ -3749,7 +3749,7 @@
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Der Mensch wurde evolutionär als Ausdauerläufer geformt – was passiert mit einem Körper, der für Bewegung gebaut wurde, wenn er kaum bewegt wird?' Einführung in evolutionäres Mismatch als Erklärung für Herz-Kreislauf-Erkrankungen.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Der Mensch wurde evolutionär als Ausdauerläufer geformt – was passiert mit einem Körper, der für Bewegung gebaut wurde, wenn er kaum bewegt wird?' Einführung in evolutionäres Mismatch als Erklärung für Herz-Kreislauf-Erkrankungen und weitere Zivilisationskrankheiten.",
         "moegliche_fehlvorstellungen": "Schüler könnten Sport als 'zusätzliche' Belastung betrachten; das evolutionäre Argument, dass Bewegung der Normalzustand ist, dreht diese Perspektive um.",
         "bezug_zum_lehrplan_kontext": "Verbindung zu HUM-FPA-5 (Pulsmessung); Integrationslernziel mit Bezug zu Gesundheitsförderung"
       },
@@ -3776,7 +3776,7 @@
           "Anpassung und Angepasstheit",
           "Natürliche Selektion und Selektionsdruck"
         ],
-        "evolutionsrelevanz_beurteilung": 2
+        "evolutionsrelevanz_beurteilung": 3
       },
       "didaktische_strategien": {
         "top3_methoden": [
@@ -3809,7 +3809,7 @@
         "favNote": "",
         "incNote": "",
         "notizen": "",
-        "bearbeitet": false,
+        "bearbeitet": true,
         "userTags": [],
         "methFavs": {}
       }
@@ -4024,7 +4024,7 @@
       "unterthema": "Abwehrsystem",
       "originaltext": "die Bedeutung weißer Blutzellen bei der körpereigenen Abwehr erläutern: Bildung von Antikörpern gegen Bakterien und Viren (spezifische Antigen-Antikörper-Reaktionen), Bildung von Gedächtniszellen, Immunität",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Das adaptive Immunsystem mit seiner Antikörper-Produktion und Gedächtniszellbildung ist eine evolutionäre Innovation, die ausschließlich bei Kiefertieren vorkommt. Kieferlose Wirbeltiere wie Neunaugen haben ein funktionell analoges, aber strukturell verschiedenes System – konvergente Immunevolution. Die somatische Rekombination der Antikörpergene (V(D)J-Rekombination) ermöglicht die Erzeugung einer theoretisch unbegrenzten Diversität von Antikörpern aus einer begrenzten Anzahl von Gensegmenten – ein Mechanismus, der dem Prinzip genetischer Variation durch Rekombination ähnelt. Das immunologische Gedächtnis verkürzt die Reaktionszeit bei Zweitkontakt mit einem Pathogen und schützt somit vor wiederholter Erkrankung.",
+        "wissenschaftliche_begruendung": "Das adaptive Immunsystem mit seiner Antikörper-Produktion und Gedächtniszellbildung ist eine evolutionäre Innovation, die ausschließlich bei Kiefertieren vorkommt. Kieferlose Wirbeltiere wie Neunaugen haben ein funktionell analoges, aber strukturell verschiedenes System – konvergente Immunevolution. Die somatische Rekombination der Antikörpergene (V(D)J-Rekombination) ermöglicht die Erzeugung einer theoretisch unbegrenzten Diversität von Antikörpern aus einer begrenzten Anzahl von Gensegmenten – ein Mechanismus, der dem Prinzip genetischer Variation durch Rekombination ähnelt. Das immunologische Gedächtnis verkürzt die Reaktionszeit bei Zweitkontakt mit einem Pathogen und schützt somit vor wiederholter Erkrankung. Interessanterweise lässt sich die Selektion nützlicher Antikörper aus dem Repertoire aller möglichen Antikörper als Analogie zur natürlichen Selektion von Organismen verstehen: Varianten entstehen zufällig, nützliche werden selektiert und verstärkt.",
         "relevante_evolutionskonzepte": [
           "Koevolution",
           "Homologie und Analogie/Konvergente und divergente Evolution",
@@ -4050,11 +4050,11 @@
           {
             "rang": 3,
             "methode": "Diskussion",
-            "beschreibung": "Evolutionärer Vergleich und Analogie zur biologischen Evolution: 'Neunaugen haben kein Immunglobulin-System – aber trotzdem ein adaptives Immunsystem. Was bedeutet das für die Evolution der Immunität? Und wie ähnelt die Selektion von Antikörpern der natürlichen Selektion von Organismen?'",
+            "beschreibung": "Evolutionärer Vergleich und Analogie zur biologischen Evolution: 'Neunaugen haben kein Immunglobulin-System – aber trotzdem ein adaptives Immunsystem. Was bedeutet das für die Evolution der Immunität? Und wie ähnelt die Selektion von Antikörpern der natürlichen Selektion von Organismen – Variation, Selektion, Verstärkung des Nützlichen?'",
             "favorit": false
           }
         ],
-        "evolutionsdidaktischer_impuls": "Leitfrage: 'Wie kann das Immunsystem Antikörper gegen Millionen verschiedener Fremdstoffe produzieren, obwohl wir nur ca. 20.000 Gene haben? Welche evolutionäre Erfindung macht das möglich?' Einführung in die V(D)J-Rekombination und die Analogie zwischen Immunabwehr und biologischer Evolution.",
+        "evolutionsdidaktischer_impuls": "Leitfrage: 'Wie kann das Immunsystem Antikörper gegen Millionen verschiedener Fremdstoffe produzieren, obwohl wir nur ca. 20.000 Gene haben? Welche evolutionäre Erfindung macht das möglich? Und erinnert euch dieser Prozess an etwas – Variation entsteht zufällig, Nützliches wird selektiert und verstärkt?' Einführung in die V(D)J-Rekombination und die Analogie zwischen Immunabwehr und biologischer Evolution.",
         "moegliche_fehlvorstellungen": "Schüler könnten Antikörper als 'fertig vorrätig' betrachten; die maßgeschneiderte Produktion als Reaktion auf das spezifische Antigen muss erklärt werden.",
         "bezug_zum_lehrplan_kontext": "Grundlage für HUM-ABW-6 (Immunisierung) und HUM-ABW-7 (Prävention); hochrelevant für das Verständnis von Impfungen"
       },
@@ -4176,7 +4176,7 @@
       "unterthema": "Zusammenwirken der Systeme",
       "originaltext": "den Menschen als Lebewesen charakterisieren (Merkmale des Lebens)",
       "evolutionsbezug": {
-        "wissenschaftliche_begruendung": "Die Charakterisierung des Menschen als Lebewesen anhand der Lebensmerkmale führt direkt zur evolutionären Einordnung des Menschen in die Biologie. Aus evolutionärer Perspektive ist der Mensch kein Sonderfall, sondern ein Produkt derselben evolutionären Prozesse wie alle anderen Organismen. Die Lebensmerkmale sind evolutionär entstandene Eigenschaften, die alle seit LUCA teilen. Das Lernziel eröffnet die Möglichkeit, den Menschen explizit in den evolutionären Kontext einzubetten und anthropozentrische Sichtweisen zu überwinden. Ein Vergleich zwischen Mensch, Ameise, Baum und Bakterie verdeutlicht die Gemeinsamkeiten besser als ein Vergleich nur mit dem Schimpansen, der eher für spätere Einheiten zur menschlichen Evolution geeignet ist.",
+        "wissenschaftliche_begruendung": "Die Charakterisierung des Menschen als Lebewesen anhand der Lebensmerkmale führt direkt zur evolutionären Einordnung des Menschen in die Biologie. Aus evolutionärer Perspektive ist der Mensch kein Sonderfall, sondern ein Produkt derselben evolutionären Prozesse wie alle anderen Organismen. Die Lebensmerkmale sind evolutionär entstandene Eigenschaften, die alle seit LUCA teilen. Das Lernziel eröffnet die Möglichkeit, den Menschen explizit in den evolutionären Kontext einzubetten und anthropozentrische Sichtweisen zu überwinden. Ein Vergleich zwischen Mensch, Ameise, Baum und Bakterie ist hier besonders geeignet, da er die Gemeinsamkeiten aller Lebewesen verdeutlicht; ein detaillierter Vergleich Mensch–Schimpanse passt besser zu späteren Einheiten zur menschlichen Evolution.",
         "relevante_evolutionskonzepte": [
           "gemeinsame Abstammung/Verwandtschaft",
           "Stammbäume und phylogenetische Systematik",
@@ -4196,7 +4196,7 @@
           {
             "rang": 2,
             "methode": "Konzeptuelles Lernen",
-            "beschreibung": "LUCA im Stammbaum: Schüler ordnen Mensch, Ameise, Baum und Bakterie in einen vereinfachten Stammbaum ausgehend von LUCA ein und diskutieren, welche Lebensmerkmale alle teilen.",
+            "beschreibung": "LUCA im Stammbaum: Schüler ordnen Mensch, Ameise, Baum und Bakterie in einen vereinfachten Stammbaum ausgehend von LUCA ein und diskutieren, welche Lebensmerkmale alle teilen – und warum das auf einen gemeinsamen Ursprung hindeutet.",
             "favorit": false
           },
           {
